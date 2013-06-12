@@ -40,7 +40,7 @@
 /dev/timerirq             0600  system      system
 
 # the DIAG device node is not world writable/readable.
-/dev/diag                 0660   system     diag
+/dev/diag                 0660   radio      radio
 
 /dev/genlock              0666   system     system
 /dev/kgsl                 0666   system     system
