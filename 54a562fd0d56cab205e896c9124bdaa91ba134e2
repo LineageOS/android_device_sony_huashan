@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a26ad4f_59af83e3",
+        "filename": "rootdir/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3559
+      },
+      "writtenOn": "2013-11-25T11:36:37Z",
+      "side": 1,
+      "message": "do not add usbdisk here",
+      "revId": "54a562fd0d56cab205e896c9124bdaa91ba134e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a26ad4f_b9a9f7e1",
+        "filename": "rootdir/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 534,
+      "author": {
+        "id": 3559
+      },
+      "writtenOn": "2013-11-25T11:36:37Z",
+      "side": 1,
+      "message": "why is this needed if device uses emulated sdcard ??",
+      "revId": "54a562fd0d56cab205e896c9124bdaa91ba134e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
