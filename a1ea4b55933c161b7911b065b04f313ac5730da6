@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fad55976_b2c83276",
+        "filename": "rootdir/system/etc/audio_policy.conf",
+        "patchSetId": 16
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 7549
+      },
+      "writtenOn": "2015-01-30T01:07:57Z",
+      "side": 1,
+      "message": "2 times primary in output devices",
+      "revId": "a1ea4b55933c161b7911b065b04f313ac5730da6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
