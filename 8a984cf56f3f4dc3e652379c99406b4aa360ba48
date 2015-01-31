@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dada55a8_c92a712c",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 19
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2015-01-31T23:17:10Z",
+      "side": 1,
+      "message": "this is not needed - it defaults to off for a couple of weeks now",
+      "revId": "8a984cf56f3f4dc3e652379c99406b4aa360ba48",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dada55a8_29206d49",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 19
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2015-01-31T23:17:10Z",
+      "side": 1,
+      "message": "sure you wanna inherit optionally? i\u0027d remove the \"-\"",
+      "revId": "8a984cf56f3f4dc3e652379c99406b4aa360ba48",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dada55a8_091da90f",
+        "filename": "rootdir/fstab.qcom",
+        "patchSetId": 19
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2015-01-31T23:17:10Z",
+      "side": 1,
+      "message": "why the formatting changes?",
+      "revId": "8a984cf56f3f4dc3e652379c99406b4aa360ba48",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
