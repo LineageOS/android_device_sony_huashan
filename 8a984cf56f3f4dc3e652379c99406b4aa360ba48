@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "dada55a8_69db851c",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 19
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 6521
+      },
+      "writtenOn": "2015-02-01T04:18:12Z",
+      "side": 1,
+      "message": "yeah, just been a while since i uploaded patchset :P",
+      "parentUuid": "dada55a8_c92a712c",
+      "revId": "8a984cf56f3f4dc3e652379c99406b4aa360ba48",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dada55a8_29206d49",
         "filename": "BoardConfig.mk",
         "patchSetId": 19
@@ -30,6 +48,24 @@
       "writtenOn": "2015-01-31T23:17:10Z",
       "side": 1,
       "message": "sure you wanna inherit optionally? i\u0027d remove the \"-\"",
+      "revId": "8a984cf56f3f4dc3e652379c99406b4aa360ba48",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dada55a8_49d8411e",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 19
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 6521
+      },
+      "writtenOn": "2015-02-01T04:18:12Z",
+      "side": 1,
+      "message": "it should be synced anyway by cm so i dont see the problem :P",
+      "parentUuid": "dada55a8_29206d49",
       "revId": "8a984cf56f3f4dc3e652379c99406b4aa360ba48",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
