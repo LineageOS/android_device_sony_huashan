@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bacf61ea_31c45291",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 20
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2015-02-02T22:55:38Z",
+      "side": 1,
+      "message": "this is already defined in msm8960-common",
+      "revId": "5911522b7b915d037575c1ac3e9d67d41163ce67",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bacf61ea_11c14e81",
+        "filename": "rootdir/fstab.qcom",
+        "patchSetId": 20
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2015-02-02T22:55:38Z",
+      "side": 1,
+      "message": "still dont get all the formatting changes here... it was clean, but this messes it up?",
+      "revId": "5911522b7b915d037575c1ac3e9d67d41163ce67",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
