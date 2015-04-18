@@ -33,6 +33,23 @@
       "revId": "d9c9aa9ba2fa4bf054405ea1edc9fce91330e168",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_4c6dc031",
+        "filename": "huashan.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 2147
+      },
+      "writtenOn": "2015-04-18T22:41:43Z",
+      "side": 1,
+      "message": "This will disable dual mic audio, however it\u0027s also behind #ifdef QCOM_FLUENCE_ENABLED which I don\u0027t think huashan has set anyway.",
+      "revId": "d9c9aa9ba2fa4bf054405ea1edc9fce91330e168",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
