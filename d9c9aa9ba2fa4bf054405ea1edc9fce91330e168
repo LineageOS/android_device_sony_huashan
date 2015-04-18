@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_ec7db4e8",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 6521
+      },
+      "writtenOn": "2015-04-18T22:24:08Z",
+      "side": 1,
+      "message": "Why?",
+      "revId": "d9c9aa9ba2fa4bf054405ea1edc9fce91330e168",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_0c83b8cd",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 6521
+      },
+      "writtenOn": "2015-04-18T22:24:08Z",
+      "side": 1,
+      "message": "This may not be needed on Lollipop, i\u0027ll check tomorrow.",
+      "revId": "d9c9aa9ba2fa4bf054405ea1edc9fce91330e168",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
