@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_57ac6eed",
+        "filename": "include/sony_lights.h~",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 6521
+      },
+      "writtenOn": "2015-04-18T10:53:05Z",
+      "side": 1,
+      "message": "nuke this file",
+      "revId": "349860284b385fbf0cc699c3b38167d59b6070bf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
