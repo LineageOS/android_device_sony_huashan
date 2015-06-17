@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa31d9ce_33ac7aed",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2015-06-17T02:36:59Z",
+      "side": 1,
+      "message": "The device has 2 compass sensors?",
+      "revId": "ceee2f5e5931e131690a02dfe6e51126a26f86c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
