@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf091321_7599bf1d",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 7446
+      },
+      "writtenOn": "2015-07-30T18:22:10Z",
+      "side": 1,
+      "message": "The percentage font is kind of small. To fix that you will need to specify recovery font like here\n\nhttps://gerrit.omnirom.org/#/c/14127/\n\nBut this will mess the recovery.\n\nMaybe run a user poll ?",
+      "range": {
+        "startLine": 83,
+        "startChar": 0,
+        "endLine": 83,
+        "endChar": 29
+      },
+      "revId": "f0cb98ed65722f1ee3f15ced82e84c8fc3fbde84",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
