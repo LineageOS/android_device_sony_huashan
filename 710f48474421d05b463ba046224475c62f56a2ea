@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f0e0f27_ab5021d6",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 6
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2015-08-05T11:46:35Z",
+      "side": 1,
+      "message": "if this device is anything like fusion3, that will only work when charging with a charger. when charging with usb, healthd will not see that.",
+      "revId": "710f48474421d05b463ba046224475c62f56a2ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
