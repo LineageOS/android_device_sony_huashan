@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f1d235d_6df9e87e",
+        "filename": "rootdir/init.qcom.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 7446
+      },
+      "writtenOn": "2015-09-03T18:03:47Z",
+      "side": 1,
+      "message": "Did a few tryouts the value is too aggressive. Causing background apps to die too fast. Other lesser values don\u0027t seem to really make a difference. May I suggest using ZRAM instead",
+      "revId": "025628d12e5c94b5bbcee9ab4abaa35bce856eab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f1d235d_8d04447d",
+        "filename": "rootdir/init.qcom.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 7446
+      },
+      "writtenOn": "2015-09-03T18:03:47Z",
+      "side": 1,
+      "message": "This seems to cause a stutters in my tests. Also the device is memory strapped while rich in cpu so this should not be enabled.",
+      "revId": "025628d12e5c94b5bbcee9ab4abaa35bce856eab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
