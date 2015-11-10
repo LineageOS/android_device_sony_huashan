@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f2f7f8d_98b698d9",
+        "filename": "huashan.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2015-11-10T21:02:15Z",
+      "side": 1,
+      "message": "Why?\n\nI changed it from the default because I wanted to make sure the file got re-created with the correct address, and just because it\u0027s a different tool.",
+      "revId": "3527e90a2d37452092ea2fb37605d088077c8f86",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f2f7f8d_f8b7dcd7",
+        "filename": "macaddrsetup/macaddrsetup.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2015-11-10T21:02:15Z",
+      "side": 1,
+      "message": "unused",
+      "revId": "3527e90a2d37452092ea2fb37605d088077c8f86",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f2f7f8d_d8bc20bd",
+        "filename": "macaddrsetup/macaddrsetup.c",
+        "patchSetId": 7
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2015-11-10T21:02:15Z",
+      "side": 1,
+      "message": "unused",
+      "revId": "3527e90a2d37452092ea2fb37605d088077c8f86",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f2f7f8d_58c83054",
+        "filename": "rootdir/init.qcom.rc",
+        "patchSetId": 7
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2015-11-10T21:02:15Z",
+      "side": 1,
+      "message": "Need to take another look at this.\n\nDoing something like this is what caused the issues we originally had with taimport",
+      "revId": "3527e90a2d37452092ea2fb37605d088077c8f86",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f2f7f8d_38c5643d",
+        "filename": "rootdir/system/etc/init.qcom.bt.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2015-11-10T21:02:15Z",
+      "side": 1,
+      "message": "Is this set on your device?",
+      "revId": "3527e90a2d37452092ea2fb37605d088077c8f86",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f2f7f8d_18c2a834",
+        "filename": "sepolicy/macaddrsetup.te",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2015-11-10T21:02:15Z",
+      "side": 1,
+      "message": "-2 for giving access to system_data_file.\n\nSee http://review.cyanogenmod.org/#/c/117270/1..2/sepolicy/macaddrsetup.te",
+      "revId": "3527e90a2d37452092ea2fb37605d088077c8f86",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f2f7f8d_f8dc7c19",
+        "filename": "setup-makefiles.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2015-11-10T21:02:15Z",
+      "side": 1,
+      "message": "You sure this works?\n\nThe variables are escaped because bash evaluates them otherwise.",
+      "revId": "3527e90a2d37452092ea2fb37605d088077c8f86",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
