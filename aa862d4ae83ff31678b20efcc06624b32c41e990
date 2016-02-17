@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ffb9cba7_580a9426",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2016-02-17T23:51:59Z",
+      "side": 1,
+      "message": "This part seems fine",
+      "revId": "aa862d4ae83ff31678b20efcc06624b32c41e990",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ffb9cba7_f806e820",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2016-02-17T23:51:59Z",
+      "side": 1,
+      "message": "I don\u0027t get what you mean with this.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 62
+      },
+      "revId": "aa862d4ae83ff31678b20efcc06624b32c41e990",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ffb9cba7_18041c17",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2016-02-17T23:51:59Z",
+      "side": 1,
+      "message": "This doesn\u0027t sound right, the behaviour of +\u003d and :\u003d look the same to me here with a simple test (printing the variables from core/binary.mk)",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 36
+      },
+      "revId": "aa862d4ae83ff31678b20efcc06624b32c41e990",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
