@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_3cf9d27f",
+        "filename": "custombootimg.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-04-25T18:50:26Z",
+      "side": 1,
+      "message": "Looks like you still need (well, _should_ have):\n\n$(hide) $(call assert-max-image-size,$@,$(BOARD_BOOTIMAGE_PARTITION_SIZE))\n\nrecovery is fine since the image size assert is handled in build-recoveryimage-target",
+      "revId": "30965b4818ae05312921bed2d8e1b71fefe4bcb6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
