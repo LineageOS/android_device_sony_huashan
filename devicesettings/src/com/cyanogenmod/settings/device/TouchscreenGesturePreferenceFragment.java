@@ -24,8 +24,6 @@ import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import cyanogenmod.providers.CMSettings;
-
 public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
 
     private static final String KEY_AMBIENT_DISPLAY_ENABLE = "ambient_display_enable";
@@ -65,8 +63,8 @@ public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
-        mHapticFeedback.setChecked(CMSettings.System.getInt(getActivity().getContentResolver(),
-                CMSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, 1) != 0);
+        mHapticFeedback.setChecked(SettingsUtils.getInt(getContext(), getActivity().
+                getContentResolver(), SettingsUtils.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, 1) != 0);
         getListView().setPadding(0, 0, 0, 0);
     }
 
@@ -118,8 +116,8 @@ public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
             final String key = preference.getKey();
             if (KEY_HAPTIC_FEEDBACK.equals(key)) {
                 final boolean value = (Boolean) newValue;
-                CMSettings.System.putInt(getActivity().getContentResolver(),
-                        CMSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, value ? 1 : 0);
+                SettingsUtils.putInt(getContext(), getActivity().getContentResolver(),
+                        SettingsUtils.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, value ? 1 : 0);
                 return true;
             }
             return false;

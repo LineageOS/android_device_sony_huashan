@@ -26,8 +26,6 @@ import android.content.SharedPreferences.Editor;
 import android.os.IBinder;
 import android.util.Log;
 
-import cyanogenmod.providers.CMSettings;
-
 import java.lang.System;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -113,8 +111,8 @@ public class GloveModeService extends Service {
     };
 
     private boolean isGloveModeEnabled() {
-        int HighTouchSensitivity = CMSettings.System.getInt(mContext.getContentResolver(),
-                CMSettings.System.HIGH_TOUCH_SENSITIVITY_ENABLE, 0);
+        int HighTouchSensitivity = SettingsUtils.getInt(mContext, mContext.getContentResolver(),
+                SettingsUtils.HIGH_TOUCH_SENSITIVITY_ENABLE, 1);
         return HighTouchSensitivity == 1;
     }
 
@@ -122,8 +120,8 @@ public class GloveModeService extends Service {
         SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
         boolean initiated = settings.getBoolean("glovemode-initiated", false);
 
-        if (!initiated && CMSettings.System.putInt(mContext.getContentResolver(),
-                CMSettings.System.HIGH_TOUCH_SENSITIVITY_ENABLE, 1)) {
+        if (!initiated && SettingsUtils.putInt(mContext, mContext.getContentResolver(),
+                SettingsUtils.HIGH_TOUCH_SENSITIVITY_ENABLE, 1)) {
             Log.d(TAG, "GloveMode has been enabled by default");
             SharedPreferences.Editor editor = settings.edit();
             editor.putBoolean("glovemode-initiated", true);
