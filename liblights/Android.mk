@@ -14,6 +14,10 @@ LOCAL_MODULE := lights.msm8960
 
 LOCAL_MODULE_TAGS := optional
 
+ifneq ($(BOARD_AOSP_BASED),)
+    LOCAL_CFLAGS += -DBOARD_AOSP_BASED
+endif
+
 include $(BUILD_SHARED_LIBRARY)
 
 endif
