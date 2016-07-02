@@ -16,6 +16,24 @@
       "revId": "e35dc02ee2132a68300485cd956070331a475712",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa7e38b_ba6cee9c",
+        "filename": "rootdir/init.board.perf.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2016-07-02T23:08:48Z",
+      "side": 1,
+      "message": "Yeah I know but seeing more and more rules using them now.\nWill remove them in next PS then.",
+      "parentUuid": "3fa7e38b_fa72667c",
+      "revId": "e35dc02ee2132a68300485cd956070331a475712",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
