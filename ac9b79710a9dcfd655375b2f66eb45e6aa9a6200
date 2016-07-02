@@ -22,6 +22,30 @@
       "revId": "ac9b79710a9dcfd655375b2f66eb45e6aa9a6200",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa7e38b_bab70e3b",
+        "filename": "rootdir/init.board.usb.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2016-07-02T21:09:22Z",
+      "side": 1,
+      "message": "That\u0027s how sony common does it and from my test, it gives the same result, but I\u0027ll come back to adbd, makes more sense.",
+      "parentUuid": "3fa7e38b_7a9af6c5",
+      "range": {
+        "startLine": 41,
+        "startChar": 9,
+        "endLine": 41,
+        "endChar": 12
+      },
+      "revId": "ac9b79710a9dcfd655375b2f66eb45e6aa9a6200",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
