@@ -12,7 +12,3 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Partitions blocks
 BOARD_FLASH_BLOCK_SIZE := 131072
-
-# Recovery
-RECOVERY_FSTAB_VERSION := 2
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
