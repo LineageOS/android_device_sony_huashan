@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fa4df85_b08715d8",
+        "filename": "sepolicy/cameraserver.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2016-08-27T22:11:30Z",
+      "side": 1,
+      "message": "Only neverallow that needs work",
+      "revId": "9f042ed06af1bc759d10fe911c6eba005381e88f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
