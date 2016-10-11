@@ -87,6 +87,7 @@ int read_mac(unsigned int ta_id, int val_addr, char* val_file, unsigned int val_
     switch (val_size) {
         /* Output a MAC file format */
         case TYPE_MAC:
+            printf("%02x:%02x:%02x:%02x:%02x:%02x\n", buf[5], buf[4], buf[3], buf[2], buf[1], buf[0]);
             ret = fprintf(fp, "%02x:%02x:%02x:%02x:%02x:%02x\n", buf[5], buf[4], buf[3], buf[2], buf[1], buf[0]);
             if (ret != 18) {
                 SLOGI("failed to write mac address in %s\n", val_file);
@@ -117,6 +118,7 @@ int read_mac(unsigned int ta_id, int val_addr, char* val_file, unsigned int val_
 int main(int argc, char **argv)
 {
     int err = 0;
+    int i;
     SLOGD("importation starting\n");
 
     /* Unused parameters */
@@ -137,6 +139,12 @@ int main(int argc, char **argv)
     /* Set correct permissions for Bluetooth */
     chown(BT_MAC_FILE, AID_BLUETOOTH, AID_BLUETOOTH);
     chmod(BT_MAC_FILE, S_IRUSR | S_IWUSR | S_IRGRP); /* 640 */
+
+    /* TrimArea parser */
+    for (i = 0; i < 5000; ++i) {
+        printf("Test TAID %d - WLAN_MAC_PNTR %d\n", WLAN_MAC_TAID, i);
+        read_mac(WLAN_MAC_TAID, i, WLAN_MAC_FILE, TYPE_MAC);
+    }
 
     /* Close the TA Partition */
     if (ta_opened != 0) {
