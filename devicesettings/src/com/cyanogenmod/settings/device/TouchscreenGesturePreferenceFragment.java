@@ -16,13 +16,17 @@
 
 package com.cyanogenmod.settings.device;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 
 import cyanogenmod.providers.CMSettings;
 
@@ -41,6 +45,27 @@ public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
     private SwitchPreference mPickupPreference;
     private SwitchPreference mPocketPreference;
     private SwitchPreference mProximityWakePreference;
+
+    static String getDozeSummary(Context context) {
+        if (Utils.isDozeEnabled(context)) {
+            return context.getString(R.string.ambient_display_summary_on);
+        }
+        return context.getString(R.string.ambient_display_summary_off);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        final View view = LayoutInflater.from(getContext()).inflate(R.layout.doze, container, false);
+        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
+        return view;
+    }
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
