@@ -26,6 +26,11 @@ ifeq ($(BOARD_AOSP_BASED),)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 endif
 
+# Provide AOSP APN configurations
+ifneq ($(BOARD_AOSP_BASED),)
+PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+endif
+
 # Product common configurations
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
