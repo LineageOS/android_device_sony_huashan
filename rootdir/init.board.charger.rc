@@ -35,6 +35,6 @@ on property:sys.boot_from_charger_mode=1
     # Enable the normal CPU configurations
     trigger enable-low-power
 
-service charger /sbin/healthd -c
+service charger /charger
     class charger
-    seclabel u:r:healthd:s0
+    seclabel u:r:charger:s0
