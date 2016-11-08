@@ -1,2 +1,3 @@
 #============= device ==============
+type ltalabel_block_device, dev_type;
 type trim_area_partition_device, dev_type;
