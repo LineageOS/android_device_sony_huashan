@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_0980798b",
+        "filename": "devicesettings/Android.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 848
+      },
+      "writtenOn": "2016-11-24T01:31:02Z",
+      "side": 1,
+      "message": "$(LOCAL_PATH)/../../../../packages/resources/devicesettings/res",
+      "range": {
+        "startLine": 18,
+        "startChar": 4,
+        "endLine": 18,
+        "endChar": 41
+      },
+      "revId": "daf4c9fdbd9b5865eb24807addaab7f6578dd019",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
