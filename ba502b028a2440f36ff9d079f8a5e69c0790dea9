@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_64c8fd54",
+        "filename": "devicesettings/res/drawable/ic_settings_gestures.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 7880
+      },
+      "writtenOn": "2016-12-08T23:52:07Z",
+      "side": 1,
+      "message": "These shouldn\u0027t be changed",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 36
+      },
+      "revId": "ba502b028a2440f36ff9d079f8a5e69c0790dea9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_c4c5913e",
+        "filename": "devicesettings/res/drawable/ic_settings_gestures.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 7880
+      },
+      "writtenOn": "2016-12-08T23:52:07Z",
+      "side": 1,
+      "message": "The fill color should actually be ?android:attr/colorAccent",
+      "revId": "ba502b028a2440f36ff9d079f8a5e69c0790dea9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
