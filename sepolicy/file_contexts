@@ -69,6 +69,7 @@
 /sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8xxx-adc(/.*)?                    u:object_r:sysfs_batteryinfo:s0
 /sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/gpuclk                            u:object_r:sysfs_thermal:s0
 /sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/max_gpuclk                        u:object_r:sysfs_thermal:s0
+/sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/reset_count                       u:object_r:sysfs_thermal:s0
 /sys/devices/platform/msm_sdcc\.3/mmc_host(/.*)?                                  u:object_r:sysfs_usb:s0
 /sys/devices/platform/msm_hsusb_host(/.*)?                                        u:object_r:sysfs_usb:s0
 /sys/devices/platform/wcnss_wlan.0/serial_number                                  u:object_r:sysfs_mac_serial:s0
