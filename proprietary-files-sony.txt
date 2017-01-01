@@ -1,0 +1,101 @@
+# Audio
+lib/libaudcal.so
+
+# Camera
+etc/flashled_calc_parameters.cfg
+lib/hw/camera.vendor.qcom.so
+lib/libcald_client.so
+lib/libcald_hal.so
+lib/libcald_imageutil.so
+lib/libcald_pal.so
+lib/libcald_server.so
+lib/libcald_util.so
+lib/libcamera_clientsemc.so
+lib/libcameralight.so
+lib/libface.so
+lib/libmmcamera_3a_legacy.so
+lib/libmmcamera_faceproc.so
+lib/libmmcamera_frameproc.so
+lib/libmmcamera_imx091.so
+lib/libmmcamera_plugin.so
+lib/libmmcamera_statsproc31.so
+lib/liboemcamera.so
+
+# Camera Firmware
+vendor/camera/APT00YP1.dat
+vendor/camera/SMC08BS2.dat
+vendor/camera/SMC08BS2_IMX134.dat
+vendor/camera/SOI08BS2.dat
+vendor/camera/SOI08BS2_BU64291.dat
+vendor/camera/SOI08BS2_IMX134.dat
+vendor/camera/SOI08BS3.dat
+vendor/camera/SOI08BS3_IMX134.dat
+vendor/camera/STW00YP1.dat
+vendor/camera/flash.dat
+vendor/camera/product.dat
+
+# DSPS Firmware
+etc/firmware/dsps.b00
+etc/firmware/dsps.b01
+etc/firmware/dsps.b02
+etc/firmware/dsps.b03
+etc/firmware/dsps.b04
+etc/firmware/dsps.b05
+etc/firmware/dsps.mdt
+
+# DxHDCP firmware
+etc/firmware/dxhdcp2.b00
+etc/firmware/dxhdcp2.b01
+etc/firmware/dxhdcp2.b02
+etc/firmware/dxhdcp2.b03
+etc/firmware/dxhdcp2.mdt
+
+# MultiMedia
+lib/libimage-jpeg-dec-omx-comp.so
+lib/libimage-jpeg-enc-omx-comp.so
+
+# NFC
+lib/hw/nfc.msm8960.so
+
+# Q6 Firmware
+etc/firmware/q6.b00
+etc/firmware/q6.b01
+etc/firmware/q6.b03
+etc/firmware/q6.b04
+etc/firmware/q6.b05
+etc/firmware/q6.b06
+etc/firmware/q6.mdt
+
+# Sensors
+lib/libals.so
+-lib/libsensors_akm8963.so
+lib/libsys-utils.so
+
+# TA
+bin/ta_param_loader
+bin/ta_qmi_service
+bin/updatemiscta
+lib/libmiscta.so
+-lib/libta.so
+
+# Touchscreen firmware
+etc/firmware/cyttsp_8064_mtp.hex
+etc/firmware/cyttsp_8960_cdp.hex
+etc/firmware/cyttsp4_fw.bin
+
+# Trustzone Firmware
+etc/firmware/tzlibasb.b00
+etc/firmware/tzlibasb.b01
+etc/firmware/tzlibasb.b02
+etc/firmware/tzlibasb.b03
+etc/firmware/tzlibasb.mdt
+etc/firmware/tzs1sl.b00
+etc/firmware/tzs1sl.b01
+etc/firmware/tzs1sl.b02
+etc/firmware/tzs1sl.b03
+etc/firmware/tzs1sl.mdt
+etc/firmware/tzsuntory.b00
+etc/firmware/tzsuntory.b01
+etc/firmware/tzsuntory.b02
+etc/firmware/tzsuntory.b03
+etc/firmware/tzsuntory.mdt
