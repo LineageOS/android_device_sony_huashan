@@ -1,7 +1,9 @@
 #============= qti_init_shell ==============
 allow qti_init_shell bluetooth_data_file:dir search;
 allow qti_init_shell bluetooth_data_file:file { read open };
+allow qti_init_shell bluetooth_loader_exec:file { open read };
 allow qti_init_shell devpts:chr_file { read write getattr open ioctl };
+allow qti_init_shell hci_attach_dev:chr_file { ioctl open read write };
 allow qti_init_shell sysfs:file read;
 allow qti_init_shell tad:unix_stream_socket connectto;
 allow qti_init_shell tad_socket:sock_file write;
