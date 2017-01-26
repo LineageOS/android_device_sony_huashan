@@ -17,11 +17,11 @@
   <string name="ambient_display_enable_title">环境显示</string>
   <string name="ambient_display_enable_summary">当接收到通知时唤醒屏幕</string>
   <string name="hand_wave_gesture_title">挥手</string>
-  <string name="hand_wave_gesture_summary">挥手时闪烁通知呼吸灯</string>
+  <string name="hand_wave_gesture_summary">挥手时闪烁通知灯</string>
   <string name="pick_up_gesture_title">拿起</string>
-  <string name="pick_up_gesture_summary">拿起时显示通知</string>
+  <string name="pick_up_gesture_summary">拿起时闪烁通知灯</string>
   <string name="pocket_gesture_title">口袋</string>
-  <string name="pocket_gesture_summary">从口袋中拿出时闪烁通知呼吸灯</string>
+  <string name="pocket_gesture_summary">从口袋中拿出时闪烁通知灯</string>
   <string name="proximity_wake_enable_title">距离传感器唤醒</string>
   <string name="proximity_wake_enable_summary">挥手时唤醒设备</string>
 </resources>

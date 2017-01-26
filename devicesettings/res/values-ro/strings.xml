@@ -13,5 +13,15 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ambient_display_title">Afișare ambientală</string>
+  <string name="ambient_display_enable_title">Afișare ambientală</string>
+  <string name="ambient_display_enable_summary">Trezește ecranul când primiți notificări</string>
+  <string name="hand_wave_gesture_title">Unduire mână</string>
+  <string name="hand_wave_gesture_summary">Pulsează notificările la unduirea mâinii</string>
+  <string name="pick_up_gesture_title">Ridicare</string>
+  <string name="pick_up_gesture_summary">Pulsează notificările la ridicare</string>
   <string name="pocket_gesture_title">Buzunar</string>
+  <string name="pocket_gesture_summary">Pulsează notificările la scoaterea din buzunar</string>
+  <string name="proximity_wake_enable_title">Trezire prin proximitate</string>
+  <string name="proximity_wake_enable_summary">Trezire dispozitiv la unduirea mâinii</string>
 </resources>

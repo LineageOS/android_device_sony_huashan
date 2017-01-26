@@ -17,11 +17,11 @@
   <string name="ambient_display_enable_title">Visualização de ambiente</string>
   <string name="ambient_display_enable_summary">Ligar o ecrã quando receber notificações</string>
   <string name="hand_wave_gesture_title">Passar a mão</string>
-  <string name="hand_wave_gesture_summary">Notificações Led ao passar a mão</string>
+  <string name="hand_wave_gesture_summary">Mostrar as notificações ao passar a mão</string>
   <string name="pick_up_gesture_title">Pegar</string>
   <string name="pick_up_gesture_summary">Mostrar as notificações ao pegar no dispositivo</string>
   <string name="pocket_gesture_title">Bolso</string>
-  <string name="pocket_gesture_summary">Notificações Led ao retirar do bolso</string>
+  <string name="pocket_gesture_summary">Mostrar notificações ao retirar do bolso</string>
   <string name="proximity_wake_enable_title">Sensor de proximidade</string>
   <string name="proximity_wake_enable_summary">Ligar o dispositivo ao passar a mão pelo sensor de proximidade</string>
 </resources>
