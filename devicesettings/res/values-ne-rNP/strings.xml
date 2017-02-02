@@ -12,4 +12,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ambient_display_title">झुलुक्क देखिने</string>
+  <string name="ambient_display_enable_title">झुलुक्क देखिने</string>
+  <string name="ambient_display_enable_summary">सुचना आउँदा स्क्रीन खुल्ने</string>
+  <string name="hand_wave_gesture_title">हात हल्लाउने</string>
+  <string name="hand_wave_gesture_summary">हात हल्लाउदा सुचना देखिने</string>
+  <string name="pick_up_gesture_title">फोन उचाल्द</string>
+  <string name="pick_up_gesture_summary">फोन उचाल्दा सुचना देखिने</string>
+  <string name="pocket_gesture_title">खल्ती मा हुँदा</string>
+  <string name="pocket_gesture_summary">खल्ती बाट निकाल्दा सुचना देखिने</string>
+  <string name="proximity_wake_enable_title">नजिक हुँदा खुल्ने</string>
+  <string name="proximity_wake_enable_summary">हात हल्लाउद खुल्ने</string>
+</resources>

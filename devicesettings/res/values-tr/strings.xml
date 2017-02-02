@@ -12,4 +12,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ambient_display_title">Ortam ekranı</string>
+  <string name="ambient_display_enable_title">Ortam ekranı</string>
+  <string name="ambient_display_enable_summary">Bildirim geldiğinde cihazı uyandır</string>
+  <string name="hand_wave_gesture_title">El sallama</string>
+  <string name="hand_wave_gesture_summary">El sallayınca bildirimleri göster</string>
+  <string name="pick_up_gesture_title">Kaldır</string>
+  <string name="pick_up_gesture_summary">Telefonu kaldırınca bildirimleri göster</string>
+  <string name="pocket_gesture_title">Cep</string>
+  <string name="pocket_gesture_summary">Cepten çıkarınca bildirimleri göster</string>
+  <string name="proximity_wake_enable_title">Harekette uyandır</string>
+  <string name="proximity_wake_enable_summary">El sallamasında cihazı uyandır</string>
+</resources>
