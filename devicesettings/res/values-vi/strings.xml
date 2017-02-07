@@ -12,4 +12,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ambient_display_title">Hiển thị môi trường xung quanh</string>
+  <string name="ambient_display_enable_title">Hiển thị môi trường xung quanh</string>
+  <string name="ambient_display_enable_summary">Đánh thức màn hình khi nhận thông báo</string>
+  <string name="hand_wave_gesture_title">Vẫy tay</string>
+  <string name="hand_wave_gesture_summary">Kích hoạt thông báo lúc vẫy tay</string>
+  <string name="pick_up_gesture_title">Nhấc lên</string>
+  <string name="pick_up_gesture_summary">Kích hoạt thông báo khi nhấc lên</string>
+  <string name="pocket_gesture_title">Bỏ túi</string>
+  <string name="pocket_gesture_summary">Kích hoạt thông báo khi lấy ra khỏi túi</string>
+  <string name="proximity_wake_enable_title">Đánh thức thiết bị bằng cảm biến tiệm cận</string>
+  <string name="proximity_wake_enable_summary">Đánh thức thiết bị bằng cách vẫy tay</string>
+</resources>
