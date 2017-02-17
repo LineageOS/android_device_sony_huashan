@@ -118,7 +118,7 @@ service hw_config /system/bin/sh /system/etc/hw_config.sh
     oneshot
     seclabel u:r:hw_config:s0
 
-service irsc_util /system/bin/irsc_util "/etc/sec_config"
+service irsc_util /system/bin/irsc_util "/vendor/etc/sec_config"
     class main
     user root
     oneshot
