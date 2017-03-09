@@ -10,6 +10,4 @@ PRODUCT_PACKAGES += \
 
 # Camera properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    camera2.portability.force_api=1 \
-    media.stagefright.legacyencoder=true \
-    media.stagefright.less-secure=true
+    camera2.portability.force_api=1
