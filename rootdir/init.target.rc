@@ -42,9 +42,6 @@ on fs
 
 # msm specific files that need to be created on /data
 on post-fs-data
-    # Create directory for TZ Apps
-    mkdir /data/misc/qsee 0770 system system
-
     # Create the directories used by the Wireless subsystem
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
@@ -111,8 +108,3 @@ on post-fs-data
     setprop vold.post_fs_data_done 1
 
     rm /data/local/tmp/adreno_config.txt
-
-service qseecomd /system/bin/qseecomd
-    class core
-    user root
-    group root
