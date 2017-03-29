@@ -48,8 +48,7 @@ status_t registerVibratorService() {
     }
 
     sp<IVibrator> vibrator = new Vibrator(std::move(enable), std::move(amplitude));
-    vibrator->registerAsService();
-    return OK;
+    return vibrator->registerAsService();
 }
 
 int main() {
@@ -61,4 +60,8 @@ int main() {
     }
 
     joinRpcThreadpool();
+
+    // Under noraml cases, execution will not reach this line.
+    ALOGI("USB HAL failed to join thread pool.");
+    return 1;
 }
