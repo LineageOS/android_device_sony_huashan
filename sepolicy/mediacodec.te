@@ -1,3 +1,0 @@
-#============= mediacodec ==============
-allow mediacodec audio_device:chr_file { ioctl open read write };
-allow mediacodec camera_prop:file { getattr open read };

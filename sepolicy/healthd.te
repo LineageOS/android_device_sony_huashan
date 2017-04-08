@@ -1,4 +1,0 @@
-#============= healthd ==============
-allow healthd device:dir read;
-allow healthd rtc_device:chr_file write;
-allow healthd self:capability dac_override;

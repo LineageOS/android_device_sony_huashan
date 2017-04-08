@@ -1,3 +1,0 @@
-#============= bootanim ==============
-allow bootanim boot_animation_prop:file { getattr open read };
-allow bootanim sysfs_thermal:file r_file_perms;

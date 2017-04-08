@@ -1,2 +1,0 @@
-#============= drmserver ==============
-allow drmserver ringtone_file:file read;

@@ -1,2 +1,0 @@
-#============= bluetooth ==============
-allow bluetooth storage_stub_file:dir getattr;

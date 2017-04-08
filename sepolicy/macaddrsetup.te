@@ -2,11 +2,12 @@ type macaddrsetup, domain;
 type macaddrsetup_exec, exec_type, file_type;
 
 init_daemon_domain(macaddrsetup)
+
 unix_socket_connect(macaddrsetup, tad, tad)
 
 #============= macaddrsetup ==============
 allow macaddrsetup bluetooth_data_file:dir { add_name search write };
 allow macaddrsetup bluetooth_data_file:file { create getattr open setattr write };
 allow macaddrsetup self:capability { chown dac_override fowner fsetid };
-allow macaddrsetup sysfs_wlanserial:file { write getattr open };
-allow macaddrsetup sysfs_wlanmac:file { write getattr open };
+allow macaddrsetup sysfs_wlanserial:file { getattr open write };
+allow macaddrsetup sysfs_wlanmac:file { getattr open write };

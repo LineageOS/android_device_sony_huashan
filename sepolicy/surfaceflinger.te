@@ -1,3 +1,0 @@
-#============= surfaceflinger ==============
-allow surfaceflinger debug_gralloc_prop:file { read getattr open };
-allow surfaceflinger sysfs_thermal:file r_file_perms;

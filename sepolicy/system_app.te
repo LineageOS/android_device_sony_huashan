@@ -1,2 +1,2 @@
 #============= system_app ==============
-allow system_app sysfs_glove_mode:file { write getattr open };
+allow system_app sysfs_glove_mode:file { getattr open write };

@@ -1,5 +1,0 @@
-#============= init ==============
-allow init fm_radio_device:chr_file write;
-allow init self:capability sys_nice;
-allow init sysfs_vibrator:file getattr;
-allow init wcnss_device:chr_file write;
