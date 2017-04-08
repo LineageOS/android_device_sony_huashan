@@ -31,7 +31,8 @@ LOCAL_SHARED_LIBRARIES := \
     libcutils \
     libgui \
     libbinder \
-    libutils
+    libutils \
+    liblog
 
 LOCAL_MODULE := libshim_cald
 
