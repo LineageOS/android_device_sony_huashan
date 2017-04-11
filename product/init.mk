@@ -1,5 +1,6 @@
-# Init packages
+# Ramdisk packages
 PRODUCT_PACKAGES += \
+    fstab.qcom \
     init.board.bluetooth.rc \
     init.board.charger.rc \
     init.board.fm.rc \
@@ -10,5 +11,7 @@ PRODUCT_PACKAGES += \
     init.board.target.rc \
     init.board.usb.rc \
     init.board.wifi.rc \
+    init.qcom.rc \
     init.recovery.qcom.rc \
-    init.target.rc
+    init.target.rc \
+    ueventd.qcom.rc
