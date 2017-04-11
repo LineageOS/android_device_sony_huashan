@@ -1,7 +1,6 @@
 # Ramdisk packages
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.qcom.rc \
     ueventd.qcom.rc
 
 # Sony TrimArea package

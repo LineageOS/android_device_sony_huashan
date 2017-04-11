@@ -10,5 +10,6 @@ PRODUCT_PACKAGES += \
     init.board.target.rc \
     init.board.usb.rc \
     init.board.wifi.rc \
+    init.qcom.rc \
     init.recovery.qcom.rc \
     init.target.rc
