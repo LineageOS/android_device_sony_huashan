@@ -14,7 +14,7 @@ on boot
     chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
     chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
 
-    mkdir /dev/socket/qmux_bluetooth 0770 bluetooth net_bt_stack
+    mkdir /dev/socket/qmux_bluetooth 0770 bluetooth bluetooth
     chmod 2770 /dev/socket/qmux_bluetooth
 
     # BT DUN port-bridge
@@ -25,7 +25,7 @@ on boot
 service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     class late_start
     user bluetooth
-    group qcom_oncrpc bluetooth net_bt_admin system
+    group qcom_oncrpc bluetooth system
     disabled
     oneshot
 

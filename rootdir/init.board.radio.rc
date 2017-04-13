@@ -14,7 +14,7 @@ service netmgrd /system/bin/netmgrd
 service qmuxd /system/bin/qmuxd
     class main
     user radio
-    group radio audio bluetooth gps qcom_diag net_bt_stack
+    group radio audio bluetooth gps
 
 service rmt_storage /system/bin/rmt_storage
     class main
