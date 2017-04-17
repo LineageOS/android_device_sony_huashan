@@ -93,10 +93,6 @@ on property:sys.boot_completed=1
     # CPU Settings
     write /sys/devices/system/cpu/cpufreq/interactive/boost 0
 
-    # MPDecision
-    rm /data/system/perfd/default_values
-    start mpdecision
-
     # IO Schedulers
     setprop sys.io.scheduler bfq
     write /sys/block/mmcblk1/queue/scheduler bfq
@@ -107,10 +103,3 @@ on property:sys.boot_completed=1
     write /sys/kernel/mm/ksm/pages_to_scan 100
     write /sys/kernel/mm/ksm/sleep_millisecs 2000
     write /sys/kernel/mm/ksm/run 1
-
-service mpdecision /system/bin/mpdecision --avg_comp
-    class main
-    user root
-    group root readproc
-    socket mpdecision stream 0660 root system
-    disabled

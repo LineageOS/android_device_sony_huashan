@@ -99,7 +99,6 @@ lib/libmmjpeg.so
 lib/libmercury.so
 
 # Perf
-bin/mpdecision
 vendor/lib/libqti-perfd-client.so
 
 # Protocol Buffers
