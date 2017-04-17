@@ -23,9 +23,6 @@
 /sys/devices/i2c-10/10-0047/audio_en                                              u:object_r:sysfs_lights_effects:s0
 /sys/devices/i2c-10/10-0047/lights_effects                                        u:object_r:sysfs_lights_effects:s0
 
-# MPDecision
-/data/system/default_values                                                       u:object_r:mpctl_data_file:s0
-
 # System binaries
 /system/bin/lights_effects                                                        u:object_r:lights_effects_exec:s0
 /system/bin/macaddrsetup                                                          u:object_r:macaddrsetup_exec:s0
