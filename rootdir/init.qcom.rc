@@ -37,6 +37,14 @@ on init
 
     symlink /sdcard /storage/sdcard0
 
+on post-fs-data
+    rm /data/logcat.txt
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
+
+service logcat_debug /system/bin/logcat -b all -f /data/logcat.txt -v threadtime
+    class main
+    user root
+    group system
