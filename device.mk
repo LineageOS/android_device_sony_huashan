@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2013-2016 The CyanogenMod Project
+#           (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,6 +22,9 @@ PRODUCT_AAPT_PREBUILT_DPI := xhdpi 280dpi hdpi tvdpi mdpi ldpi
 
 # Device specific overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+ifeq ($(BOARD_AOSP_BASED),)
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+endif
 
 # Product common configurations
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
