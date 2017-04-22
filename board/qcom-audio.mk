@@ -1,4 +1,8 @@
 # Audio configurations
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
+ifneq ($(BOARD_AOSP_BASED),)
+USE_CUSTOM_AUDIO_POLICY := 0
+else
 USE_CUSTOM_AUDIO_POLICY := 1
+endif
