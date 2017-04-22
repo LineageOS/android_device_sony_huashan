@@ -62,6 +62,3 @@ extract "$MY_DIR"/proprietary-files-qc.txt "$SRC"
 
 # Generate vendor makefiles
 "$MY_DIR"/setup-makefiles.sh
-
-# QCom Common binaries for msm8960
-# "$ROM_ROOT"/device/qcom/common/extractors/extract-files.sh "$SRC" msm8960 graphics

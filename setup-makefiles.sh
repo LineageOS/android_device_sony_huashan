@@ -52,7 +52,4 @@ write_makefiles "$MY_DIR"/proprietary-files-qc.txt
 # Vendor BoardConfig variables
 printf 'USE_CAMERA_STUB := false\n' >> "$BOARDMK"
 
-# QCom Common binaries for msm8960
-# printf '\n%s\n' "\$(call inherit-product, vendor/qcom/binaries/msm8960/graphics/graphics-vendor.mk)" >> "$PRODUCTMK"
-
 write_footers
