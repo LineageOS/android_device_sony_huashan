@@ -22,6 +22,30 @@
       "revId": "e0c03aa7189df63909a2200c1dbb50ec7fd1affd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a486d77_0cf976c8",
+        "filename": "overlay-lineage/packages/apps/Settings/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2017-04-28T13:32:52Z",
+      "side": 1,
+      "message": "Some changes like these come from matching the original overlaid files.",
+      "parentUuid": "1a486d77_f2aef6e6",
+      "range": {
+        "startLine": 1,
+        "startChar": 30,
+        "endLine": 1,
+        "endChar": 33
+      },
+      "revId": "e0c03aa7189df63909a2200c1dbb50ec7fd1affd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
