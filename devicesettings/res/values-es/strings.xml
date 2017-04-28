@@ -18,8 +18,8 @@
   <string name="ambient_display_enable_summary">Activar la pantalla cuando se reciben notificaciones</string>
   <string name="hand_wave_gesture_title">Pasar la mano</string>
   <string name="hand_wave_gesture_summary">Mostrar notificaciones cuando se pase la mano por el dispositivo</string>
-  <string name="pick_up_gesture_title">Contestar</string>
-  <string name="pick_up_gesture_summary">Mostrar notificaciones al contestar</string>
+  <string name="pick_up_gesture_title">Recoger</string>
+  <string name="pick_up_gesture_summary">Mostrar notificaciones al recoger</string>
   <string name="pocket_gesture_title">Bolsillo</string>
   <string name="pocket_gesture_summary">Mostrar notificaciones cuando se saque del bolsillo</string>
   <string name="proximity_wake_enable_title">Despertar por proximidad</string>
