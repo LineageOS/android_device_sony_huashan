@@ -10,6 +10,12 @@ service netmgrd /system/bin/netmgrd
     user root
     group radio
 
+# QMUX must be in multiple groups to support external process connections
+service qmuxd /system/bin/qmuxd
+    class main
+    user radio
+    group radio audio bluetooth gps qcom_diag net_bt_stack
+
 service rmt_storage /system/bin/rmt_storage
     class main
     user root
