@@ -101,7 +101,7 @@ on post-fs-data
     mkdir /data/audio 0770 media audio
 
     # Camera
-    mkdir /data/camera 0771 root camera
+    mkdir /data/camera 0771 media camera
 
     chown system /dev/block/platform/msm_sdcc.1/by-name
 
