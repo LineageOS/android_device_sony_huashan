@@ -1,0 +1,4 @@
+type hw_config, domain;
+type hw_config_exec, exec_type, file_type;
+
+init_daemon_domain(hw_config)

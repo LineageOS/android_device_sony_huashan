@@ -22,15 +22,16 @@ on boot
     chown bluetooth bluetooth /dev/smd7
 
 # Bluetooth
-service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
+service hci_attach /system/bin/sh /system/etc/init.qcom.bt.sh
     class late_start
     user bluetooth
     group qcom_oncrpc bluetooth system
     disabled
     oneshot
+    seclabel u:r:hci_attach:s0
 
 on property:bluetooth.hciattach=true
-    start hciattach
+    start hci_attach
 
 on property:bluetooth.hciattach=false
     setprop bluetooth.status off

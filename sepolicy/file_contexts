@@ -36,8 +36,15 @@
 /sbin/tad_static                                                                  u:object_r:tad_exec:s0
 
 # /system
+/system/bin/hci_qcomm_init                                                        u:object_r:hci_attach_exec:s0
+/system/bin/irsc_util                                                             u:object_r:irsc_util_exec:s0
 /system/bin/lights_effects                                                        u:object_r:lights_effects_exec:s0
 /system/bin/macaddrsetup                                                          u:object_r:macaddrsetup_exec:s0
+/system/bin/netmgrd                                                               u:object_r:netmgrd_exec:s0
+/system/bin/qmuxd                                                                 u:object_r:qmuxd_exec:s0
+/system/bin/rmt_storage                                                           u:object_r:rmt_exec:s0
+/system/bin/secchand                                                              u:object_r:secchand_exec:s0
+/system/bin/ta_qmi_service                                                        u:object_r:ta_qmi_service_exec:s0
 /system/bin/thermanager                                                           u:object_r:thermanager_exec:s0
 /system/bin/updatemiscta                                                          u:object_r:updatemiscta_exec:s0
 
