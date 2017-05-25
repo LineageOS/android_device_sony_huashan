@@ -24,4 +24,4 @@ Camera  | 8MPx, LED Flash
 
 ![Sony Xperia SP](http://cdn2.gsmarena.com/vv/pics/sony/sony-xperia-sp-02.jpg "Sony Xperia SP in its three colors")
 
-This branch is for building LineageOS 14.1 (or Android Nougat 7.1 AOSP based roms) ROMS.
+This branch is for building LineageOS 14.1 (or Android Nougat 7.1 AOSP based) ROMS.
