@@ -16,6 +16,24 @@
       "revId": "4ce0460cf562088a0fb203869cb84d8f5d2a4ece",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa82b9bf_d379a894",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2017-05-31T14:49:58Z",
+      "side": 0,
+      "message": "True, didn\u0027t even notice",
+      "parentUuid": "fa82b9bf_1348705a",
+      "revId": "4ce0460cf562088a0fb203869cb84d8f5d2a4ece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
