@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa82b9bf_1348705a",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 15964
+      },
+      "writtenOn": "2017-05-31T14:48:44Z",
+      "side": 0,
+      "message": "Necessary that this should be removed too with the revert?",
+      "revId": "4ce0460cf562088a0fb203869cb84d8f5d2a4ece",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
