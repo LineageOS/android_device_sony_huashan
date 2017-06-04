@@ -13,6 +13,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="ambient_display_title">Omgivningsskärm</string>
+  <string name="ambient_display_enable_title">Omgivningsskärm</string>
   <string name="pick_up_gesture_title">Plocka upp</string>
   <string name="pocket_gesture_title">Ficka</string>
 </resources>

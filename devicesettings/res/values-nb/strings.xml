@@ -17,11 +17,11 @@
   <string name="ambient_display_enable_title">Omgivelsesskjerm</string>
   <string name="ambient_display_enable_summary">Vekke skjermen når du mottar varsler</string>
   <string name="hand_wave_gesture_title">Håndvink</string>
-  <string name="hand_wave_gesture_summary">Pulseringsvarsel ved håndvink</string>
+  <string name="hand_wave_gesture_summary">Pulsér varsler ved håndvink</string>
   <string name="pick_up_gesture_title">Opp-plukking</string>
-  <string name="pick_up_gesture_summary">Pulseringsvarsel når plukket opp</string>
+  <string name="pick_up_gesture_summary">Pulsér varsler når plukket opp</string>
   <string name="pocket_gesture_title">Lomme</string>
-  <string name="pocket_gesture_summary">Pulseringsvarsel når telefonen er tatt opp av lommen</string>
+  <string name="pocket_gesture_summary">Pulsér varsler når telefonen er tatt opp av lommen</string>
   <string name="proximity_wake_enable_title">Berøringsfri vekking</string>
   <string name="proximity_wake_enable_summary">Vekk enheten med håndvink</string>
 </resources>

@@ -22,5 +22,6 @@
   <string name="pick_up_gesture_summary">Afficher les notifications lors de la prise en main</string>
   <string name="pocket_gesture_title">Poche</string>
   <string name="pocket_gesture_summary">Afficher les notifications à la sortie de poche</string>
+  <string name="proximity_wake_enable_title">Réveil par proximité</string>
   <string name="proximity_wake_enable_summary">Réveiller l\'appareil au passage de la main</string>
 </resources>

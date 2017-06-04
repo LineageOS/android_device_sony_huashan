@@ -22,6 +22,6 @@
   <string name="pick_up_gesture_summary">拿起時顯示通知</string>
   <string name="pocket_gesture_title">口袋</string>
   <string name="pocket_gesture_summary">從口袋中取出時顯示通知</string>
-  <string name="proximity_wake_enable_title">接近喚醒</string>
+  <string name="proximity_wake_enable_title">距離喚醒</string>
   <string name="proximity_wake_enable_summary">揮手時喚醒裝置</string>
 </resources>
