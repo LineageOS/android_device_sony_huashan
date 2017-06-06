@@ -610,7 +610,7 @@ open_lights(const struct hw_module_t* module, char const* name,
 
     /* Device configuration */
     dev->common.tag = HARDWARE_DEVICE_TAG;
-    dev->common.version = 0;
+    dev->common.version = LIGHTS_DEVICE_API_VERSION_1_0;
     dev->common.module = (struct hw_module_t*)module;
     dev->common.close = (int (*)(struct hw_device_t*))close_lights;
     dev->set_light = set_light;
