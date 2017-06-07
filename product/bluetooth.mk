@@ -6,5 +6,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=smd \
     qcom.bt.le_dev_pwr_class=1 \
+    ro.bluetooth.hfp.ver=1.6 \
     ro.bt.bdaddr_path=/data/misc/bluetooth_bdaddr \
     ro.qualcomm.bt.hci_transport=smd
