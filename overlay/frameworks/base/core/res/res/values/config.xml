@@ -146,13 +146,28 @@
          that can be set by the user. -->
     <integer name="config_screenBrightnessDim">17</integer>
 
+    <!-- Slow brightness animation ramp rate in brightness units per second-->
+    <integer translatable="false" name="config_brightness_ramp_rate_slow">80</integer>
+
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">0</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">0</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
+
+    <!-- Light sensor event rate in milliseconds for automatic brightness control. -->
+    <integer name="config_autoBrightnessLightSensorRate">1000</integer>
+
+    <!-- Initial light sensor event rate in milliseconds for automatic brightness control. This is
+         used for obtaining the first light sample when the device stops dozing.
+
+         Set this to 0 to disable this feature. -->
+    <integer name="config_autoBrightnessInitialLightSensorRate">250</integer>
+
+    <!-- Period of time in which to consider light samples in milliseconds. -->
+    <integer name="config_autoBrightnessAmbientLightHorizon">5000</integer>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 control points as follows:
