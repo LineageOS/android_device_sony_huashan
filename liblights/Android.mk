@@ -14,6 +14,7 @@ LOCAL_MODULE := lights.msm8960
 
 LOCAL_MODULE_TAGS := optional
 
+LOCAL_CFLAGS += -Wunused-variable
 ifneq ($(BOARD_AOSP_BASED),)
     LOCAL_CFLAGS += -DBOARD_AOSP_BASED
 endif
