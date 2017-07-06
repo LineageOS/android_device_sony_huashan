@@ -1,5 +1,7 @@
 /*
- * Copyright (C) 2015 The CyanogenMod Project
+ * Copyright (C) 2015-2017 Adrian DC
+ *           (C) 2015-2016 The CyanogenMod Project
+ *           (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -110,7 +112,7 @@ write_int(char const* path, int value) {
     char buffer[20];
 
     /* Int output to path */
-    fd = open(path, O_RDWR);
+    fd = open(path, O_WRONLY);
     if (fd >= 0) {
         bytes = snprintf(buffer, sizeof(buffer), "%d\n", value);
         amt = write(fd, buffer, bytes);
@@ -118,7 +120,7 @@ write_int(char const* path, int value) {
         return (amt == -1 ? -errno : 0);
     }
     else {
-        ALOGE("write_int failed to open %s\n", path);
+        ALOGE("write_int failed to open %s (%s)\n", path, strerror(errno));
         return -errno;
     }
 }
@@ -131,7 +133,7 @@ write_string(char const* path, const char *value) {
     char buffer[20];
 
     /* String output to path */
-    fd = open(path, O_RDWR);
+    fd = open(path, O_WRONLY);
     if (fd >= 0) {
         bytes = snprintf(buffer, sizeof(buffer), "%s\n", value);
         amt = write(fd, buffer, bytes);
@@ -139,7 +141,7 @@ write_string(char const* path, const char *value) {
         return (amt == -1 ? -errno : 0);
     }
     else {
-        ALOGE("write_string failed to open %s\n", path);
+        ALOGE("write_string failed to open %s (%s)\n", path, strerror(errno));
         return -errno;
     }
 }
@@ -262,7 +264,6 @@ write_program(int leds_program_target, int delayOn, int delayOff) {
 
     int fd, amt, bytes;
     int values[4];
-    char target[4];
     char buffer[180];
 
     /* String output to path */
