@@ -17,12 +17,10 @@
 package com.cyanogenmod.settings.device;
 
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v14.preference.SwitchPreference;
-import android.provider.Settings;
-import android.view.Menu;
-import android.view.MenuItem;
 
 public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
 
@@ -115,7 +113,7 @@ public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
         public boolean onPreferenceChange(Preference preference, Object newValue) {
             final String key = preference.getKey();
             if (KEY_HAPTIC_FEEDBACK.equals(key)) {
-                final boolean value = (Boolean) newValue;
+                final boolean value = (boolean) newValue;
                 SettingsUtils.putInt(getContext(), getActivity().getContentResolver(),
                         SettingsUtils.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, value ? 1 : 0);
                 return true;

@@ -103,7 +103,7 @@ public class GloveModeService extends Service {
         public void onReceive(Context context, Intent intent) {
             if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
                 mGloveModeEnabled = isGloveModeEnabled();
-               if (DEBUG) Log.d(TAG, "Glove Mode state: " + mGloveModeEnabled);
+                if (DEBUG) Log.d(TAG, "Glove Mode state: " + mGloveModeEnabled);
             } else if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
                 updateGloveMode();
             }
