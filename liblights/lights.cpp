@@ -73,37 +73,6 @@ static unsigned int g_leds_ARGB = 0;
 static int g_delayOn = -1;
 static int g_delayOff = -1;
 
-/* === Module init_globals === */
-void
-init_globals(void) {
-
-    int i, c;
-
-    /* Device mutex */
-    pthread_mutex_init(&g_lock, NULL);
-
-    /* Module notifications */
-    memset(&g_notification, 0, sizeof(g_notification));
-    memset(&g_battery, 0, sizeof(g_battery));
-    g_delayOn = -1;
-    g_delayOff = -1;
-
-    /* Module paths */
-    for (i = 1; i <= LEDS_UNIT_COUNT; ++i) {
-        for (c = 0; c < LEDS_COLORS_COUNT; ++c) {
-            sprintf(path_ledbrightn[(i - 1) * LEDS_COLORS_COUNT + c],
-                    LEDS_COLORS_BRIGHTNESS_FILE, i, leds_colors[c]);
-            sprintf(path_ledcurrent[(i - 1) * LEDS_COLORS_COUNT + c],
-                    LEDS_COLORS_CURRENT_FILE, i, leds_colors[c]);
-        }
-    }
-
-    /* Module sequencers */
-    for (i = 0; i < LEDS_SEQ_COUNT; ++i) {
-        g_leds_sequencers[i] = LEDS_SEQ_UNKNOWN;
-    }
-}
-
 /* === Module write_int === */
 static int
 write_int(char const* path, int value) {
@@ -143,6 +112,37 @@ write_string(char const* path, const char *value) {
     else {
         ALOGE("write_string failed to open %s (%s)\n", path, strerror(errno));
         return -errno;
+    }
+}
+
+/* === Module init_globals === */
+void
+init_globals(void) {
+
+    int i, c;
+
+    /* Device mutex */
+    pthread_mutex_init(&g_lock, NULL);
+
+    /* Module notifications */
+    memset(&g_notification, 0, sizeof(g_notification));
+    memset(&g_battery, 0, sizeof(g_battery));
+    g_delayOn = -1;
+    g_delayOff = -1;
+
+    /* Module paths */
+    for (i = 1; i <= LEDS_UNIT_COUNT; ++i) {
+        for (c = 0; c < LEDS_COLORS_COUNT; ++c) {
+            sprintf(path_ledbrightn[(i - 1) * LEDS_COLORS_COUNT + c],
+                    LEDS_COLORS_BRIGHTNESS_FILE, i, leds_colors[c]);
+            sprintf(path_ledcurrent[(i - 1) * LEDS_COLORS_COUNT + c],
+                    LEDS_COLORS_CURRENT_FILE, i, leds_colors[c]);
+        }
+    }
+
+    /* Module sequencers */
+    for (i = 0; i < LEDS_SEQ_COUNT; ++i) {
+        g_leds_sequencers[i] = LEDS_SEQ_UNKNOWN;
     }
 }
 
