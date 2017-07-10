@@ -43,6 +43,8 @@
 #define LEDS_COLORS_CURRENT_NOTIFICATIONS  255
 #define LEDS_COLORS_CURRENT_MAXIMUM        255
 #define LEDS_COLORS_CURRENT_RATIO          255
+#define LEDS_COLORS_EFFECTS_CURRENT_FILE   "/sys/class/leds/LED%d_%c/effects_current"
+#define LEDS_COLORS_EFFECTS_CURRENT_RATIO  85
 #define LEDS_CHARGED_DELAY_OFF             5000
 #define LEDS_CHARGED_DELAY_ON              5000
 #define LEDS_CHARGED_LEVEL                 100

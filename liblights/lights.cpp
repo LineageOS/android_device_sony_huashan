@@ -119,7 +119,8 @@ write_string(char const* path, const char *value) {
 void
 init_globals(void) {
 
-    int i, c;
+    char path[MAX_PATH_SIZE];
+    int i, c, value;
 
     /* Device mutex */
     pthread_mutex_init(&g_lock, NULL);
@@ -137,6 +138,12 @@ init_globals(void) {
                     LEDS_COLORS_BRIGHTNESS_FILE, i, leds_colors[c]);
             sprintf(path_ledcurrent[(i - 1) * LEDS_COLORS_COUNT + c],
                     LEDS_COLORS_CURRENT_FILE, i, leds_colors[c]);
+
+            /* Initialize effects_current controls */
+            sprintf(path, LEDS_COLORS_EFFECTS_CURRENT_FILE, i, leds_colors[c]);
+            value = (LEDS_COLORS_EFFECTS_CURRENT_RATIO * leds_currents[i-1][c])
+                    / LEDS_COLORS_CURRENT_MAXIMUM;
+            write_int(path, value);
         }
     }
 
