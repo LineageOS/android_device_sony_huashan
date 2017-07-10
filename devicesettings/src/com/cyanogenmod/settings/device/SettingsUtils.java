@@ -32,6 +32,14 @@ public class SettingsUtils {
     public static final String PREFERENCES = "SettingsUtilsPreferences";
     public static final String SETTINGS_CLASS = "cyanogenmod.providers.CMSettings$System";
 
+    public static final String LIGHTS_EFFECTS_MUSIC_ALWAYS =
+            "LIGHTS_EFFECTS_MUSIC_ALWAYS";
+    public static final String LIGHTS_EFFECTS_MUSIC_AWAKE =
+            "LIGHTS_EFFECTS_MUSIC_AWAKE";
+    public static final String LIGHTS_EFFECTS_MUSIC_GAIN =
+            "LIGHTS_EFFECTS_MUSIC_GAIN";
+    public static final String LIGHTS_EFFECTS_MUSIC_ENABLE =
+            "LIGHTS_EFFECTS_MUSIC_ENABLE";
     public static final String HIGH_TOUCH_SENSITIVITY_ENABLE =
             "HIGH_TOUCH_SENSITIVITY_ENABLE";
     public static final String TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK =
