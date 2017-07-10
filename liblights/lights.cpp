@@ -119,6 +119,7 @@ write_string(char const* path, const char *value) {
 void
 init_globals(void) {
 
+    char color_id[2];
     char path[MAX_PATH_SIZE];
     int i, c, value;
 
@@ -138,6 +139,12 @@ init_globals(void) {
                     LEDS_COLORS_BRIGHTNESS_FILE, i, leds_colors[c]);
             sprintf(path_ledcurrent[(i - 1) * LEDS_COLORS_COUNT + c],
                     LEDS_COLORS_CURRENT_FILE, i, leds_colors[c]);
+
+            /* Initialize color_id controls */
+            sprintf(path, LEDS_COLORS_COLOR_ID_FILE, i, leds_colors[c]);
+            color_id[0] = leds_colors[c];
+            color_id[1] = 0;
+            write_string(path, color_id);
 
             /* Initialize effects_current controls */
             sprintf(path, LEDS_COLORS_EFFECTS_CURRENT_FILE, i, leds_colors[c]);
