@@ -37,6 +37,7 @@
 
 /* === LibLights AS3665 LEDs === */
 #define LEDS_COLORS_BRIGHTNESS_FILE        "/sys/class/leds/LED%d_%c/brightness"
+#define LEDS_COLORS_COLOR_ID_FILE          "/sys/class/leds/LED%d_%c/color_id"
 #define LEDS_COLORS_CURRENT_FILE           "/sys/class/leds/LED%d_%c/led_current"
 #define LEDS_COLORS_BRIGHTNESS_MAXIMUM     255
 #define LEDS_COLORS_CURRENT_CHARGING       127

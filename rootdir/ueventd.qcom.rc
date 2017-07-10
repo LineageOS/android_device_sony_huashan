@@ -190,6 +190,7 @@
 /sys/devices/i2c-10/10-0047            sequencer3_run_mode   0660 system system
 /sys/devices/i2c-10/10-0047            sequencer_load        0660 system system
 /sys/devices/i2c-10/10-0047/leds/*     brightness            0660 system system
+/sys/devices/i2c-10/10-0047/leds/*     color_id              0660 system system
 /sys/devices/i2c-10/10-0047/leds/*     effects_current       0660 system system
 /sys/devices/i2c-10/10-0047/leds/*     led_current           0660 system system
 /sys/devices/i2c-10/10-0047/leds/*     trigger               0660 system system
