@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Lights effects -->
+    <string name="lights_effects_title">Lights effects</string>
+    <string name="lights_effects_notification_category">Notifications</string>
+    <string name="lights_effects_notification_settings_title">Configure notifications</string>
+    <string name="lights_effects_notification_settings_summary">Access notification lights settings</string>
+    <string name="lights_effects_music_category">Music lights effects</string>
+    <string name="lights_effects_music_enable_title">Enable music pulse effects</string>
+    <string name="lights_effects_music_enable_summary">Audio signal controls the LEDs in rhythm</string>
+    <string name="lights_effects_music_gain_title">Music effects audio gain</string>
+    <string name="lights_effects_music_gain_summary">Scale the audio volume for LEDs brightness</string>
+    <string name="lights_effects_music_gain_higher">Higher gain</string>
+    <string name="lights_effects_music_gain_normal">Normal gain</string>
+    <string name="lights_effects_music_gain_lower">Lower gain</string>
+    <string name="lights_effects_music_awake_title">Only pulse with display on</string>
+    <string name="lights_effects_music_awake_summary">Allow music effects only when the device is awake</string>
+    <string name="lights_effects_music_always_title">Always enable music effects</string>
+    <string name="lights_effects_music_always_summary">Use all audio outputs to pulse the LEDs. Blocks normal lights and charging notifications.</string>
+</resources>

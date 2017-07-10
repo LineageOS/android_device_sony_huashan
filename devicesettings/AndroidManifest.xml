@@ -30,6 +30,10 @@
                  android:permission="GloveModeService">
         </service>
 
+        <service android:name="com.cyanogenmod.settings.device.LightsEffectsService"
+                 android:permission="LightsEffectsService">
+        </service>
+
         <service android:name="com.cyanogenmod.settings.device.SensorsDozeService"
                  android:permission="SensorsDozeService">
         </service>
@@ -47,6 +51,21 @@
             <meta-data
                 android:name="com.android.settings.icon"
                 android:resource="@drawable/ic_settings_gestures" />
+        </activity>
+
+        <activity
+            android:name=".LightsEffectsPreferenceActivity"
+            android:label="@string/lights_effects_title"
+            android:theme="@style/DeviceSettings">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.device" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_settings_lights_effects" />
         </activity>
 
     </application>
