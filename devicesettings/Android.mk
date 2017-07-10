@@ -12,6 +12,7 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v14-preference \
     android-support-v7-appcompat \
+    android-support-v7-palette \
     android-support-v7-preference \
     android-support-v7-recyclerview
 
