@@ -17,10 +17,17 @@
 /sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/gpuclk                            u:object_r:sysfs_thermal:s0
 /sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/max_gpuclk                        u:object_r:sysfs_thermal:s0
 
+# Lights Music
+/sys/devices/i2c-10/10-0047/audio_agc_ctrl                                        u:object_r:sysfs_lights_effects:s0
+/sys/devices/i2c-10/10-0047/audio_buf_gain                                        u:object_r:sysfs_lights_effects:s0
+/sys/devices/i2c-10/10-0047/audio_en                                              u:object_r:sysfs_lights_effects:s0
+/sys/devices/i2c-10/10-0047/lights_effects                                        u:object_r:sysfs_lights_effects:s0
+
 # MPDecision
 /data/system/default_values                                                       u:object_r:mpctl_data_file:s0
 
 # System binaries
+/system/bin/lights_effects                                                        u:object_r:lights_effects_exec:s0
 /system/bin/macaddrsetup                                                          u:object_r:macaddrsetup_exec:s0
 /system/bin/secchand                                                              u:object_r:secchand_exec:s0
 /system/bin/ta_qmi_service                                                        u:object_r:ta_qmi_service_exec:s0

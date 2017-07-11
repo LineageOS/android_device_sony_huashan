@@ -1,0 +1,10 @@
+type lights_effects, domain;
+type lights_effects_exec, exec_type, file_type;
+
+init_daemon_domain(lights_effects)
+
+#============= lights_effects ==============
+allow lights_effects audio_device:chr_file { ioctl open read write };
+allow lights_effects audio_device:dir search;
+allow lights_effects rootfs:lnk_file getattr;
+allow lights_effects sysfs_lights_effects:file { open read write };

@@ -6,6 +6,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     hw_config.sh
 
-# Lights package
+# Lights packages
 PRODUCT_PACKAGES += \
-    lights.msm8960
+    lights.msm8960 \
+    lights_effects

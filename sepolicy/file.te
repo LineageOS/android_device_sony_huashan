@@ -1,6 +1,7 @@
 #============= file ==============
 type radio_efs_file, fs_type;
 type sysfs_glove_mode, fs_type, sysfs_type;
+type sysfs_lights_effects, fs_type, sysfs_type;
 type sysfs_vibrator, fs_type, sysfs_type;
 type sysfs_wlanmac, fs_type, sysfs_type;
 type sysfs_wlanserial, fs_type, sysfs_type;
