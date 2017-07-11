@@ -182,6 +182,10 @@
 /sys/devices/i2c-10/10-0040/leds/lcd-* max_brightness        0640 system system
 
 # Lights HAL AS3665
+/sys/devices/i2c-10/10-0047            audio_agc_ctrl        0660 system system
+/sys/devices/i2c-10/10-0047            audio_buf_gain        0666 system system
+/sys/devices/i2c-10/10-0047            audio_en              0660 system system
+/sys/devices/i2c-10/10-0047            lights_effects        0666 system system
 /sys/devices/i2c-10/10-0047            sequencer1_mode       0660 system system
 /sys/devices/i2c-10/10-0047            sequencer2_mode       0660 system system
 /sys/devices/i2c-10/10-0047            sequencer3_mode       0660 system system

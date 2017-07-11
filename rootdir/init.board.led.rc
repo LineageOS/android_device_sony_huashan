@@ -17,3 +17,16 @@ on property:sys.boot_from_charger_mode=1
     write /sys/class/leds/LED1_G/led_current 0
     write /sys/class/leds/LED1_B/brightness 0
     write /sys/class/leds/LED1_B/led_current 0
+
+on property:sys.lights_effects_gain=*
+    start lights_effects
+
+on property:sys.lights_effects_value=*
+    start lights_effects
+
+service lights_effects /system/bin/lights_effects
+    class late_start
+    user system
+    group system
+    disabled
+    oneshot
