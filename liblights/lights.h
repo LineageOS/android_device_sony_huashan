@@ -62,6 +62,7 @@ const int leds_map[3][3]                 = { { 6, 3, 0 }, { 7, 4, 1 }, { 8, 5, 2
 #define LEDS_AUDIO_AGC_CTRL_FILE           "/sys/devices/i2c-10/10-0047/audio_agc_ctrl"
 #define LEDS_AUDIO_BUF_GAIN_FILE           "/sys/devices/i2c-10/10-0047/audio_buf_gain"
 #define LEDS_AUDIO_EN_FILE                 "/sys/devices/i2c-10/10-0047/audio_en"
+#define LEDS_LIGHTS_EFFECTS_FILE           "/sys/devices/i2c-10/10-0047/lights_effects"
 #define LEDS_SEQ1_MODE_FILE                "/sys/devices/i2c-10/10-0047/sequencer1_mode"
 #define LEDS_SEQ2_MODE_FILE                "/sys/devices/i2c-10/10-0047/sequencer2_mode"
 #define LEDS_SEQ3_MODE_FILE                "/sys/devices/i2c-10/10-0047/sequencer3_mode"
@@ -77,6 +78,7 @@ const int leds_map[3][3]                 = { { 6, 3, 0 }, { 7, 4, 1 }, { 8, 5, 2
 #define LEDS_AUDIO_BUF_GAIN_ON             4
 #define LEDS_AUDIO_EN_OFF                  0
 #define LEDS_AUDIO_EN_ON                   1
+#define LEDS_LIGHTS_EFFECTS_OFF            "0"
 #define LEDS_SEQ_COUNT                     3
 #define LEDS_SEQ_BLINK_NONE                0
 #define LEDS_SEQ_BLINK_RAMPUP_SMOOTH       2
