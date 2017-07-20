@@ -142,8 +142,6 @@ static void set_light_mixer_music(bool enable)
     mixer_set_int(mixer, "LINEOUT2 Volume", enable ? 12 : 0);
     mixer_set_enum(mixer, "RX5 MIX1 INP2", enable ? "RX2" : "ZERO");
     mixer_set_enum(mixer, "RX5 MIX1 INP1", enable ? "RX1" : "ZERO");
-    mixer_set_int(mixer, "SLIMBUS_0_RX Audio Mixer MultiMedia5",
-            enable ? 1 : 0);
 
     /* Release mixer card */
     mixer_close(mixer);
