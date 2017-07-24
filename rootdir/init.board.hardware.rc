@@ -102,6 +102,7 @@ service tad_static /sbin/tad_static /dev/block/platform/msm_sdcc.1/by-name/TA 0,
 service ta_qmi_service /system/bin/ta_qmi_service
     user root
     class main
+    group system wakelock
     seclabel u:r:ta_qmi_service:s0
 
 # Wi-Fi and BT MAC addresses

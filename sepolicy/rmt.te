@@ -2,3 +2,5 @@ type rmt, domain;
 type rmt_exec, exec_type, file_type;
 
 init_daemon_domain(rmt)
+
+wakelock_use(rmt)
