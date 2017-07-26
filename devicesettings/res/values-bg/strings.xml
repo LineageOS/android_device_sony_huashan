@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Светлини ефекти</string>
+  <string name="lights_effects_notification_category">Известия</string>
+  <string name="lights_effects_notification_settings_title">Конфигуриране на уведомления</string>
+  <string name="lights_effects_notification_settings_summary">Достъп до светлинни настройки за уведомленията</string>
+  <string name="lights_effects_music_category">Светлини ефекти на музика</string>
+  <string name="lights_effects_music_enable_title">Разреши пулсиращи ефекти на музика</string>
+  <string name="lights_effects_music_enable_summary">Аудио сигнала контролира светодиодите в ритъм</string>
+  <string name="lights_effects_music_gain_title">Музика увеличение на аудио ефекти</string>
+  <string name="lights_effects_music_gain_summary">Скала на аудиосистемата за промяна на яркост на светодиодите</string>
+  <string name="lights_effects_music_gain_higher">По-високо увеличение</string>
+  <string name="lights_effects_music_gain_normal">Нормално увеличение</string>
+  <string name="lights_effects_music_gain_lower">По-ниско увеличение</string>
+  <string name="lights_effects_music_awake_title">Пулсиране само при включен дисплей</string>
+  <string name="lights_effects_music_awake_summary">Позволи музикални ефекти, само когато устройството е будно</string>
+  <string name="lights_effects_music_always_title">Винаги разрешавай музикални ефекти</string>
+  <string name="lights_effects_music_always_summary">Използвайте всички аудио изходи за пулсиране на светодиоди. Блокирай нормални уведомления и уведомления за зареждане.</string>
 </resources>

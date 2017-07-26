@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">אפקטי תאורה</string>
+  <string name="lights_effects_notification_category">התראות</string>
+  <string name="lights_effects_notification_settings_title">הגדר התראות</string>
+  <string name="lights_effects_notification_settings_summary">הגדרות התראת אפקטי אורות</string>
+  <string name="lights_effects_music_category">אפקטי אור במוזיקה</string>
+  <string name="lights_effects_music_enable_title">הפעל את אפקט ההבהוב במוזיקה</string>
+  <string name="lights_effects_music_enable_summary">אותות השמע שולטים בקצב הבהוב נורית ההתראות</string>
+  <string name="lights_effects_music_gain_title">חוזק השמע לאפקטי המוזיקה</string>
+  <string name="lights_effects_music_gain_summary">התאם את עוצמת השמע לבהירות הנורית</string>
+  <string name="lights_effects_music_gain_higher">עוצמה גבוהה</string>
+  <string name="lights_effects_music_gain_normal">עוצמה רגילה</string>
+  <string name="lights_effects_music_gain_lower">עוצמה נמוכה</string>
+  <string name="lights_effects_music_awake_title">ההבהוב רק שהמסך דולק</string>
+  <string name="lights_effects_music_awake_summary">אפשר את אפקטי מוזיקה רק כאשר המסך דולק</string>
+  <string name="lights_effects_music_always_title">הפעל תמיד את אפקטי המוזיקה</string>
+  <string name="lights_effects_music_always_summary">השתמש בכל יציאות השמע לאפקט ההבהוב נוריות. חוסם את האורות רגילים ואת התראת הטעינה בנורית.</string>
 </resources>

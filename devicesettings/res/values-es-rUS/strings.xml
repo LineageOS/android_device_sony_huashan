@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Efectos de luces</string>
+  <string name="lights_effects_notification_category">Notificaciones</string>
+  <string name="lights_effects_notification_settings_title">Configurar notificaciones</string>
+  <string name="lights_effects_notification_settings_summary">Ajustes de las luces de notificación de acceso</string>
+  <string name="lights_effects_music_category">Efectos de luces musicales</string>
+  <string name="lights_effects_music_enable_title">Activar efectos de pulsos musicales</string>
+  <string name="lights_effects_music_enable_summary">La señal de audio controla el ritmo de los LEDs</string>
+  <string name="lights_effects_music_gain_title">Efectos musicales de ganancia de audio</string>
+  <string name="lights_effects_music_gain_summary">Escala el volumen de audio para el brillo de los LEDs</string>
+  <string name="lights_effects_music_gain_higher">Ganancia mayor</string>
+  <string name="lights_effects_music_gain_normal">Ganancia normal</string>
+  <string name="lights_effects_music_gain_lower">Ganancia menor</string>
+  <string name="lights_effects_music_awake_title">Pulso, sólo con la pantalla encendida</string>
+  <string name="lights_effects_music_awake_summary">Permitir efectos musicales sólo cuando el dispositivo está encendido</string>
+  <string name="lights_effects_music_always_title">Activar siempre los efectos musicales</string>
+  <string name="lights_effects_music_always_summary">Utiliza todas las salidas de audio para el pulso de los LEDs. Bloquea las luces normales y notificaciones de carga.</string>
 </resources>

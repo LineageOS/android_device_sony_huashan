@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">灯光效果</string>
+  <string name="lights_effects_notification_category">通知</string>
+  <string name="lights_effects_notification_settings_title">配置通知</string>
+  <string name="lights_effects_notification_settings_summary">访问通知指示灯设置</string>
+  <string name="lights_effects_music_category">音乐灯光效果</string>
+  <string name="lights_effects_music_enable_title">启用音乐脉冲效果</string>
+  <string name="lights_effects_music_enable_summary">音频信号控制 LED 节奏</string>
+  <string name="lights_effects_music_gain_title">音乐效果音频增益</string>
+  <string name="lights_effects_music_gain_summary">基于音量决定 LED 亮度</string>
+  <string name="lights_effects_music_gain_higher">更高的增益</string>
+  <string name="lights_effects_music_gain_normal">正常增益</string>
+  <string name="lights_effects_music_gain_lower">更低的增益</string>
+  <string name="lights_effects_music_awake_title">仅当屏幕开启时闪烁</string>
+  <string name="lights_effects_music_awake_summary">仅当设备唤醒时才允许音乐效果</string>
+  <string name="lights_effects_music_always_title">总是启用音乐效果</string>
+  <string name="lights_effects_music_always_summary">将脉冲指示灯用于所有音频输入。屏蔽正常的指示灯和充电通知。</string>
 </resources>

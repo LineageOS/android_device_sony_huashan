@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Argi-efektuak</string>
+  <string name="lights_effects_notification_category">Jakinarazpenak</string>
+  <string name="lights_effects_notification_settings_title">Konfiguratu jakinarazpenak</string>
+  <string name="lights_effects_notification_settings_summary">Atzitu jakinarazpen-argien ezarpenak</string>
+  <string name="lights_effects_music_category">Musikaren argi-efektuak</string>
+  <string name="lights_effects_music_enable_title">Gaitu musika-pultsu efektuak</string>
+  <string name="lights_effects_music_enable_summary">Audio seinalearen erritmoak LEDak kontrolatzen ditu</string>
+  <string name="lights_effects_music_gain_title">Musika-efektuen audio-irabazia</string>
+  <string name="lights_effects_music_gain_summary">Eskalatu audioren bolumena LEDen distirarako</string>
+  <string name="lights_effects_music_gain_higher">Iragazi gehiago</string>
+  <string name="lights_effects_music_gain_normal">Irabazi arrunta</string>
+  <string name="lights_effects_music_gain_lower">Irabazi gutxiago</string>
+  <string name="lights_effects_music_awake_title">Pultsua pantaila piztuta dagoenean besterik ez</string>
+  <string name="lights_effects_music_awake_summary">Baimendu musika efektuak gailua piztuta dagoenan</string>
+  <string name="lights_effects_music_always_title">Gaitu beti musika efektuak</string>
+  <string name="lights_effects_music_always_summary">Erabili audio irteera guztiak LEDen pultsua kontrolatzeko. Argi arruntak eta kargatze-jakinarazpenak blokeatzen ditu.</string>
 </resources>

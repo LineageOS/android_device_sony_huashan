@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Učinki lučk</string>
+  <string name="lights_effects_notification_category">Obvestila</string>
+  <string name="lights_effects_notification_settings_title">Nastavi obvestila</string>
+  <string name="lights_effects_notification_settings_summary">Dostop do nastavitev lučk za obvestila</string>
+  <string name="lights_effects_music_category">Učinki lučk za glasbo</string>
+  <string name="lights_effects_music_enable_title">Omogoči učinke utripanja za glasbo</string>
+  <string name="lights_effects_music_enable_summary">Zvočni signal upravlja lučke LED v ritmu</string>
+  <string name="lights_effects_music_gain_title">Stopnja ojačitve glasbenih učinkov</string>
+  <string name="lights_effects_music_gain_summary">Prilagodi svetlost LED lučk glasnosti zvoka</string>
+  <string name="lights_effects_music_gain_higher">Višja stopnja</string>
+  <string name="lights_effects_music_gain_normal">Običajna stopnja</string>
+  <string name="lights_effects_music_gain_lower">Nižja stopnja</string>
+  <string name="lights_effects_music_awake_title">Utripaj samo z vklopljenim zaslonom</string>
+  <string name="lights_effects_music_awake_summary">Dovoli glasbene učinke samo, ko je naprava budna</string>
+  <string name="lights_effects_music_always_title">Vedno omogoči glasbene učinke</string>
+  <string name="lights_effects_music_always_summary">Uporabi vse zvočne izhode za utripanje LED lučk. Blokira običajne lučke in obvestila polnjenja.</string>
 </resources>

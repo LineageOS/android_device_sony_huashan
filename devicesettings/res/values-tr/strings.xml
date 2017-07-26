@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Işık efektleri</string>
+  <string name="lights_effects_notification_category">Bildirimler</string>
+  <string name="lights_effects_notification_settings_title">Bildirimleri yapılandır</string>
+  <string name="lights_effects_notification_settings_summary">Bildirim ışıkları ayarlarına erişim</string>
+  <string name="lights_effects_music_category">Müzik ışıkları efektleri</string>
+  <string name="lights_effects_music_enable_title">Müzik yanma efektlerini etkinleştir</string>
+  <string name="lights_effects_music_enable_summary">Ses sinyali, LED\'leri ritimle kontrol eder</string>
+  <string name="lights_effects_music_gain_title">Müzik efektleri ses kazancı</string>
+  <string name="lights_effects_music_gain_summary">LED parlaklığı için ses seviyesini ölçeklendirme</string>
+  <string name="lights_effects_music_gain_higher">Yüksek kazanç</string>
+  <string name="lights_effects_music_gain_normal">Normal kazanç</string>
+  <string name="lights_effects_music_gain_lower">Düşük kazanç</string>
+  <string name="lights_effects_music_awake_title">Sadece ekranda yanıp söner</string>
+  <string name="lights_effects_music_awake_summary">Müzik efektlerine yalnızca cihaz uyanıkken izin ver</string>
+  <string name="lights_effects_music_always_title">Her zaman müzik efektlerini etkinleştir</string>
+  <string name="lights_effects_music_always_summary">LED\'lerin yanıp sönmesi için tüm ses çıkışlarını kullanın. Normal ışıkları ve şarj bildirimlerini engeller.</string>
 </resources>

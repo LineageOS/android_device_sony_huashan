@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Svetelné efekty LED</string>
+  <string name="lights_effects_notification_category">Upozornenia</string>
+  <string name="lights_effects_notification_settings_title">Nastavenia upozornení</string>
+  <string name="lights_effects_notification_settings_summary">Prístup k nastaveniam svetelných efektov</string>
+  <string name="lights_effects_music_category">Svetelné hudobné efekty</string>
+  <string name="lights_effects_music_enable_title">Aktivovať svetelné hudobné efekty</string>
+  <string name="lights_effects_music_enable_summary">Audio signál ovláda LEDky v rytme hudby</string>
+  <string name="lights_effects_music_gain_title">Stupeň zvýraznenia hudobných efektov</string>
+  <string name="lights_effects_music_gain_summary">Rozpätie hlasitosti zvuku pre jas LED</string>
+  <string name="lights_effects_music_gain_higher">Vyšší zisk</string>
+  <string name="lights_effects_music_gain_normal">Normálny zisk</string>
+  <string name="lights_effects_music_gain_lower">Nižší zisk</string>
+  <string name="lights_effects_music_awake_title">Svetelné efekty iba pri zapnutej obrazovke</string>
+  <string name="lights_effects_music_awake_summary">Povoliť hudobné efekty iba pri zapnutej obrazovke</string>
+  <string name="lights_effects_music_always_title">Povoliť hudobné efekty vždy</string>
+  <string name="lights_effects_music_always_summary">Použiť všetky zvukové výstupy na ovládanie svetelných efektov LED diód. Blokuje bežné správanie LED a upozornenia LED ohľadne nabíjania.</string>
 </resources>
