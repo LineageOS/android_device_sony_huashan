@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Светлосни ефекти</string>
+  <string name="lights_effects_notification_category">Обавештења</string>
+  <string name="lights_effects_notification_settings_title">Подеси обавештења</string>
+  <string name="lights_effects_notification_settings_summary">Приступите подешавањима светлосних обавештења</string>
+  <string name="lights_effects_music_category">Светлосни ефекти музике</string>
+  <string name="lights_effects_music_enable_title">Пулсирајући ефекти музике</string>
+  <string name="lights_effects_music_enable_summary">Аудио-сигнал управља LED индикатором у ритму музике</string>
+  <string name="lights_effects_music_gain_title">Ниво појачања музичких ефеката</string>
+  <string name="lights_effects_music_gain_summary">Прилагодите осветљеност LED индикатора према јачини звука</string>
+  <string name="lights_effects_music_gain_higher">Висок ниво</string>
+  <string name="lights_effects_music_gain_normal">Нормалан ниво</string>
+  <string name="lights_effects_music_gain_lower">Низак ниво</string>
+  <string name="lights_effects_music_awake_title">Пулсирај само при укљученом екрану</string>
+  <string name="lights_effects_music_awake_summary">Дозвољава музичке ефекте само када је уређај будан</string>
+  <string name="lights_effects_music_always_title">Увек омогући музичке ефекте</string>
+  <string name="lights_effects_music_always_summary">Користите све аудио излазе за пулс лед диода. Блокира нормална светла и обавештења пуњења.</string>
 </resources>
