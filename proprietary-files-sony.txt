@@ -16,7 +16,6 @@ lib/libface.so
 lib/libmmcamera_3a_legacy.so
 lib/libmmcamera_faceproc.so
 lib/libmmcamera_frameproc.so
-lib/libmmcamera_imx091.so
 lib/libmmcamera_plugin.so
 lib/libmmcamera_statsproc31.so
 lib/liboemcamera.so
@@ -49,10 +48,6 @@ etc/firmware/dxhdcp2.b01
 etc/firmware/dxhdcp2.b02
 etc/firmware/dxhdcp2.b03
 etc/firmware/dxhdcp2.mdt
-
-# MultiMedia
-lib/libimage-jpeg-dec-omx-comp.so
-lib/libimage-jpeg-enc-omx-comp.so
 
 # NFC
 lib/hw/nfc.msm8960.so
