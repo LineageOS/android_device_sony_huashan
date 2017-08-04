@@ -17,4 +17,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Efeutos de lluces</string>
+  <string name="lights_effects_notification_category">Avisos</string>
+  <string name="lights_effects_notification_settings_title">Configurar avisos</string>
+  <string name="lights_effects_notification_settings_summary">Accedi a los axustes de lluces d\'avisu</string>
+  <string name="lights_effects_music_category">Efeutos de lluces musicales</string>
+  <string name="lights_effects_music_gain_title">Ganancia del audiu d\'efeutos musicales</string>
+  <string name="lights_effects_music_gain_higher">Ganancia alta</string>
+  <string name="lights_effects_music_gain_normal">Ganacia normal</string>
+  <string name="lights_effects_music_gain_lower">Ganancia baxa</string>
+  <string name="lights_effects_music_awake_summary">Permitir efeutos musicales namái cuando\'l preséu tea esconsoñáu</string>
+  <string name="lights_effects_music_always_title">Activar siempres los efeutos musicales</string>
 </resources>

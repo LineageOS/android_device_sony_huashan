@@ -22,15 +22,15 @@
   <string name="lights_effects_notification_settings_title">Configura les notificacions</string>
   <string name="lights_effects_notification_settings_summary">Configuració de les llums de notificació d\'accés</string>
   <string name="lights_effects_music_category">Efectes de llums musicals</string>
-  <string name="lights_effects_music_enable_title">Activa els efectes de pols musicals</string>
+  <string name="lights_effects_music_enable_title">Activa els efectes de pampallugues musicals</string>
   <string name="lights_effects_music_enable_summary">El senyal d\'àudio controla els LED en ritme</string>
   <string name="lights_effects_music_gain_title">Efectes musicals de guany d\'àudio</string>
   <string name="lights_effects_music_gain_summary">Escala el volum d\'àudio per la brillantor dels LED</string>
   <string name="lights_effects_music_gain_higher">Guany alt</string>
   <string name="lights_effects_music_gain_normal">Guany normal</string>
   <string name="lights_effects_music_gain_lower">Guany baix</string>
-  <string name="lights_effects_music_awake_title">Només pols amb pantalla encesa</string>
+  <string name="lights_effects_music_awake_title">Només pampalluga amb la pantalla encesa</string>
   <string name="lights_effects_music_awake_summary">Permet els efectes musicals només quan el dispositiu estigui despert</string>
   <string name="lights_effects_music_always_title">Activa sempre els efectes musicals</string>
-  <string name="lights_effects_music_always_summary">Utilitza totes les sortides d\'àudio per prémer els LED. Bloqueja els llums normals i notificacions de càrrega.</string>
+  <string name="lights_effects_music_always_summary">Utilitza totes les sortides d\'àudio per fer pampallugar els LEDs. Bloqueja les llums normals i les notificacions de càrrega.</string>
 </resources>
