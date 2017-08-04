@@ -17,4 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Lyseffekter</string>
+  <string name="lights_effects_notification_category">Varsler</string>
+  <string name="lights_effects_music_category">Musikk lyseffekter</string>
+  <string name="lights_effects_music_awake_title">Pulsér bare når skjermen er på</string>
+  <string name="lights_effects_music_awake_summary">Tillater musikkeffekter bare når enheten er våken</string>
 </resources>

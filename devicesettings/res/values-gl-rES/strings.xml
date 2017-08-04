@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Efectos de luz</string>
+  <string name="lights_effects_notification_category">Notificacións</string>
+  <string name="lights_effects_notification_settings_title">Configurar as notificacións</string>
+  <string name="lights_effects_notification_settings_summary">Axustes das luces de notificación de acceso</string>
+  <string name="lights_effects_music_category">Efectos de luces musicais</string>
+  <string name="lights_effects_music_enable_title">Activar os efectos de pulsos musicais</string>
+  <string name="lights_effects_music_enable_summary">O sinal de son controla o ritmo dos LEDs</string>
+  <string name="lights_effects_music_gain_title">Efectos musicais de ganancia de son</string>
+  <string name="lights_effects_music_gain_summary">Escalar o volume do son para o brillo dos LEDs</string>
+  <string name="lights_effects_music_gain_higher">Maior ganancia</string>
+  <string name="lights_effects_music_gain_normal">Ganancia normal</string>
+  <string name="lights_effects_music_gain_lower">Menor ganancia</string>
+  <string name="lights_effects_music_awake_title">Só escintilar coa pantalla acesa</string>
+  <string name="lights_effects_music_awake_summary">Permitir efectos musicais só cando o dispositivo está aceso</string>
+  <string name="lights_effects_music_always_title">Activar sempre os efectos musicais</string>
+  <string name="lights_effects_music_always_summary">Empregar tódalas saídas de son para escintilar os LEDs. Bloquear as luces normais e as notificacións de carga.</string>
 </resources>

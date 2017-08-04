@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Valoefektit</string>
+  <string name="lights_effects_notification_category">Ilmoitukset</string>
+  <string name="lights_effects_notification_settings_title">Ilmoitusten määrittäminen</string>
+  <string name="lights_effects_notification_settings_summary">Hallinnoi ilmoitusvalojen asetuksia</string>
+  <string name="lights_effects_music_category">Musiikin valoefektit</string>
+  <string name="lights_effects_music_enable_title">Ota pulssi musiikin tahtiin käyttöön</string>
+  <string name="lights_effects_music_enable_summary">Äänisignaali ohjaa LEDien rytmiä</string>
+  <string name="lights_effects_music_gain_title">Musiikkiefektin äänen vaikutus</string>
+  <string name="lights_effects_music_gain_summary">Skaalaa LEDien kirkkautta äänenvoimakkuuden mukaan</string>
+  <string name="lights_effects_music_gain_higher">Korkea vaikutus</string>
+  <string name="lights_effects_music_gain_normal">Normaali vaikutus</string>
+  <string name="lights_effects_music_gain_lower">Matala vaikutus</string>
+  <string name="lights_effects_music_awake_title">Käytä pulssia vain näytön ollessa päällä</string>
+  <string name="lights_effects_music_awake_summary">Salli musiikin efektit vain laitteen ollessa hereillä</string>
+  <string name="lights_effects_music_always_title">Ota musiikin efektit aina käyttöön</string>
+  <string name="lights_effects_music_always_summary">Käytä kaikkia audioulostuloja LEDien pulssiin. Estää normaalit valot ja latausilmoitukset.</string>
 </resources>
