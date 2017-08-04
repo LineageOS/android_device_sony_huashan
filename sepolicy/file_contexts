@@ -70,5 +70,8 @@
 /sys/devices/virtual/graphics/fb([0-2])+/product_description                      u:object_r:sysfs_surfaceflinger:s0
 /sys/devices/virtual/timed_output/vibrator/level                                  u:object_r:sysfs_vibrator:s0
 
+# debugfs
+/sys/kernel/debug/asoc(/.*)?                                                      u:object_r:debugfs_asoc:s0
+
 # /data
 /data/etc/flashled_vf_factory                                                     u:object_r:camera_data_file:s0
