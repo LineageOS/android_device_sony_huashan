@@ -3,4 +3,10 @@ type ta_qmi_service_exec, exec_type, file_type;
 
 init_daemon_domain(ta_qmi_service)
 
+unix_socket_connect(ta_qmi_service, tad, tad)
+
 wakelock_use(ta_qmi_service)
+
+#============= ta_qmi_service ==============
+allow ta_qmi_service self:socket create_socket_perms;
+allow ta_qmi_service shared_log_device:chr_file { ioctl open read write };
