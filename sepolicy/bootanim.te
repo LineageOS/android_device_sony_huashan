@@ -1,0 +1,2 @@
+#============= bootanim ==============
+allow bootanim sysfs_thermal:file r_file_perms;
