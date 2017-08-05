@@ -1,0 +1,2 @@
+#============= platform_app ==============
+allow platform_app sysfs_thermal:file { getattr open read };
