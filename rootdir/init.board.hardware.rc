@@ -131,7 +131,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 
 service secchand /system/bin/secchand
     user root
-    group root
+    group root drmrpc system
     class core
     seclabel u:r:secchand:s0
 

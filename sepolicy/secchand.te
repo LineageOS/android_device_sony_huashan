@@ -2,3 +2,11 @@ type secchand, domain;
 type secchand_exec, exec_type, file_type;
 
 init_daemon_domain(secchand)
+
+unix_socket_connect(secchand, tad, tad)
+
+#============= secchand ==============
+allow secchand ion_device:chr_file { ioctl open read };
+allow secchand self:socket create_socket_perms;
+allow secchand shared_log_device:chr_file { ioctl open read write };
+allow secchand tee_device:chr_file { ioctl open read write };
