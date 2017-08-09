@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Hiệu ứng đèn thông báo</string>
+  <string name="lights_effects_notification_category">Thông báo</string>
+  <string name="lights_effects_notification_settings_title">Định cấu hình thông báo</string>
+  <string name="lights_effects_notification_settings_summary">Cài đặt truy cập đèn thông báo</string>
+  <string name="lights_effects_music_category">Hiệu ứng đèn nhạc</string>
+  <string name="lights_effects_music_enable_title">Bật hiệu ứng xung âm nhạc</string>
+  <string name="lights_effects_music_enable_summary">Các điều khiển tín hiệu âm thanh LED theo nhịp</string>
+  <string name="lights_effects_music_gain_title">Hiệu ứng nhạc âm thanh đạt được</string>
+  <string name="lights_effects_music_gain_summary">Tỷ lệ âm lượng cho độ sáng LED</string>
+  <string name="lights_effects_music_gain_higher">Tăng cao hơn</string>
+  <string name="lights_effects_music_gain_normal">Đạt được bình thường</string>
+  <string name="lights_effects_music_gain_lower">Đạt được thấp hơn</string>
+  <string name="lights_effects_music_awake_title">Chỉ bật xung khi màn hình sáng</string>
+  <string name="lights_effects_music_awake_summary">Cho phép các hiệu ứng âm nhạc chỉ khi thiết bị đang thức</string>
+  <string name="lights_effects_music_always_title">Luôn bật các hiệu ứng âm nhạc</string>
+  <string name="lights_effects_music_always_summary">Sử dụng tất cả đầu ra âm thanh để kích hoạt các đèn LED. Các khối đèn bình thường và thông báo sạc.</string>
 </resources>

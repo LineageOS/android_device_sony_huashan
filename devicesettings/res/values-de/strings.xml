@@ -20,5 +20,11 @@
   <string name="lights_effects_title">Lichteffekte</string>
   <string name="lights_effects_notification_category">Benachrichtigungen</string>
   <string name="lights_effects_notification_settings_title">Benachrichtigungen konfigurieren</string>
+  <string name="lights_effects_notification_settings_summary">Benachrichtigungslicht-Einstellungen öffnen</string>
   <string name="lights_effects_music_category">Musik-Lichteffekte</string>
+  <string name="lights_effects_music_enable_title">Musik-Puls-Effekte aktivieren</string>
+  <string name="lights_effects_music_enable_summary">Musikabhängige LED-Steuerung</string>
+  <string name="lights_effects_music_gain_summary">Lautstärke steuert die LED-Helligkeit</string>
+  <string name="lights_effects_music_awake_title">Nur pulsieren wenn der Bildschirm an ist</string>
+  <string name="lights_effects_music_always_title">Musikeffekte immer aktivieren</string>
 </resources>

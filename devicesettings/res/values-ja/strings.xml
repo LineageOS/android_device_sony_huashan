@@ -20,4 +20,11 @@
   <string name="lights_effects_title">ライト効果</string>
   <string name="lights_effects_notification_category">通知</string>
   <string name="lights_effects_notification_settings_title">通知の設定</string>
+  <string name="lights_effects_music_gain_higher">高ゲイン</string>
+  <string name="lights_effects_music_gain_normal">中ゲイン</string>
+  <string name="lights_effects_music_gain_lower">低ゲイン</string>
+  <string name="lights_effects_music_awake_title">ディスプレイ点灯中のみ点滅</string>
+  <string name="lights_effects_music_awake_summary">端末が起動している時だけ音楽効果を許可します</string>
+  <string name="lights_effects_music_always_title">音楽効果を常に有効化する</string>
+  <string name="lights_effects_music_always_summary">すべての音声出力に対して LED を点灯させます。通常の点灯や充電中の通知はブロックされます</string>
 </resources>

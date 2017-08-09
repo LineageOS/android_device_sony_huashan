@@ -17,4 +17,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Licht effecten</string>
+  <string name="lights_effects_notification_category">Meldingen</string>
+  <string name="lights_effects_notification_settings_title">Meldingen configureren</string>
+  <string name="lights_effects_music_category">Muziek licht effecten</string>
+  <string name="lights_effects_music_awake_summary">Alleen effecten toestaan wanneer het apparaat wakker is</string>
+  <string name="lights_effects_music_always_title">Altijd muziek effecten aanzetten</string>
 </resources>

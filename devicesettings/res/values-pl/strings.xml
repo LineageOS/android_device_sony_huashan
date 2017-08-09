@@ -19,4 +19,5 @@
   <!-- Lights effects -->
   <string name="lights_effects_title">Efekty świetlne</string>
   <string name="lights_effects_notification_category">Powiadomienia</string>
+  <string name="lights_effects_music_gain_title">Wzmocnienie efektów muzycznych</string>
 </resources>
