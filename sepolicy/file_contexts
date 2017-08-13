@@ -1,4 +1,5 @@
 # /dev partitions
+/dev/block/mmcblk0                                                                u:object_r:root_block_device:s0
 /dev/block/platform/msm_sdcc\.1/by-name/Cache                                     u:object_r:cache_block_device:s0
 /dev/block/platform/msm_sdcc\.1/by-name/TA                                        u:object_r:trim_area_partition_device:s0
 /dev/block/platform/msm_sdcc\.1/by-name/Userdata                                  u:object_r:userdata_block_device:s0
