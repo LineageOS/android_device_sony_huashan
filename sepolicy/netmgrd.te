@@ -4,3 +4,19 @@ type netmgrd_exec, exec_type, file_type;
 init_daemon_domain(netmgrd)
 
 qmux_socket(netmgrd)
+
+set_prop(netmgrd, net_radio_prop)
+
+wakelock_use(netmgrd)
+
+#============= netmgrd ==============
+allow netmgrd netmgrd:capability { fsetid net_admin net_raw setgid setpcap setuid sys_module };
+allow netmgrd netmgrd:netlink_route_socket { create_socket_perms_no_ioctl nlmsg_read nlmsg_write };
+allow netmgrd netmgrd:netlink_socket create_socket_perms_no_ioctl;
+allow netmgrd proc_net:file w_file_perms;
+allow netmgrd self:udp_socket create_socket_perms;
+allow netmgrd shell_exec:file rx_file_perms;
+allow netmgrd system_file:file x_file_perms;
+allow netmgrd toolbox_exec:file rx_file_perms;
+allowxperm netmgrd self:udp_socket ioctl priv_sock_ioctls;
+r_dir_file(netmgrd, net_data_file)
