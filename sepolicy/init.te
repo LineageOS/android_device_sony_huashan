@@ -1,0 +1,4 @@
+#============= init ==============
+allow init camera_data_file:file getattr;
+allow init tmpfs:lnk_file create;
+allow init wlan_device:chr_file write;

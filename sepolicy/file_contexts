@@ -36,6 +36,7 @@
 /dev/socket/qmux_nfc(/.*)?                                                        u:object_r:qmuxd_socket:s0
 /dev/socket/tad                                                                   u:object_r:tad_socket:s0
 /dev/v4l-subdev.*                                                                 u:object_r:video_device:s0
+/dev/wcnss_wlan                                                                   u:object_r:wlan_device:s0
 
 # /sbin
 /sbin/tad_static                                                                  u:object_r:tad_exec:s0
@@ -74,4 +75,5 @@
 /sys/kernel/debug/asoc(/.*)?                                                      u:object_r:debugfs_asoc:s0
 
 # /data
+/data/camera(/.*)?                                                                u:object_r:camera_data_file:s0
 /data/etc/flashled_vf_factory                                                     u:object_r:camera_data_file:s0
