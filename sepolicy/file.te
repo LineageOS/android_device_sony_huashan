@@ -1,6 +1,7 @@
 # /sys
 type sysfs_als, fs_type, sysfs_type;
 type sysfs_bus_i2c, fs_type, sysfs_type;
+type sysfs_camera_torch, fs_type, sysfs_type;
 type sysfs_fm_dl, fs_type, sysfs_type;
 type sysfs_glove_mode, fs_type, sysfs_type;
 type sysfs_gpio, fs_type, sysfs_type;
