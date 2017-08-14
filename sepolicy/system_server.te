@@ -1,4 +1,8 @@
 qmux_socket(system_server)
 
 #============= system_server ==============
+allow system_server graphics_device:chr_file { ioctl open read write };
+allow system_server graphics_device:dir search;
+allow system_server self:socket ioctl;
 allow system_server sysfs_als:file write;
+allow system_server sysfs_proximity_sensor:file write;
