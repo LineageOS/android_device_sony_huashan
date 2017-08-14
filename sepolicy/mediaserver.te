@@ -13,4 +13,5 @@ allow mediaserver sysfs_bus_i2c:dir { open read search };
 allow mediaserver sysfs_bus_i2c:lnk_file read;
 allow mediaserver sysfs_camera_torch:dir search;
 allow mediaserver sysfs_camera_torch:file { open read write };
+allow mediaserver system_file:file execmod;
 allow mediaserver system_server:unix_stream_socket { read write };
