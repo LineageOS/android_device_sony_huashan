@@ -25,7 +25,7 @@ on boot
 service hci_attach /system/bin/sh /system/etc/init.qcom.bt.sh
     class late_start
     user bluetooth
-    group qcom_oncrpc bluetooth system
+    group bluetooth system
     disabled
     oneshot
     seclabel u:r:hci_attach:s0

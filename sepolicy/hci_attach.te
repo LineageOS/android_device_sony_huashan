@@ -2,3 +2,15 @@ type hci_attach, domain;
 type hci_attach_exec, exec_type, file_type;
 
 init_daemon_domain(hci_attach)
+
+set_prop(hci_attach, wifi_prop)
+
+#============= hci_attach ==============
+allow hci_attach bluetooth_data_file:dir search;
+allow hci_attach bluetooth_data_file:file r_file_perms;
+allow hci_attach bluetooth_prop:property_service set;
+allow hci_attach hci_attach_dev:chr_file rw_file_perms;
+allow hci_attach hci_attach_exec:file execute_no_trans;
+allow hci_attach shell_exec:file { entrypoint getattr read };
+allow hci_attach system_file:file execute_no_trans;
+allow hci_attach toolbox_exec:file rx_file_perms;

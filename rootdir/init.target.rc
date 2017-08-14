@@ -103,6 +103,8 @@ on post-fs-data
     # Camera
     mkdir /data/camera 0771 media camera
 
+    mkdir /data/etc 0775 system system
+
     chown system /dev/block/platform/msm_sdcc.1/by-name
 
     setprop vold.post_fs_data_done 1
