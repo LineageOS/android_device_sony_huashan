@@ -1,1 +1,4 @@
 qmux_socket(system_server)
+
+#============= system_server ==============
+allow system_server sysfs_als:file write;

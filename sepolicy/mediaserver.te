@@ -1,0 +1,2 @@
+#============= mediaserver ==============
+allow mediaserver sysfs_als:file { getattr open write };
