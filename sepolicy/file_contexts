@@ -23,6 +23,7 @@
 /dev/msm_rotator                                                                  u:object_r:video_device:s0
 /dev/msm_vidc.*                                                                   u:object_r:audio_device:s0
 /dev/msm_vpe_standalone                                                           u:object_r:video_device:s0
+/dev/qseecom                                                                      u:object_r:tee_device:s0
 /dev/smd2                                                                         u:object_r:hci_attach_dev:s0
 /dev/smd3                                                                         u:object_r:hci_attach_dev:s0
 /dev/smd([0-9])+                                                                  u:object_r:smd_device:s0
