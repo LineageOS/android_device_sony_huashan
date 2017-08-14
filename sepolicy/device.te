@@ -3,3 +3,7 @@ type bootloader_block_device, dev_type;
 type ltalabel_block_device, dev_type;
 type modem_block_device, dev_type;
 type trim_area_partition_device, dev_type;
+
+# /dev devices
+type shared_log_device, dev_type;
+type smd_device, dev_type;

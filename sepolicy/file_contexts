@@ -23,6 +23,11 @@
 /dev/msm_rotator                                                                  u:object_r:video_device:s0
 /dev/msm_vidc.*                                                                   u:object_r:audio_device:s0
 /dev/msm_vpe_standalone                                                           u:object_r:video_device:s0
+/dev/smd2                                                                         u:object_r:hci_attach_dev:s0
+/dev/smd3                                                                         u:object_r:hci_attach_dev:s0
+/dev/smd([0-9])+                                                                  u:object_r:smd_device:s0
+/dev/smdcntl[0-7]                                                                 u:object_r:radio_device:s0
+/dev/smem_log                                                                     u:object_r:shared_log_device:s0
 /dev/socket/tad                                                                   u:object_r:tad_socket:s0
 /dev/v4l-subdev.*                                                                 u:object_r:video_device:s0
 
