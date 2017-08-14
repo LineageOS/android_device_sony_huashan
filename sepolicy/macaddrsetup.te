@@ -9,5 +9,5 @@ unix_socket_connect(macaddrsetup, tad, tad)
 allow macaddrsetup bluetooth_data_file:dir { add_name search write };
 allow macaddrsetup bluetooth_data_file:file { create getattr open setattr write };
 allow macaddrsetup self:capability { chown dac_override fowner fsetid };
-allow macaddrsetup sysfs_wlanserial:file { getattr open write };
-allow macaddrsetup sysfs_wlanmac:file { getattr open write };
+allow macaddrsetup sysfs_mac_serial:file { getattr open write };
+allow macaddrsetup sysfs_mac_address:file { getattr open write };

@@ -1,8 +1,7 @@
 # /sys
 type sysfs_glove_mode, fs_type, sysfs_type;
 type sysfs_lights_effects, fs_type, sysfs_type;
-type sysfs_wlanmac, fs_type, sysfs_type;
-type sysfs_wlanserial, fs_type, sysfs_type;
+type sysfs_mac_serial, fs_type, sysfs_type;
 
 # /dev/socket
 type tad_socket, file_type;
