@@ -57,6 +57,7 @@
 # /sys
 /sys/class/power_supply/battery(/.*)?                                             u:object_r:sysfs_batteryinfo:s0
 /sys/class/thermal(/.*)?                                                          u:object_r:sysfs_thermal:s0
+/sys/class/uio(/.*)?                                                              u:object_r:sysfs_rmtfs:s0
 /sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity     u:object_r:sysfs_glove_mode:s0
 /sys/devices/i2c-10/10-0040/als_on                                                u:object_r:sysfs_als:s0
 /sys/devices/i2c-10/10-0040/debug                                                 u:object_r:sysfs_als:s0
@@ -72,6 +73,7 @@
 /sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/reset_count                       u:object_r:sysfs_thermal:s0
 /sys/devices/platform/msm_sdcc\.3/mmc_host(/.*)?                                  u:object_r:sysfs_usb:s0
 /sys/devices/platform/msm_hsusb_host(/.*)?                                        u:object_r:sysfs_usb:s0
+/sys/devices/platform/msm_sharedmem/uio(/.*)?                                     u:object_r:sysfs_rmtfs:s0
 /sys/devices/platform/wcnss_wlan.0/serial_number                                  u:object_r:sysfs_mac_serial:s0
 /sys/devices/platform/wcnss_wlan.0/wcnss_mac_addr                                 u:object_r:sysfs_mac_address:s0
 /sys/devices/virtual/graphics/fb([0-2])+/hpd                                      u:object_r:sysfs_surfaceflinger:s0

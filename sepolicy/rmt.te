@@ -4,3 +4,13 @@ type rmt_exec, exec_type, file_type;
 init_daemon_domain(rmt)
 
 wakelock_use(rmt)
+
+#============= rmt ==============
+allow rmt block_device:dir r_dir_perms;
+allow rmt modem_block_device:blk_file rw_file_perms;
+allow rmt root_block_device:blk_file r_file_perms;
+allow rmt self:capability { setgid setuid };
+allow rmt self:socket create_socket_perms;
+allow rmt shared_log_device:chr_file rw_file_perms;
+allow rmt uio_device:chr_file rw_file_perms;
+r_dir_file(rmt, sysfs_rmtfs)
