@@ -1,1 +1,4 @@
 qmux_socket(radio)
+
+#============= radio ==============
+allow radio sysfs_thermal:file { getattr open read };
