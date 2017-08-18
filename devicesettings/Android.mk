@@ -16,10 +16,10 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v7-preference \
     android-support-v7-recyclerview
 
-ifeq ($(BOARD_AOSP_BASED),)
-    LOCAL_STATIC_JAVA_LIBRARIES += \
-        org.cyanogenmod.platform.sdk
-endif
+#ifeq ($(BOARD_AOSP_BASED),)
+#    LOCAL_STATIC_JAVA_LIBRARIES += \
+#        org.cyanogenmod.platform.sdk
+#endif
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
