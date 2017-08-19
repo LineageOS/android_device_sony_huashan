@@ -74,6 +74,7 @@
 /sys/devices/virtual/graphics/fb([0-2])+/hpd                                      u:object_r:sysfs_surfaceflinger:s0
 /sys/devices/virtual/graphics/fb([0-2])+/vendor_name                              u:object_r:sysfs_surfaceflinger:s0
 /sys/devices/virtual/graphics/fb([0-2])+/product_description                      u:object_r:sysfs_surfaceflinger:s0
+/sys/devices/virtual/smdpkt/smdcntl([0-9])+/open_timeout                          u:object_r:sysfs_smdcntl_open_timeout:s0
 /sys/devices/virtual/thermal(/.*)?                                                u:object_r:sysfs_thermal:s0
 /sys/devices/virtual/timed_output/vibrator/level                                  u:object_r:sysfs_vibrator:s0
 
