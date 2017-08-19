@@ -17,4 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Световые эффекты</string>
+  <string name="lights_effects_notification_category">Уведомления</string>
+  <string name="lights_effects_notification_settings_title">Настройка уведомлений</string>
 </resources>

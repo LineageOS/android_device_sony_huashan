@@ -22,7 +22,6 @@
   <string name="lights_effects_notification_settings_title">Configura le notifiche</string>
   <string name="lights_effects_notification_settings_summary">Impostazioni di accesso luci notifiche</string>
   <string name="lights_effects_music_category">Effetti led musica</string>
-  <string name="lights_effects_music_enable_title">Effetti riproduzione musicale</string>
   <string name="lights_effects_music_enable_summary">Il segnale audio controlla il ritmo del LED</string>
   <string name="lights_effects_music_gain_title">Effetti guadagno audio musica</string>
   <string name="lights_effects_music_gain_summary">Il volume dell\'audio fa variare l\'intensità della luminosità dei led</string>

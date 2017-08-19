@@ -22,7 +22,6 @@
   <string name="lights_effects_notification_settings_title">Định cấu hình thông báo</string>
   <string name="lights_effects_notification_settings_summary">Cài đặt truy cập đèn thông báo</string>
   <string name="lights_effects_music_category">Hiệu ứng đèn nhạc</string>
-  <string name="lights_effects_music_enable_title">Bật hiệu ứng xung âm nhạc</string>
   <string name="lights_effects_music_enable_summary">Các điều khiển tín hiệu âm thanh LED theo nhịp</string>
   <string name="lights_effects_music_gain_title">Hiệu ứng nhạc âm thanh đạt được</string>
   <string name="lights_effects_music_gain_summary">Tỷ lệ âm lượng cho độ sáng LED</string>

@@ -22,7 +22,6 @@
   <string name="lights_effects_notification_settings_title">設定通知</string>
   <string name="lights_effects_notification_settings_summary">存取通知燈設定</string>
   <string name="lights_effects_music_category">音樂燈光效果</string>
-  <string name="lights_effects_music_enable_title">啟用音樂閃爍呼吸燈效果</string>
   <string name="lights_effects_music_enable_summary">通知燈隨著音訊訊號改變</string>
   <string name="lights_effects_music_gain_title">音訊增益</string>
   <string name="lights_effects_music_gain_summary">通知燈的亮度隨著音量變化</string>
@@ -32,5 +31,5 @@
   <string name="lights_effects_music_awake_title">僅限螢幕開啟時閃爍呼吸燈</string>
   <string name="lights_effects_music_awake_summary">僅當裝置喚醒時允許音樂效果</string>
   <string name="lights_effects_music_always_title">一律啟用音樂效果</string>
-  <string name="lights_effects_music_always_summary">將閃爍呼吸燈指示燈用於所有音訊輸入。遮蔽正常的指示燈和充電通知。</string>
+  <string name="lights_effects_music_always_summary">將閃爍呼吸指示燈用於所有音訊輸入。阻止正常的指示燈和充電通知。</string>
 </resources>

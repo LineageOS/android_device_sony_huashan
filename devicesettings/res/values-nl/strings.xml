@@ -17,10 +17,19 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
-  <string name="lights_effects_title">Licht effecten</string>
+  <string name="lights_effects_title">Lichteffecten</string>
   <string name="lights_effects_notification_category">Meldingen</string>
-  <string name="lights_effects_notification_settings_title">Meldingen configureren</string>
-  <string name="lights_effects_music_category">Muziek licht effecten</string>
-  <string name="lights_effects_music_awake_summary">Alleen effecten toestaan wanneer het apparaat wakker is</string>
-  <string name="lights_effects_music_always_title">Altijd muziek effecten aanzetten</string>
+  <string name="lights_effects_notification_settings_title">Meldingen instellen</string>
+  <string name="lights_effects_notification_settings_summary">Instellingen meldingsled</string>
+  <string name="lights_effects_music_category">Lichteffecten bij muziek</string>
+  <string name="lights_effects_music_enable_summary">Audiosignaal bepaalt ritme van led</string>
+  <string name="lights_effects_music_gain_title">Audioversterking muziekeffecten</string>
+  <string name="lights_effects_music_gain_summary">Audiovolume verhogen voor helderheid van de led</string>
+  <string name="lights_effects_music_gain_higher">Grote versterking</string>
+  <string name="lights_effects_music_gain_normal">Normale versterking</string>
+  <string name="lights_effects_music_gain_lower">Kleine versterking</string>
+  <string name="lights_effects_music_awake_title">Alleen knipperen als scherm aan is</string>
+  <string name="lights_effects_music_awake_summary">Muziekeffecten alleen toestaan als apparaat is ingeschakeld</string>
+  <string name="lights_effects_music_always_title">Muziekeffecten altijd inschakelen</string>
+  <string name="lights_effects_music_always_summary">Alle audio-uitgangen gebruiken om de led te laten knipperen. Normale verlichting en melding van het opladen worden geblokkeerd.</string>
 </resources>

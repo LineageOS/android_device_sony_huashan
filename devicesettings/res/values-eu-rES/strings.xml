@@ -22,7 +22,6 @@
   <string name="lights_effects_notification_settings_title">Konfiguratu jakinarazpenak</string>
   <string name="lights_effects_notification_settings_summary">Atzitu jakinarazpen-argien ezarpenak</string>
   <string name="lights_effects_music_category">Musikaren argi-efektuak</string>
-  <string name="lights_effects_music_enable_title">Gaitu musika-pultsu efektuak</string>
   <string name="lights_effects_music_enable_summary">Audio seinalearen erritmoak LEDak kontrolatzen ditu</string>
   <string name="lights_effects_music_gain_title">Musika-efektuen audio-irabazia</string>
   <string name="lights_effects_music_gain_summary">Eskalatu audioren bolumena LEDen distirarako</string>

@@ -22,7 +22,6 @@
   <string name="lights_effects_notification_settings_title">Подеси обавештења</string>
   <string name="lights_effects_notification_settings_summary">Приступите подешавањима светлосних обавештења</string>
   <string name="lights_effects_music_category">Светлосни ефекти музике</string>
-  <string name="lights_effects_music_enable_title">Пулсирајући ефекти музике</string>
   <string name="lights_effects_music_enable_summary">Аудио-сигнал управља LED индикатором у ритму музике</string>
   <string name="lights_effects_music_gain_title">Ниво појачања музичких ефеката</string>
   <string name="lights_effects_music_gain_summary">Прилагодите осветљеност LED индикатора према јачини звука</string>

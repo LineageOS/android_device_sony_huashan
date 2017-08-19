@@ -22,7 +22,6 @@
   <string name="lights_effects_notification_settings_title">Configurer les notifications</string>
   <string name="lights_effects_notification_settings_summary">Paramètres des notifications lumineuses</string>
   <string name="lights_effects_music_category">Effets lumineux musicaux</string>
-  <string name="lights_effects_music_enable_title">Activer les effets de pulsation musicale</string>
   <string name="lights_effects_music_enable_summary">Le signal audio contrôle le rythme des LEDs</string>
   <string name="lights_effects_music_gain_title">Gain audio des effets musicaux</string>
   <string name="lights_effects_music_gain_summary">Adapter la luminosité des LEDs au volume audio</string>

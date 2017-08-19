@@ -22,7 +22,6 @@
   <string name="lights_effects_notification_settings_title">Nastavit oznámení</string>
   <string name="lights_effects_notification_settings_summary">Přístup k nastavení světelných efektů</string>
   <string name="lights_effects_music_category">Světelné hudební efekty</string>
-  <string name="lights_effects_music_enable_title">Povolit světelné hudební efekty</string>
   <string name="lights_effects_music_enable_summary">Audio signál řídí LED v rytmu hudby</string>
   <string name="lights_effects_music_gain_title">Stupeň zvýraznění hudebních efektů</string>
   <string name="lights_effects_music_gain_summary">Stupnice hlasitosti zvuku pro jas LED</string>
