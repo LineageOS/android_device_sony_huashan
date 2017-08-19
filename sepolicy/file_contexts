@@ -55,11 +55,16 @@
 /system/bin/updatemiscta                                                          u:object_r:updatemiscta_exec:s0
 
 # /sys
+/sys/class/power_supply/battery(/.*)?                                             u:object_r:sysfs_batteryinfo:s0
+/sys/class/thermal(/.*)?                                                          u:object_r:sysfs_thermal:s0
 /sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity     u:object_r:sysfs_glove_mode:s0
+/sys/devices/i2c-10/10-0040/leds/lcd-backlight(.*/.*)?                            u:object_r:sysfs_leds:s0
 /sys/devices/i2c-10/10-0047/audio_agc_ctrl                                        u:object_r:sysfs_lights_effects:s0
 /sys/devices/i2c-10/10-0047/audio_buf_gain                                        u:object_r:sysfs_lights_effects:s0
 /sys/devices/i2c-10/10-0047/audio_en                                              u:object_r:sysfs_lights_effects:s0
 /sys/devices/i2c-10/10-0047/lights_effects                                        u:object_r:sysfs_lights_effects:s0
+/sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8921-charger/power_supply(/.*)?   u:object_r:sysfs_batteryinfo:s0
+/sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8xxx-adc(/.*)?                    u:object_r:sysfs_batteryinfo:s0
 /sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/gpuclk                            u:object_r:sysfs_thermal:s0
 /sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/max_gpuclk                        u:object_r:sysfs_thermal:s0
 /sys/devices/platform/msm_sdcc\.3/mmc_host(/.*)?                                  u:object_r:sysfs_usb:s0
@@ -69,6 +74,7 @@
 /sys/devices/virtual/graphics/fb([0-2])+/hpd                                      u:object_r:sysfs_surfaceflinger:s0
 /sys/devices/virtual/graphics/fb([0-2])+/vendor_name                              u:object_r:sysfs_surfaceflinger:s0
 /sys/devices/virtual/graphics/fb([0-2])+/product_description                      u:object_r:sysfs_surfaceflinger:s0
+/sys/devices/virtual/thermal(/.*)?                                                u:object_r:sysfs_thermal:s0
 /sys/devices/virtual/timed_output/vibrator/level                                  u:object_r:sysfs_vibrator:s0
 
 # debugfs
