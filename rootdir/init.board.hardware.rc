@@ -50,7 +50,9 @@ on boot
 
     # Proximity sensor
     chown system system /sys/devices/i2c-12/12-0054/threshold
+    chmod 660 /sys/devices/i2c-12/12-0054/threshold
     chown system system /sys/devices/i2c-12/12-0054/nburst
+    chmod 660 /sys/devices/i2c-12/12-0054/nburst
 
     # Vibrator
     chown root system /sys/class/timed_output/vibrator/level
@@ -120,6 +122,7 @@ service macaddrsetup /system/bin/macaddrsetup
 service hw_config /system/bin/sh /system/etc/hw_config.sh
     class main
     user root
+    group root system
     oneshot
     seclabel u:r:hw_config:s0
 

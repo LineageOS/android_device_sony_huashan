@@ -55,6 +55,8 @@
 /system/bin/updatemiscta                                                          u:object_r:updatemiscta_exec:s0
 
 # /sys
+/sys/bus/i2c(/.*)?                                                                u:object_r:sysfs_bus_i2c:s0
+/sys/class/gpio(/.*)?                                                             u:object_r:sysfs_gpio:s0
 /sys/class/power_supply/battery(/.*)?                                             u:object_r:sysfs_batteryinfo:s0
 /sys/class/thermal(/.*)?                                                          u:object_r:sysfs_thermal:s0
 /sys/class/uio(/.*)?                                                              u:object_r:sysfs_rmtfs:s0
@@ -66,7 +68,10 @@
 /sys/devices/i2c-10/10-0047/audio_buf_gain                                        u:object_r:sysfs_lights_effects:s0
 /sys/devices/i2c-10/10-0047/audio_en                                              u:object_r:sysfs_lights_effects:s0
 /sys/devices/i2c-10/10-0047/lights_effects                                        u:object_r:sysfs_lights_effects:s0
+/sys/devices/i2c-12/12-0054(/.*)?                                                 u:object_r:sysfs_proximity_sensor:s0
 /sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8921-charger/power_supply(/.*)?   u:object_r:sysfs_batteryinfo:s0
+/sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8xxx-gpio/gpio(/.*)?              u:object_r:sysfs_gpio:s0
+/sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8xxx-mpp\.0/gpio(/.*)?            u:object_r:sysfs_gpio:s0
 /sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8xxx-adc(/.*)?                    u:object_r:sysfs_batteryinfo:s0
 /sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/gpuclk                            u:object_r:sysfs_thermal:s0
 /sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/max_gpuclk                        u:object_r:sysfs_thermal:s0
@@ -74,6 +79,7 @@
 /sys/devices/platform/msm_sdcc\.3/mmc_host(/.*)?                                  u:object_r:sysfs_usb:s0
 /sys/devices/platform/msm_hsusb_host(/.*)?                                        u:object_r:sysfs_usb:s0
 /sys/devices/platform/msm_sharedmem/uio(/.*)?                                     u:object_r:sysfs_rmtfs:s0
+/sys/devices/platform/msmgpio/gpio(/.*)?                                          u:object_r:sysfs_gpio:s0
 /sys/devices/platform/wcnss_wlan.0/serial_number                                  u:object_r:sysfs_mac_serial:s0
 /sys/devices/platform/wcnss_wlan.0/wcnss_mac_addr                                 u:object_r:sysfs_mac_address:s0
 /sys/devices/virtual/graphics/fb([0-2])+/hpd                                      u:object_r:sysfs_surfaceflinger:s0
