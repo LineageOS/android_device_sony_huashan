@@ -1,2 +1,6 @@
+set_prop(system_app, fm_prop)
+
 #============= system_app ==============
+allow system_app fm_data_file:file r_file_perms;
+allow system_app fm_device:chr_file r_file_perms;
 allow system_app sysfs_glove_mode:file { getattr open write };

@@ -1,3 +1,4 @@
 # property service keys
 type camera_prop, property_type;
+type fm_prop, property_type;
 type updatemiscta_prop, property_type;

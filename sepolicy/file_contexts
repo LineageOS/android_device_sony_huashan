@@ -24,6 +24,7 @@
 /dev/msm_vidc.*                                                                   u:object_r:audio_device:s0
 /dev/msm_vpe_standalone                                                           u:object_r:video_device:s0
 /dev/qseecom                                                                      u:object_r:tee_device:s0
+/dev/radio0                                                                       u:object_r:fm_device:s0
 /dev/smd2                                                                         u:object_r:hci_attach_dev:s0
 /dev/smd3                                                                         u:object_r:hci_attach_dev:s0
 /dev/smd([0-9])+                                                                  u:object_r:smd_device:s0
@@ -88,6 +89,7 @@
 /sys/devices/virtual/smdpkt/smdcntl([0-9])+/open_timeout                          u:object_r:sysfs_smdcntl_open_timeout:s0
 /sys/devices/virtual/thermal(/.*)?                                                u:object_r:sysfs_thermal:s0
 /sys/devices/virtual/timed_output/vibrator/level                                  u:object_r:sysfs_vibrator:s0
+/sys/module/radio_iris_transport/parameters/fmsmd_set                             u:object_r:sysfs_fm_dl:s0
 
 # debugfs
 /sys/kernel/debug/asoc(/.*)?                                                      u:object_r:debugfs_asoc:s0
@@ -95,3 +97,4 @@
 # /data
 /data/camera(/.*)?                                                                u:object_r:camera_data_file:s0
 /data/etc/flashled_vf_factory                                                     u:object_r:camera_data_file:s0
+/data/misc/fm(/.*)?                                                               u:object_r:fm_data_file:s0
