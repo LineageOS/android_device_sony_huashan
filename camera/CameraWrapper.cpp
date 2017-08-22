@@ -28,9 +28,9 @@
 #define LOG_TAG "CameraWrapper"
 #include <cutils/log.h>
 
-#include <gui/SensorManager.h>
 #include <hardware/hardware.h>
 #include <hardware/camera.h>
+#include <sensor/SensorManager.h>
 #include <utils/threads.h>
 #include <utils/String8.h>
 

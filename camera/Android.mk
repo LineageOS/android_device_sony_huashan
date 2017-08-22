@@ -7,10 +7,21 @@ LOCAL_SRC_FILES := \
     CameraWrapper.cpp
 
 LOCAL_C_INCLUDES := \
+    framework/native/include \
     system/media/camera/include
 
 LOCAL_SHARED_LIBRARIES := \
-    libhardware liblog libcamera_client libgui libutils
+    libhardware \
+    liblog \
+    libcamera_client \
+    libgui \
+    libhidltransport \
+    libsensor \
+    libutils \
+    android.hidl.token@1.0-utils
+
+LOCAL_STATIC_LIBRARIES := \
+    libarect
 
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE := camera.qcom
