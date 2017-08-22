@@ -31,6 +31,7 @@ LOCAL_SHARED_LIBRARIES := \
     libcutils \
     libgui \
     libbinder \
+    libsensor \
     libutils \
     liblog
 
