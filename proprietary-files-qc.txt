@@ -137,6 +137,9 @@ lib/libkeyctrl.so
 lib/libpin-cache.so
 lib/libs1sl.so
 
+# STLport
+vendor/lib/libstlport.so
+
 # Time services
 -vendor/lib/libtime_genoff.so
 
