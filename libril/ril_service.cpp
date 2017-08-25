@@ -3858,9 +3858,9 @@ int radio::setupDataCallResponse(int slotId,
 
         SetupDataCallResult result = {};
 
-        if (response == NULL || (responseLen != sizeof(RIL_Data_Call_Response_v11) != 0
-                && responseLen != sizeof(RIL_Data_Call_Response_v9) != 0
-                && responseLen != sizeof(RIL_Data_Call_Response_v6) != 0)) {
+        if (response == NULL || (responseLen % sizeof(RIL_Data_Call_Response_v11) != 0
+                && responseLen % sizeof(RIL_Data_Call_Response_v9) != 0
+                && responseLen % sizeof(RIL_Data_Call_Response_v6) != 0)) {
             if (response != NULL) {
                 RLOGE("setupDataCallResponse: Invalid response");
                 if (e == RIL_E_SUCCESS) responseInfo.error = RadioError::INVALID_RESPONSE;
@@ -3872,11 +3872,11 @@ int radio::setupDataCallResponse(int slotId,
             result.dnses = hidl_string();
             result.gateways = hidl_string();
             result.pcscf = hidl_string();
-        } else if (responseLen == sizeof(RIL_Data_Call_Response_v11)) {
+        } else if ((responseLen % sizeof(RIL_Data_Call_Response_v11)) == 0) {
             convertRilDataCallToHal((RIL_Data_Call_Response_v11 *) response, result);
-        } else if (responseLen == sizeof(RIL_Data_Call_Response_v9)) {
+        } else if ((responseLen % sizeof(RIL_Data_Call_Response_v9)) == 0) {
             convertRilDataCallToHal((RIL_Data_Call_Response_v9 *) response, result);
-        } else if (responseLen == sizeof(RIL_Data_Call_Response_v6)) {
+        } else if ((responseLen % sizeof(RIL_Data_Call_Response_v6)) == 0) {
             convertRilDataCallToHal((RIL_Data_Call_Response_v6 *) response, result);
         }
 
@@ -6878,21 +6878,21 @@ void convertRilDataCallListToHal(void *response, size_t responseLen,
         hidl_vec<SetupDataCallResult>& dcResultList) {
     int num;
 
-    if (responseLen == sizeof(RIL_Data_Call_Response_v11)) {
+    if ((responseLen % sizeof(RIL_Data_Call_Response_v11)) == 0) {
         num = responseLen / sizeof(RIL_Data_Call_Response_v11);
         RIL_Data_Call_Response_v11 *dcResponse = (RIL_Data_Call_Response_v11 *) response;
         dcResultList.resize(num);
         for (int i = 0; i < num; i++) {
             convertRilDataCallToHal(&dcResponse[i], dcResultList[i]);
         }
-    } else if (responseLen == sizeof(RIL_Data_Call_Response_v9)) {
+    } else if ((responseLen % sizeof(RIL_Data_Call_Response_v9)) == 0) {
         num = responseLen / sizeof(RIL_Data_Call_Response_v9);
         RIL_Data_Call_Response_v9 *dcResponse = (RIL_Data_Call_Response_v9 *) response;
         dcResultList.resize(num);
         for (int i = 0; i < num; i++) {
             convertRilDataCallToHal(&dcResponse[i], dcResultList[i]);
         }
-    } else if (responseLen == sizeof(RIL_Data_Call_Response_v6)) {
+    } else if ((responseLen % sizeof(RIL_Data_Call_Response_v6)) == 0) {
         num = responseLen / sizeof(RIL_Data_Call_Response_v6);
         RIL_Data_Call_Response_v6 *dcResponse = (RIL_Data_Call_Response_v6 *) response;
         dcResultList.resize(num);
