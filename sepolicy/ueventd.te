@@ -1,0 +1,8 @@
+#============= ueventd ==============
+allow ueventd sysfs_batteryinfo:file write;
+allow ueventd sysfs_camera_torch:file write;
+allow ueventd sysfs_gpio:file write;
+allow ueventd sysfs_leds:file write;
+allow ueventd sysfs_proximity_sensor:file write;
+allow ueventd sysfs_rmtfs:file write;
+allow ueventd sysfs_thermal:file write;
