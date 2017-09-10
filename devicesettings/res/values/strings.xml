@@ -17,7 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Lights effects -->
     <string name="lights_effects_title">Lights effects</string>
-    <string name="lights_effects_notification_category">Notifications</string>
+    <string name="lights_effects_summary">Configure LED light effects</string>
     <string name="lights_effects_notification_settings_title">Configure notifications</string>
     <string name="lights_effects_notification_settings_summary">Access notification lights settings</string>
     <string name="lights_effects_music_category">Music lights effects</string>
