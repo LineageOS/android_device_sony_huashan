@@ -11,8 +11,8 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <uses-sdk
-        android:minSdkVersion="23"
-        android:targetSdkVersion="23" />
+        android:minSdkVersion="26"
+        android:targetSdkVersion="26" />
 
     <application
         android:allowBackup="true"
@@ -47,10 +47,10 @@
             </intent-filter>
             <meta-data
                 android:name="com.android.settings.category"
-                android:value="com.android.settings.category.device" />
+                android:value="com.android.settings.category.ia.display" />
             <meta-data
-                android:name="com.android.settings.icon"
-                android:resource="@drawable/ic_settings_gestures" />
+                android:name="com.android.settings.summary"
+                android:resource="@string/ambient_display_summary" />
         </activity>
 
         <activity
@@ -62,10 +62,10 @@
             </intent-filter>
             <meta-data
                 android:name="com.android.settings.category"
-                android:value="com.android.settings.category.device" />
+                android:value="com.android.settings.category.ia.display" />
             <meta-data
-                android:name="com.android.settings.icon"
-                android:resource="@drawable/ic_settings_lights_effects" />
+                android:name="com.android.settings.summary"
+                android:resource="@string/lights_effects_summary" />
         </activity>
 
     </application>

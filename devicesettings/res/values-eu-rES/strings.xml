@@ -18,7 +18,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
   <string name="lights_effects_title">Argi-efektuak</string>
-  <string name="lights_effects_notification_category">Jakinarazpenak</string>
   <string name="lights_effects_notification_settings_title">Konfiguratu jakinarazpenak</string>
   <string name="lights_effects_notification_settings_summary">Atzitu jakinarazpen-argien ezarpenak</string>
   <string name="lights_effects_music_category">Musikaren argi-efektuak</string>

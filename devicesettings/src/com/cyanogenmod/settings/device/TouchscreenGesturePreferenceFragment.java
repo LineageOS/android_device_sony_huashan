@@ -16,22 +16,27 @@
 
 package com.cyanogenmod.settings.device;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v14.preference.SwitchPreference;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
 
-    private static final String KEY_AMBIENT_DISPLAY_ENABLE = "ambient_display_enable";
     private static final String KEY_GESTURE_HAND_WAVE = "gesture_hand_wave";
     private static final String KEY_GESTURE_PICK_UP = "gesture_pick_up";
     private static final String KEY_GESTURE_POCKET = "gesture_pocket";
     private static final String KEY_HAPTIC_FEEDBACK = "touchscreen_gesture_haptic_feedback";
     private static final String KEY_PROXIMITY_WAKE = "proximity_wake_enable";
 
-    private SwitchPreference mAmbientDisplayPreference;
+    private Switch mAmbientDisplaySwitch;
     private SwitchPreference mHandwavePreference;
     private SwitchPreference mHapticFeedback;
     private SwitchPreference mPickupPreference;
@@ -39,12 +44,33 @@ public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
     private SwitchPreference mProximityWakePreference;
 
     @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        final View view = LayoutInflater.from(getContext()).inflate(R.layout.doze, container, false);
+        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        View switchBar = view.findViewById(R.id.switch_bar);
+        mAmbientDisplaySwitch = (Switch) switchBar.findViewById(android.R.id.switch_widget);
+        mAmbientDisplaySwitch.setChecked(isDozeEnabled());
+        mAmbientDisplaySwitch.setOnCheckedChangeListener(mAmbientDisplayPrefListener);
+    }
+
+    @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.gesture_panel);
         boolean dozeEnabled = isDozeEnabled();
-        mAmbientDisplayPreference = (SwitchPreference) findPreference(KEY_AMBIENT_DISPLAY_ENABLE);
-        mAmbientDisplayPreference.setChecked(dozeEnabled);
-        mAmbientDisplayPreference.setOnPreferenceChangeListener(mAmbientDisplayPrefListener);
         mHandwavePreference = (SwitchPreference) findPreference(KEY_GESTURE_HAND_WAVE);
         mHandwavePreference.setEnabled(dozeEnabled);
         mHandwavePreference.setOnPreferenceChangeListener(mGesturePrefListener);
@@ -76,18 +102,15 @@ public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
                 Settings.Secure.DOZE_ENABLED, 1) != 0;
     }
 
-    private Preference.OnPreferenceChangeListener mAmbientDisplayPrefListener =
-        new Preference.OnPreferenceChangeListener() {
+    private CompoundButton.OnCheckedChangeListener mAmbientDisplayPrefListener =
+        new CompoundButton.OnCheckedChangeListener() {
         @Override
-        public boolean onPreferenceChange(Preference preference, Object newValue) {
-            boolean enable = (boolean) newValue;
-            boolean ret = enableDoze(enable);
-            if (ret) {
+        public void onCheckedChanged(CompoundButton compoundButton, boolean enable) {
+            if (enableDoze(enable)) {
                 mHandwavePreference.setEnabled(enable);
                 mPickupPreference.setEnabled(enable);
                 mPocketPreference.setEnabled(enable);
             }
-            return ret;
         }
     };
 

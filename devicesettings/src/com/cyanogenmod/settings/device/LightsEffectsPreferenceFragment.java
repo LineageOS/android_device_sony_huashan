@@ -38,6 +38,12 @@ public static final String TAG = "LightsEffectsService";
     private SwitchPreference mLightsEffectsMusicAlways;
 
     @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.lights_effects_panel);
 

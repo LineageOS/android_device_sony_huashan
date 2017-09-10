@@ -18,7 +18,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
   <string name="lights_effects_title">Светлосни ефекти</string>
-  <string name="lights_effects_notification_category">Обавештења</string>
   <string name="lights_effects_notification_settings_title">Подеси обавештења</string>
   <string name="lights_effects_notification_settings_summary">Приступите подешавањима светлосних обавештења</string>
   <string name="lights_effects_music_category">Светлосни ефекти музике</string>
