@@ -18,7 +18,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
   <string name="lights_effects_title">Hiệu ứng đèn thông báo</string>
-  <string name="lights_effects_notification_category">Thông báo</string>
   <string name="lights_effects_notification_settings_title">Định cấu hình thông báo</string>
   <string name="lights_effects_notification_settings_summary">Cài đặt truy cập đèn thông báo</string>
   <string name="lights_effects_music_category">Hiệu ứng đèn nhạc</string>
