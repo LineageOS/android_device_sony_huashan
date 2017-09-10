@@ -18,7 +18,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
   <string name="lights_effects_title">Učinki lučk</string>
-  <string name="lights_effects_notification_category">Obvestila</string>
   <string name="lights_effects_notification_settings_title">Nastavi obvestila</string>
   <string name="lights_effects_notification_settings_summary">Dostop do nastavitev lučk za obvestila</string>
   <string name="lights_effects_music_category">Učinki lučk za glasbo</string>
