@@ -18,7 +18,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
   <string name="lights_effects_title">燈光效果</string>
-  <string name="lights_effects_notification_category">通知</string>
   <string name="lights_effects_notification_settings_title">設定通知</string>
   <string name="lights_effects_notification_settings_summary">存取通知燈設定</string>
   <string name="lights_effects_music_category">音樂燈光效果</string>
