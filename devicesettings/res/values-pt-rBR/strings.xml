@@ -18,7 +18,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
   <string name="lights_effects_title">Efeitos luminosos</string>
-  <string name="lights_effects_notification_category">Notificações</string>
   <string name="lights_effects_notification_settings_title">Configurar notificações</string>
   <string name="lights_effects_notification_settings_summary">Acessar as configurações das luzes de notificação</string>
   <string name="lights_effects_music_category">Efeitos luminosos de música</string>
