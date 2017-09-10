@@ -18,9 +18,9 @@ package org.lineageos.settings.device;
 
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
+import android.support.v14.preference.PreferenceFragment;
 import android.support.v14.preference.SwitchPreference;
 
 public class LightsEffectsPreferenceFragment extends PreferenceFragment {
@@ -34,6 +34,12 @@ public class LightsEffectsPreferenceFragment extends PreferenceFragment {
     private ListPreference mLightsEffectsMusicGain;
     private SwitchPreference mLightsEffectsMusicAwake;
     private SwitchPreference mLightsEffectsMusicAlways;
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+    }
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -146,5 +152,4 @@ public class LightsEffectsPreferenceFragment extends PreferenceFragment {
             return true;
         }
     };
-
 }
