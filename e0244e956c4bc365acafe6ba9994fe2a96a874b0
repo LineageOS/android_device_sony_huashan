@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cb72d57c_127f41e0",
+        "filename": "product/device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-09-11T06:04:27Z",
+      "side": 1,
+      "message": "Is this something you\u0027re adding temporarily? Because this wasn\u0027t needed back in 14.1, as it was automatically handled by cmsdk, if I am not wrong.",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 41
+      },
+      "revId": "e0244e956c4bc365acafe6ba9994fe2a96a874b0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
