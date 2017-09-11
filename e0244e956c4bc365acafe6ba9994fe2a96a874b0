@@ -22,6 +22,30 @@
       "revId": "e0244e956c4bc365acafe6ba9994fe2a96a874b0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "085cf605_bc712cc4",
+        "filename": "product/device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 13595
+      },
+      "writtenOn": "2017-09-11T06:12:47Z",
+      "side": 1,
+      "message": "Yes it\u0027s temporary, I plan to move it to an overlay for Settings as I mentioned on Slack with Mike.\n\nI\u0027m avoiding absolute dependencies on CMSDK, as I made my DeviceSettings fully compatible / adapted for AOSP and using it there mostly for the moment.\n\nOn Nougat this wasn\u0027t an issue, as the Ambient Display switch was in Display and the own gestures were a section, below Display \u0026 such, but on Oreo, both options come together.\n\nThis is what it looks like :https://forum.xda-developers.com/showpost.php?p\u003d73745177\u0026postcount\u003d72",
+      "parentUuid": "cb72d57c_127f41e0",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 41
+      },
+      "revId": "e0244e956c4bc365acafe6ba9994fe2a96a874b0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
