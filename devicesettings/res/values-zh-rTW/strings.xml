@@ -22,6 +22,7 @@
   <string name="lights_effects_notification_settings_title">設定通知</string>
   <string name="lights_effects_notification_settings_summary">存取通知燈設定</string>
   <string name="lights_effects_music_category">音樂燈光效果</string>
+  <string name="lights_effects_music_enable_title">音樂閃爍呼吸燈效果</string>
   <string name="lights_effects_music_enable_summary">通知燈隨著音訊訊號改變</string>
   <string name="lights_effects_music_gain_title">音訊增益</string>
   <string name="lights_effects_music_gain_summary">通知燈的亮度隨著音量變化</string>

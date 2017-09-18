@@ -22,6 +22,7 @@
   <string name="lights_effects_notification_settings_title">Configurați notificările</string>
   <string name="lights_effects_notification_settings_summary">Accesați setările notificărilor luminilor</string>
   <string name="lights_effects_music_category">Efecte luminoase muzică</string>
+  <string name="lights_effects_music_enable_title">Efecte de pulsare muzică</string>
   <string name="lights_effects_music_enable_summary">Semnalul audio controlează LED-ul în ritm</string>
   <string name="lights_effects_music_gain_title">Gain audio al efectelor muzicale</string>
   <string name="lights_effects_music_gain_summary">Scalează volumul audio pentru luminozitatea LED-ului</string>

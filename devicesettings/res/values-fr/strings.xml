@@ -22,6 +22,7 @@
   <string name="lights_effects_notification_settings_title">Configurer les notifications</string>
   <string name="lights_effects_notification_settings_summary">Paramètres des notifications lumineuses</string>
   <string name="lights_effects_music_category">Effets lumineux musicaux</string>
+  <string name="lights_effects_music_enable_title">Effets lumineux musicaux</string>
   <string name="lights_effects_music_enable_summary">Le signal audio contrôle le rythme des LEDs</string>
   <string name="lights_effects_music_gain_title">Gain audio des effets musicaux</string>
   <string name="lights_effects_music_gain_summary">Adapter la luminosité des LEDs au volume audio</string>
@@ -31,4 +32,5 @@
   <string name="lights_effects_music_awake_title">Pulser seulement avec l\'écran allumé</string>
   <string name="lights_effects_music_awake_summary">Permettre les effets musicaux seulement lorsque l\'écran est allumé</string>
   <string name="lights_effects_music_always_title">Effets musicaux permanents</string>
+  <string name="lights_effects_music_always_summary">Utiliser toutes les sorties audio pour faire clignoter les LED. Bloque les notifications lumineuses normales et celles de charge.</string>
 </resources>

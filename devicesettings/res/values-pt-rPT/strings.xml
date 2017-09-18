@@ -22,12 +22,14 @@
   <string name="lights_effects_notification_settings_title">Configurar notificações</string>
   <string name="lights_effects_notification_settings_summary">Aceder às definições de luzes de notificação</string>
   <string name="lights_effects_music_category">Efeitos de luzes de música</string>
+  <string name="lights_effects_music_enable_title">Efeitos de luzes de música</string>
   <string name="lights_effects_music_enable_summary">O sinal de áudio controla o ritmo dos LEDs</string>
   <string name="lights_effects_music_gain_title">Ganho no áudio com efeitos de música</string>
   <string name="lights_effects_music_gain_summary">Acompanhar o brilho dos LEDs com o volume do áudio</string>
   <string name="lights_effects_music_gain_higher">Maior ganho</string>
   <string name="lights_effects_music_gain_normal">Ganho normal</string>
   <string name="lights_effects_music_gain_lower">Baixo ganho</string>
+  <string name="lights_effects_music_awake_title">Usar efeito apenas com o ecrã ligado</string>
   <string name="lights_effects_music_awake_summary">Permitir efeitos de música apenas quando o dispositivo estiver acordado</string>
   <string name="lights_effects_music_always_title">Ativar sempre os efeitos de música</string>
   <string name="lights_effects_music_always_summary">Usar todas as saídas de áudio para ligar os LEDs. Bloqueia luzes normais e notificações de carregamento.</string>

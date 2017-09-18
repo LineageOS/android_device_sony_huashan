@@ -22,6 +22,7 @@
   <string name="lights_effects_notification_settings_title">Configura les notificacions</string>
   <string name="lights_effects_notification_settings_summary">Configuració de les llums de notificació d\'accés</string>
   <string name="lights_effects_music_category">Efectes de llums musicals</string>
+  <string name="lights_effects_music_enable_title">Efectes de pampallugues musicals</string>
   <string name="lights_effects_music_enable_summary">El senyal d\'àudio controla els LED en ritme</string>
   <string name="lights_effects_music_gain_title">Efectes musicals de guany d\'àudio</string>
   <string name="lights_effects_music_gain_summary">Escala el volum d\'àudio per la brillantor dels LED</string>

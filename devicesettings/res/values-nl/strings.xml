@@ -22,6 +22,7 @@
   <string name="lights_effects_notification_settings_title">Meldingen instellen</string>
   <string name="lights_effects_notification_settings_summary">Instellingen meldingsled</string>
   <string name="lights_effects_music_category">Lichteffecten bij muziek</string>
+  <string name="lights_effects_music_enable_title">Pulserende effecten bij muziek</string>
   <string name="lights_effects_music_enable_summary">Audiosignaal bepaalt ritme van led</string>
   <string name="lights_effects_music_gain_title">Audioversterking muziekeffecten</string>
   <string name="lights_effects_music_gain_summary">Audiovolume verhogen voor helderheid van de led</string>

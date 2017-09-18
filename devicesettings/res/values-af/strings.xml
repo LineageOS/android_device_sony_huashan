@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Liggie effek</string>
+  <string name="lights_effects_notification_category">Kennisgewings</string>
+  <string name="lights_effects_notification_settings_title">Stel kennisgewings op</string>
+  <string name="lights_effects_notification_settings_summary">Toegang na liggie kennisgewing instellings</string>
+  <string name="lights_effects_music_category">Musiek liggie effek</string>
+  <string name="lights_effects_music_enable_title">Musiek pols effek</string>
+  <string name="lights_effects_music_enable_summary">Oudio-sein beheer die LEDs in ritme</string>
+  <string name="lights_effects_music_gain_title">Musiek effekte oudio-wins</string>
+  <string name="lights_effects_music_gain_summary">Skaal die oudio volume vir die LEDs se helderheid</string>
+  <string name="lights_effects_music_gain_higher">Hoër wins</string>
+  <string name="lights_effects_music_gain_normal">Normale wins</string>
+  <string name="lights_effects_music_gain_lower">Laer wins</string>
+  <string name="lights_effects_music_awake_title">Pols slegs wanneer jou skerm aan is</string>
+  <string name="lights_effects_music_awake_summary">Musiek effekte word slegs toegelaat wanneer die toestel wakker is</string>
+  <string name="lights_effects_music_always_title">Musiek effekte altyd aangeskakel</string>
+  <string name="lights_effects_music_always_summary">Gebruik alle oudio-uitsette om die LEDs to pols. Blokkeer normale liggies en laai kennisgewings.</string>
 </resources>

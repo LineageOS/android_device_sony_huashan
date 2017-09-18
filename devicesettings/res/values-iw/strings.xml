@@ -22,6 +22,7 @@
   <string name="lights_effects_notification_settings_title">הגדר התראות</string>
   <string name="lights_effects_notification_settings_summary">הגדרות התראת אפקטי אורות</string>
   <string name="lights_effects_music_category">אפקטי אור במוזיקה</string>
+  <string name="lights_effects_music_enable_title">אפקט דופק במוזיקה</string>
   <string name="lights_effects_music_enable_summary">אותות השמע שולטים בקצב הבהוב נורית ההתראות</string>
   <string name="lights_effects_music_gain_title">חוזק השמע לאפקטי המוזיקה</string>
   <string name="lights_effects_music_gain_summary">התאם את עוצמת השמע לבהירות הנורית</string>

@@ -22,6 +22,7 @@
   <string name="lights_effects_notification_settings_title">配置通知</string>
   <string name="lights_effects_notification_settings_summary">访问通知指示灯设置</string>
   <string name="lights_effects_music_category">音乐灯光效果</string>
+  <string name="lights_effects_music_enable_title">音乐闪烁呼吸灯效果</string>
   <string name="lights_effects_music_enable_summary">音频信号控制 LED 节奏</string>
   <string name="lights_effects_music_gain_title">音乐效果音频增益</string>
   <string name="lights_effects_music_gain_summary">基于音量决定 LED 亮度</string>

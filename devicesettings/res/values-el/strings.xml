@@ -17,4 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Εφέ φωτισμού</string>
+  <string name="lights_effects_notification_category">Ειδοποιήσεις</string>
+  <string name="lights_effects_notification_settings_title">Ρύθμιση ειδοποιήσεων</string>
+  <string name="lights_effects_music_enable_title">Εφέ παλμού μουσικής</string>
 </resources>

@@ -20,6 +20,7 @@
   <string name="lights_effects_title">Lyseffekter</string>
   <string name="lights_effects_notification_category">Varsler</string>
   <string name="lights_effects_notification_settings_title">Konfigurer varsler</string>
+  <string name="lights_effects_notification_settings_summary">Tilgang til varsellys-innstillinger</string>
   <string name="lights_effects_music_category">Musikk lyseffekter</string>
   <string name="lights_effects_music_gain_title">Lydforsterkningsnivå for musikkeffekter</string>
   <string name="lights_effects_music_gain_higher">Høyere forsterkningsnivå</string>

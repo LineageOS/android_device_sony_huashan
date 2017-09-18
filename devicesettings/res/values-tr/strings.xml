@@ -22,6 +22,7 @@
   <string name="lights_effects_notification_settings_title">Bildirimleri yapılandır</string>
   <string name="lights_effects_notification_settings_summary">Bildirim ışıkları ayarlarına erişim</string>
   <string name="lights_effects_music_category">Müzik ışıkları efektleri</string>
+  <string name="lights_effects_music_enable_title">Müzik ışıkları efektleri</string>
   <string name="lights_effects_music_enable_summary">Ses sinyali, LED\'leri ritimle kontrol eder</string>
   <string name="lights_effects_music_gain_title">Müzik efektleri ses kazancı</string>
   <string name="lights_effects_music_gain_summary">LED parlaklığı için ses seviyesini ölçeklendirme</string>

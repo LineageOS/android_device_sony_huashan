@@ -22,6 +22,7 @@
   <string name="lights_effects_notification_settings_title">Ilmoitusten määrittäminen</string>
   <string name="lights_effects_notification_settings_summary">Hallinnoi ilmoitusvalojen asetuksia</string>
   <string name="lights_effects_music_category">Musiikin valoefektit</string>
+  <string name="lights_effects_music_enable_title">Musiikin valoefektit</string>
   <string name="lights_effects_music_enable_summary">Äänisignaali ohjaa LEDien rytmiä</string>
   <string name="lights_effects_music_gain_title">Musiikkiefektin äänen vaikutus</string>
   <string name="lights_effects_music_gain_summary">Skaalaa LEDien kirkkautta äänenvoimakkuuden mukaan</string>

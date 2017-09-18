@@ -22,6 +22,7 @@
   <string name="lights_effects_notification_settings_title">Конфигуриране на уведомления</string>
   <string name="lights_effects_notification_settings_summary">Достъп до светлинни настройки за уведомленията</string>
   <string name="lights_effects_music_category">Светлини ефекти на музика</string>
+  <string name="lights_effects_music_enable_title">Музикални импулсни ефекти</string>
   <string name="lights_effects_music_enable_summary">Аудио сигнала контролира светодиодите в ритъм</string>
   <string name="lights_effects_music_gain_title">Музика увеличение на аудио ефекти</string>
   <string name="lights_effects_music_gain_summary">Скала на аудиосистемата за промяна на яркост на светодиодите</string>

@@ -20,6 +20,12 @@
   <string name="lights_effects_title">ライト効果</string>
   <string name="lights_effects_notification_category">通知</string>
   <string name="lights_effects_notification_settings_title">通知の設定</string>
+  <string name="lights_effects_notification_settings_summary">通知ライト設定を開きます</string>
+  <string name="lights_effects_music_category">音楽ライト効果</string>
+  <string name="lights_effects_music_enable_title">音楽の点滅エフェクト</string>
+  <string name="lights_effects_music_enable_summary">オーディオ信号のリズムに従って LED を制御します</string>
+  <string name="lights_effects_music_gain_title">音楽効果のゲイン</string>
+  <string name="lights_effects_music_gain_summary">音量によって LED の明るさを調整します</string>
   <string name="lights_effects_music_gain_higher">高ゲイン</string>
   <string name="lights_effects_music_gain_normal">中ゲイン</string>
   <string name="lights_effects_music_gain_lower">低ゲイン</string>

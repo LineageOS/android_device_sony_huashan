@@ -22,8 +22,13 @@
   <string name="lights_effects_notification_settings_title">Benachrichtigungen konfigurieren</string>
   <string name="lights_effects_notification_settings_summary">Benachrichtigungslicht-Einstellungen öffnen</string>
   <string name="lights_effects_music_category">Musik-Lichteffekte</string>
+  <string name="lights_effects_music_enable_title">Pulsierende Musikeffekte</string>
   <string name="lights_effects_music_enable_summary">Musikabhängige LED-Steuerung</string>
+  <string name="lights_effects_music_gain_title">Verstärkung für Musikeffekte</string>
   <string name="lights_effects_music_gain_summary">Lautstärke steuert die LED-Helligkeit</string>
+  <string name="lights_effects_music_gain_higher">Höhere Verstärkung</string>
+  <string name="lights_effects_music_gain_normal">Normale Verstärkung</string>
+  <string name="lights_effects_music_gain_lower">Niedrigere Verstärkung</string>
   <string name="lights_effects_music_awake_title">Nur pulsieren wenn der Bildschirm an ist</string>
   <string name="lights_effects_music_awake_summary">Musikeffekte nur erlauben, wenn das Gerät aktiv ist</string>
   <string name="lights_effects_music_always_title">Musikeffekte immer aktivieren</string>

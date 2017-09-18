@@ -22,6 +22,7 @@
   <string name="lights_effects_notification_settings_title">Nastavi obvestila</string>
   <string name="lights_effects_notification_settings_summary">Dostop do nastavitev lučk za obvestila</string>
   <string name="lights_effects_music_category">Učinki lučk za glasbo</string>
+  <string name="lights_effects_music_enable_title">Učinki utripanja za glasbo</string>
   <string name="lights_effects_music_enable_summary">Zvočni signal upravlja lučke LED v ritmu</string>
   <string name="lights_effects_music_gain_title">Stopnja ojačitve glasbenih učinkov</string>
   <string name="lights_effects_music_gain_summary">Prilagodi svetlost LED lučk glasnosti zvoka</string>
