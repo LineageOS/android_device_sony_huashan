@@ -1,7 +1,6 @@
 # Camera packages
 PRODUCT_PACKAGES += \
     camera.qcom \
-    libstlport \
     Snap
 
 # Camera SHIM packages

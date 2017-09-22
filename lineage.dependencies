@@ -20,10 +20,6 @@
     "target_path": "hardware/sony/thermanager"
   },
   {
-    "repository": "android_external_stlport",
-    "target_path": "external/stlport"
-  },
-  {
     "repository": "android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings"
   }
