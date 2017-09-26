@@ -114,6 +114,13 @@ int read_mac(unsigned int ta_id, int val_addr, char* val_file, unsigned int val_
     return 0;
 }
 
+void set_permissions()
+{
+    /* Set correct permissions for Bluetooth */
+    chown(BT_MAC_FILE, AID_BLUETOOTH, AID_BLUETOOTH);
+    chmod(BT_MAC_FILE, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP); /* 660 */
+}
+
 int main(int argc, char **argv)
 {
     int err = 0;
@@ -125,6 +132,9 @@ int main(int argc, char **argv)
         return 1;
     }
 
+    /* Set correct permissions for existing files */
+    set_permissions();
+
     /* WiFi Serial Number importation */
     err |= read_mac(WLAN_SERIAL_TAID, WLAN_SERIAL_PNTR, WLAN_SERIAL_FILE, TYPE_SERIAL);
 
@@ -134,9 +144,8 @@ int main(int argc, char **argv)
     /* Bluetooth MAC importation */
     err |= read_mac(BT_MAC_TAID, BT_MAC_PNTR, BT_MAC_FILE, TYPE_MAC);
 
-    /* Set correct permissions for Bluetooth */
-    chown(BT_MAC_FILE, AID_BLUETOOTH, AID_BLUETOOTH);
-    chmod(BT_MAC_FILE, S_IRUSR | S_IWUSR | S_IRGRP); /* 640 */
+    /* Set correct permissions after files creations */
+    set_permissions();
 
     /* Close the TA Partition */
     if (ta_opened != 0) {

@@ -93,7 +93,7 @@ service updatemiscta /system/bin/updatemiscta
 # Last 2 args: start block(blk size 128k), number of blocks(partitionsize(kb)/128(kb))
 service tad_static /sbin/tad_static /dev/block/platform/msm_sdcc.1/by-name/TA 0,16
     user root
-    group root
+    group root system
     socket tad stream 0660 system system
     class core
     seclabel u:r:tad:s0
@@ -109,6 +109,7 @@ service ta_qmi_service /system/bin/ta_qmi_service
 service macaddrsetup /system/bin/macaddrsetup
     class late_start
     user root
+    group root bluetooth system
     oneshot
     seclabel u:r:macaddrsetup:s0
 
