@@ -1,4 +1,5 @@
 #============= init ==============
+allow init { domain -lmkd -crash_dump }:process noatsecure;
 allow init camera_data_file:file getattr;
 allow init fm_device:chr_file write;
 allow init tmpfs:lnk_file create;
