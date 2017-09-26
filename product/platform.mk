@@ -14,3 +14,7 @@ PRODUCT_PACKAGES += \
 # Sony MACAddrSetup package
 PRODUCT_PACKAGES += \
     macaddrsetup
+
+# Dumpstate HAL
+PRODUCT_PACKAGES += \
+    android.hardware.dumpstate@1.0-service.huashan
