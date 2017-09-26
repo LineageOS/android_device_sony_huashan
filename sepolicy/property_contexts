@@ -2,3 +2,4 @@
 camera.0.                                                                         u:object_r:camera_prop:s0
 camera.1.                                                                         u:object_r:camera_prop:s0
 persist.tareset.notfirstboot                                                      u:object_r:updatemiscta_prop:s0
+wc_transport.                                                                     u:object_r:bluetooth_prop:s0
