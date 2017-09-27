@@ -82,7 +82,7 @@ on boot
 service thermanager /system/bin/thermanager /system/etc/thermanager.xml
     class main
     user root
-    group root
+    group root system
 
 service updatemiscta /system/bin/updatemiscta
     class main
