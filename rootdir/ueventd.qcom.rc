@@ -179,7 +179,7 @@
 
 # Lights HAL AS3677
 /sys/devices/i2c-10/10-0040/leds/lcd-* brightness            0660 system system
-/sys/devices/i2c-10/10-0040/leds/lcd-* max_brightness        0640 system system
+/sys/devices/i2c-10/10-0040/leds/lcd-* max_brightness        0660 system system
 
 # Lights HAL AS3665
 /sys/devices/i2c-10/10-0047            audio_agc_ctrl        0660 system system
