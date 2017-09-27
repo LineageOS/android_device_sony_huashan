@@ -4,14 +4,13 @@ type thermanager_exec, exec_type, file_type;
 init_daemon_domain(thermanager)
 
 #============= thermanager ==============
-allow thermanager self:capability dac_override;
 allow thermanager sysfs_batteryinfo:dir search;
-allow thermanager sysfs_batteryinfo:file { read write open };
+allow thermanager sysfs_batteryinfo:file { open read write };
 allow thermanager sysfs_batteryinfo:lnk_file read;
 allow thermanager sysfs_devices_system_cpu:file write;
 allow thermanager sysfs_leds:dir search;
-allow thermanager sysfs_leds:file { read write open };
+allow thermanager sysfs_leds:file { open read write };
 allow thermanager sysfs_leds:lnk_file read;
 allow thermanager sysfs_thermal:dir search;
-allow thermanager sysfs_thermal:file { read write open };
+allow thermanager sysfs_thermal:file { open read write };
 allow thermanager sysfs_thermal:lnk_file read;
