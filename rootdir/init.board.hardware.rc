@@ -79,6 +79,9 @@ on boot
     chown system system /sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity
     chmod 0664 /sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity
 
+    # USB power supply
+    chmod 0640 /sys/class/power_supply/usb/current_max
+
 service thermanager /system/bin/thermanager /system/etc/thermanager.xml
     class main
     user root
