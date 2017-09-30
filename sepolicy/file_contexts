@@ -54,6 +54,7 @@
 /system/bin/ta_qmi_service                                                        u:object_r:ta_qmi_service_exec:s0
 /system/bin/thermanager                                                           u:object_r:thermanager_exec:s0
 /system/bin/updatemiscta                                                          u:object_r:updatemiscta_exec:s0
+/vendor/bin/hw/android\.hardware\.vibrator@1\.0-service.huashan                   u:object_r:hal_vibrator_default_exec:s0
 
 # /sys
 /sys/bus/i2c(/.*)?                                                                u:object_r:sysfs_bus_i2c:s0
