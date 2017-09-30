@@ -53,6 +53,7 @@
 /system/bin/updatemiscta                                                          u:object_r:updatemiscta_exec:s0
 
 # /vendor
+/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.0-service\.huashan  u:object_r:hal_vibrator_default_exec:s0
 /(vendor|system/vendor)/bin/lights_effects                                        u:object_r:lights_effects_exec:s0
 /(vendor|system/vendor)/bin/macaddrsetup                                          u:object_r:macaddrsetup_exec:s0
 /(vendor|system/vendor)/bin/thermanager                                           u:object_r:thermanager_exec:s0
