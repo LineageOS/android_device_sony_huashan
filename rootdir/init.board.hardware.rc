@@ -111,14 +111,6 @@ service ta_qmi_service /system/bin/ta_qmi_service
     group system wakelock
     seclabel u:r:ta_qmi_service:s0
 
-# Wi-Fi and BT MAC addresses
-service macaddrsetup /system/bin/macaddrsetup
-    class late_start
-    user root
-    group root bluetooth system
-    oneshot
-    seclabel u:r:macaddrsetup:s0
-
 service hw_config /system/bin/sh /system/etc/hw_config.sh
     class main
     user root

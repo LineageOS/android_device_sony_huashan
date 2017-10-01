@@ -1,0 +1,6 @@
+service macaddrsetup /vendor/bin/macaddrsetup
+    class late_start
+    user root
+    group root bluetooth system
+    oneshot
+    seclabel u:r:macaddrsetup:s0
