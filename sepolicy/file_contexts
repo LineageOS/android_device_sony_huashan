@@ -51,11 +51,11 @@
 /system/bin/rmt_storage                                                           u:object_r:rmt_exec:s0
 /system/bin/secchand                                                              u:object_r:secchand_exec:s0
 /system/bin/ta_qmi_service                                                        u:object_r:ta_qmi_service_exec:s0
-/system/bin/thermanager                                                           u:object_r:thermanager_exec:s0
 /system/bin/updatemiscta                                                          u:object_r:updatemiscta_exec:s0
 
 # /vendor
 /(vendor|system/vendor)/bin/macaddrsetup                                          u:object_r:macaddrsetup_exec:s0
+/(vendor|system/vendor)/bin/thermanager                                           u:object_r:thermanager_exec:s0
 
 # /sys
 /sys/bus/i2c(/.*)?                                                                u:object_r:sysfs_bus_i2c:s0
