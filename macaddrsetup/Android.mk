@@ -11,6 +11,9 @@ LOCAL_SHARED_LIBRARIES := \
     libcutils
 
 LOCAL_MODULE := macaddrsetup
+LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MODULE_TAGS := optional
+
+LOCAL_INIT_RC := macaddrsetup.rc
 
 include $(BUILD_EXECUTABLE)
