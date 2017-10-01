@@ -124,7 +124,7 @@ public class GloveModeService extends Service {
     };
 
     private boolean isGloveModeEnabled() {
-        int HighTouchSensitivity = SettingsUtils.getInt(mContext, mContext.getContentResolver(),
+        int HighTouchSensitivity = SettingsUtils.getInt(mContext,
                 SettingsUtils.HIGH_TOUCH_SENSITIVITY_ENABLE, 1);
         return HighTouchSensitivity == 1;
     }
@@ -133,7 +133,7 @@ public class GloveModeService extends Service {
         SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
         boolean initiated = settings.getBoolean("glovemode-initiated", false);
 
-        if (!initiated && SettingsUtils.putInt(mContext, mContext.getContentResolver(),
+        if (!initiated && SettingsUtils.putInt(mContext,
                 SettingsUtils.HIGH_TOUCH_SENSITIVITY_ENABLE, 1)) {
             Log.d(TAG, "GloveMode has been enabled by default");
             SharedPreferences.Editor editor = settings.edit();
