@@ -1,0 +1,12 @@
+on property:sys.lights_effects_gain=*
+    start lights_effects
+
+on property:sys.lights_effects_value=*
+    start lights_effects
+
+service lights_effects /vendor/bin/lights_effects
+    class late_start
+    user system
+    group system
+    disabled
+    oneshot

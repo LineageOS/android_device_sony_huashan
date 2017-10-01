@@ -39,10 +39,13 @@ LOCAL_SHARED_LIBRARIES := \
     libtinyalsa
 
 LOCAL_MODULE := lights_effects
+LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_CFLAGS += -Wunused-variable
+
+LOCAL_INIT_RC := lights_effects.rc
 
 include $(BUILD_EXECUTABLE)
 
