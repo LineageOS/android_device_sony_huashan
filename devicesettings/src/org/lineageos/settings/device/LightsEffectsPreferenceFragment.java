@@ -81,42 +81,42 @@ public class LightsEffectsPreferenceFragment extends PreferenceFragment {
     }
 
     private void setLightsEffectsMusicEnable(boolean enable) {
-        SettingsUtils.putIntPreference(getContext(), SettingsUtils.LIGHTS_EFFECTS_MUSIC_ENABLE,
+        SettingsUtils.putInt(getContext(), SettingsUtils.LIGHTS_EFFECTS_MUSIC_ENABLE,
                 enable ? 1 : 0);
     }
 
     private void setLightsEffectsMusicGain(int value) {
-        SettingsUtils.putIntPreference(getContext(), SettingsUtils.LIGHTS_EFFECTS_MUSIC_GAIN,
+        SettingsUtils.putInt(getContext(), SettingsUtils.LIGHTS_EFFECTS_MUSIC_GAIN,
                 value);
     }
 
     private void setLightsEffectsMusicAwake(boolean enable) {
-        SettingsUtils.putIntPreference(getContext(), SettingsUtils.LIGHTS_EFFECTS_MUSIC_AWAKE,
+        SettingsUtils.putInt(getContext(), SettingsUtils.LIGHTS_EFFECTS_MUSIC_AWAKE,
                 enable ? 1 : 0);
     }
 
     private void setLightsEffectsMusicAlways(boolean enable) {
-        SettingsUtils.putIntPreference(getContext(), SettingsUtils.LIGHTS_EFFECTS_MUSIC_ALWAYS,
+        SettingsUtils.putInt(getContext(), SettingsUtils.LIGHTS_EFFECTS_MUSIC_ALWAYS,
                 enable ? 1 : 0);
     }
 
     private boolean getLightsEffectsMusicEnable() {
-        return SettingsUtils.getIntPreference(getContext(),
+        return SettingsUtils.getInt(getContext(),
                 SettingsUtils.LIGHTS_EFFECTS_MUSIC_ENABLE, 1) != 0;
     }
 
     private int getLightsEffectsMusicGain() {
-        return SettingsUtils.getIntPreference(getContext(),
+        return SettingsUtils.getInt(getContext(),
                 SettingsUtils.LIGHTS_EFFECTS_MUSIC_GAIN, 4);
     }
 
     private boolean getLightsEffectsMusicAwake() {
-        return SettingsUtils.getIntPreference(getContext(),
+        return SettingsUtils.getInt(getContext(),
                 SettingsUtils.LIGHTS_EFFECTS_MUSIC_AWAKE, 1) != 0;
     }
 
     private boolean getLightsEffectsMusicAlways() {
-        return SettingsUtils.getIntPreference(getContext(),
+        return SettingsUtils.getInt(getContext(),
                 SettingsUtils.LIGHTS_EFFECTS_MUSIC_ALWAYS, 0) != 0;
     }
 
