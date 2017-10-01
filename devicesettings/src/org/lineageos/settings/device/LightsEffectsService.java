@@ -112,13 +112,13 @@ public class LightsEffectsService extends Service {
     }
 
     private void applySettings() {
-        boolean lightsEffectsMusicEnable = SettingsUtils.getIntPreference(mContext,
+        boolean lightsEffectsMusicEnable = SettingsUtils.getInt(mContext,
                 SettingsUtils.LIGHTS_EFFECTS_MUSIC_ENABLE, 1) != 0;
-        boolean lightsEffectsMusicAwake = SettingsUtils.getIntPreference(mContext,
+        boolean lightsEffectsMusicAwake = SettingsUtils.getInt(mContext,
                 SettingsUtils.LIGHTS_EFFECTS_MUSIC_AWAKE, 1) != 0;
-        boolean lightsEffectsMusicAlways = SettingsUtils.getIntPreference(mContext,
+        boolean lightsEffectsMusicAlways = SettingsUtils.getInt(mContext,
                 SettingsUtils.LIGHTS_EFFECTS_MUSIC_ALWAYS, 0) != 0;
-        int lightsEffectsMusicGain = SettingsUtils.getIntPreference(mContext,
+        int lightsEffectsMusicGain = SettingsUtils.getInt(mContext,
                 SettingsUtils.LIGHTS_EFFECTS_MUSIC_GAIN, 4);
 
         if (mLightsEffectsMusicGain != lightsEffectsMusicGain) {
