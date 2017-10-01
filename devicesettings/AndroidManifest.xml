@@ -68,5 +68,20 @@
                 android:resource="@string/lights_effects_summary" />
         </activity>
 
+        <activity
+            android:name=".GloveModePreferenceActivity"
+            android:label="@string/high_touch_sensitivity_title"
+            android:theme="@style/DeviceSettings">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.language" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/high_touch_sensitivity_summary" />
+        </activity>
+
     </application>
 </manifest>
