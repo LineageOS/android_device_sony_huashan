@@ -3,7 +3,6 @@
 }
 
 -keep class cyanogenmod.providers.CMSettings$System {
-    public static final java.lang.String HIGH_TOUCH_SENSITIVITY_ENABLE;
     public static final java.lang.String TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK;
 }
 
