@@ -41,6 +41,8 @@ public class GloveModeService extends Service {
     private static final long GLOVE_UPDATE_DELTA = 900000; // 15 minutes
 
     private Context mContext;
+    private SharedPreferences.OnSharedPreferenceChangeListener mPreferencesListener;
+
     private long mLastGloveModeUpdate = 0;
     private boolean mGloveModeEnabled = false;
 
@@ -63,13 +65,23 @@ public class GloveModeService extends Service {
         mGloveModeEnabled = isGloveModeEnabled();
         if (DEBUG) Log.d(TAG, "Glove Mode state: " + mGloveModeEnabled);
 
-        updateGloveMode();
+        updateGloveMode(true);
+
+        mPreferencesListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
+            public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+                mGloveModeEnabled = isGloveModeEnabled();
+                updateGloveMode(true);
+            }
+        };
+        SettingsUtils.registerPreferenceChangeListener(mContext, mPreferencesListener);
 
         return START_STICKY;
     }
 
     public void onDestroy() {
         if (DEBUG) Log.d(TAG, "Destroying service");
+
+        SettingsUtils.unregisterPreferenceChangeListener(mContext, mPreferencesListener);
 
         super.onDestroy();
     }
@@ -78,19 +90,19 @@ public class GloveModeService extends Service {
         return null;
     }
 
-    private void updateGloveMode() {
+    private void updateGloveMode(boolean configure) {
         if (DEBUG) Log.d(TAG, "Updating Glove Mode: " + mGloveModeEnabled);
 
-        if (!mGloveModeEnabled) {
+        if (!mGloveModeEnabled && !configure) {
             return;
         }
 
         long currentTimeMs = System.currentTimeMillis();
-        if (currentTimeMs - mLastGloveModeUpdate > GLOVE_UPDATE_DELTA) {
+        if (currentTimeMs - mLastGloveModeUpdate > GLOVE_UPDATE_DELTA || configure) {
             mLastGloveModeUpdate = currentTimeMs;
             try {
                 FileOutputStream fos = new FileOutputStream(GLOVE_PATH);
-                fos.write(String.valueOf(0).getBytes());
+                fos.write(String.valueOf(mGloveModeEnabled ? 0 : 1).getBytes());
                 fos.flush();
                 fos.close();
             } catch (IOException e) {
@@ -106,7 +118,7 @@ public class GloveModeService extends Service {
                 mGloveModeEnabled = isGloveModeEnabled();
                 if (DEBUG) Log.d(TAG, "Glove Mode state: " + mGloveModeEnabled);
             } else if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
-                updateGloveMode();
+                updateGloveMode(false);
             }
         }
     };
