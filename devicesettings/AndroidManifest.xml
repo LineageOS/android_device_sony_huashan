@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cyanogenmod.settings.device"
-    android:versionCode="2"
-    android:versionName="2.0"
+    package="org.lineageos.settings.device"
+    android:versionCode="3"
+    android:versionName="3.0"
     android:sharedUserId="android.uid.system">
 
     <uses-permission android:name="android.permission.DEVICE_POWER" />
@@ -19,22 +19,22 @@
         android:label="@string/device_settings_app_name"
         android:persistent="true">
 
-        <receiver android:name="com.cyanogenmod.settings.device.BootCompletedReceiver">
+        <receiver android:name="org.lineageos.settings.device.BootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
-        <service android:name="com.cyanogenmod.settings.device.GloveModeService"
+        <service android:name="org.lineageos.settings.device.GloveModeService"
                  android:permission="GloveModeService">
         </service>
 
-        <service android:name="com.cyanogenmod.settings.device.LightsEffectsService"
+        <service android:name="org.lineageos.settings.device.LightsEffectsService"
                  android:permission="LightsEffectsService">
         </service>
 
-        <service android:name="com.cyanogenmod.settings.device.SensorsDozeService"
+        <service android:name="org.lineageos.settings.device.SensorsDozeService"
                  android:permission="SensorsDozeService">
         </service>
 
