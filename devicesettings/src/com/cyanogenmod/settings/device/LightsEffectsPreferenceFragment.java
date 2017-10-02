@@ -25,8 +25,6 @@ import android.support.v14.preference.SwitchPreference;
 
 public class LightsEffectsPreferenceFragment extends PreferenceFragment {
 
-public static final String TAG = "LightsEffectsService";
-
     private static final String KEY_LIGHTS_EFFECTS_MUSIC_ENABLE = "lights_effects_music_enable";
     private static final String KEY_LIGHTS_EFFECTS_MUSIC_GAIN = "lights_effects_music_gain";
     private static final String KEY_LIGHTS_EFFECTS_MUSIC_AWAKE = "lights_effects_music_awake";
