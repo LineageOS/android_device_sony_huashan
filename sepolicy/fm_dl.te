@@ -6,8 +6,8 @@ init_daemon_domain(fm_dl)
 set_prop(fm_dl, fm_prop)
 
 #============= fm_dl ==============
-allow fm_dl fm_data_file:dir search;
-allow fm_dl fm_data_file:file rw_file_perms;
+allow fm_dl fm_data_file:dir ra_dir_perms;
+allow fm_dl fm_data_file:file create_file_perms;
 allow fm_dl fm_device:chr_file r_file_perms;
 allow fm_dl shell_exec:file { entrypoint getattr read };
 allow fm_dl sysfs_fm_dl:file w_file_perms;
