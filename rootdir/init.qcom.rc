@@ -35,9 +35,6 @@ on init
 
     symlink /dev/socket /tmp
 
-    mkdir /dev/bus 0755 root root
-    mkdir /dev/bus/usb 0755 root root
-
     symlink /sdcard /storage/sdcard0
 
 on early-boot
