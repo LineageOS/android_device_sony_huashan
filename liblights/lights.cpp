@@ -54,9 +54,7 @@ enum leds_rgbupdate { LEDS_RGB_KEEP, LEDS_RGB_WRITE };
 enum leds_sequencers { LEDS_SEQ_UNKNOWN, LEDS_SEQ_DISABLED, LEDS_SEQ_ENABLED };
 
 /* === Framework Constants === */
-#ifdef BOARD_AOSP_BASED
 #define LIGHT_MODE_MULTIPLE_LEDS 0x01
-#endif
 
 /* === Module Variables === */
 static pthread_once_t g_init = PTHREAD_ONCE_INIT;
@@ -381,11 +379,7 @@ set_light_leds_locked(struct light_device_t* dev,
     /* LEDs variables processing */
     colorARGB = state->color;
     leds_brightness = (colorARGB & 0xFF000000) >> 24;
-#ifdef BOARD_AOSP_BASED
     leds_modes = LIGHT_MODE_MULTIPLE_LEDS;
-#else
-    leds_modes = state->ledsModes;
-#endif
     leds_unit_minid = 1;
     leds_unit_maxid = LEDS_UNIT_COUNT;
     delayOn = state->flashOnMS;

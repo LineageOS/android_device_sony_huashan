@@ -19,9 +19,6 @@ LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_CFLAGS += -Wunused-variable
-ifneq ($(BOARD_AOSP_BASED),)
-    LOCAL_CFLAGS += -DBOARD_AOSP_BASED
-endif
 
 include $(BUILD_SHARED_LIBRARY)
 
