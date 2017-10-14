@@ -57,7 +57,7 @@ static int alarm_get_time(enum alarm_time_type time_type,
     if (!secs)
         return -1;
 
-    fd = open("/dev/rtc0", O_RDWR);
+    fd = open("/dev/rtc0", O_RDONLY);
     if (fd < 0) {
         LOGE("Can't open rtc devfs node\n");
         return -1;
