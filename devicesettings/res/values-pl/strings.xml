@@ -20,5 +20,7 @@
   <string name="lights_effects_title">Efekty świetlne</string>
   <string name="lights_effects_notification_category">Powiadomienia</string>
   <string name="lights_effects_music_gain_title">Wzmocnienie efektów muzycznych</string>
+  <string name="lights_effects_music_gain_higher">Mocniejsze wzmocnienie</string>
   <string name="lights_effects_music_gain_normal">Normalne wzmocnienie</string>
+  <string name="lights_effects_music_gain_lower">Mniejsze wzmocnienie</string>
 </resources>
