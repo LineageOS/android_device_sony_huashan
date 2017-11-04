@@ -16,6 +16,7 @@
 
 package org.lineageos.settings.device;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
@@ -25,11 +26,13 @@ import android.support.v14.preference.SwitchPreference;
 
 public class LightsEffectsPreferenceFragment extends PreferenceFragment {
 
+    private static final String KEY_NOTIFICATION_SETTINGS = "notification_settings";
     private static final String KEY_LIGHTS_EFFECTS_MUSIC_ENABLE = "lights_effects_music_enable";
     private static final String KEY_LIGHTS_EFFECTS_MUSIC_GAIN = "lights_effects_music_gain";
     private static final String KEY_LIGHTS_EFFECTS_MUSIC_AWAKE = "lights_effects_music_awake";
     private static final String KEY_LIGHTS_EFFECTS_MUSIC_ALWAYS = "lights_effects_music_always";
 
+    private Preference mNotificationSettings;
     private SwitchPreference mLightsEffectsMusicEnable;
     private ListPreference mLightsEffectsMusicGain;
     private SwitchPreference mLightsEffectsMusicAwake;
@@ -44,6 +47,19 @@ public class LightsEffectsPreferenceFragment extends PreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.lights_effects_panel);
+
+        mNotificationSettings = (Preference) findPreference(KEY_NOTIFICATION_SETTINGS);
+        mNotificationSettings.setOnPreferenceClickListener(
+                new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Intent intent = new Intent(Settings.ACTION_NOTIFICATION_SETTINGS);
+                intent.addFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
+                intent.putExtra(SettingsUtils.EXTRA_SHOW_FRAGMENT_AS_SUBSETTING, true);
+                startActivity(intent);
+                return true;
+            }
+        });
 
         boolean lightsEffectsMusicEnable = getLightsEffectsMusicEnable();
         String lightsEffectsMusicGain = String.valueOf(getLightsEffectsMusicGain());
