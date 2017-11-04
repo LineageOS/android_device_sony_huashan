@@ -43,6 +43,9 @@ public class SettingsUtils {
     public static final String TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK =
             "TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK";
 
+    public static final String EXTRA_SHOW_FRAGMENT_AS_SUBSETTING =
+            ":settings:show_fragment_as_subsetting";
+
     public static int getInt(Context context, String name, int def) {
         SharedPreferences settings = context.getSharedPreferences(PREFERENCES, 0);
         return settings.getInt(name, def);
