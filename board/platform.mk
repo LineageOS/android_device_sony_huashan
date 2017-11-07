@@ -14,3 +14,6 @@ BOARD_LIB_DUMPSTATE := libdumpstate.sony
 # Images
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
+
+# Binder API
+TARGET_USES_64_BIT_BINDER := true
