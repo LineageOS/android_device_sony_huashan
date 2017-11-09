@@ -323,7 +323,6 @@
         <ctl name="LINEOUT1 Volume" value="12" />
         <ctl name="RX3 Digital Volume" value="88" />
         <ctl name="RX1 MIX1 INP1" value="RX1" />
-        <ctl name="EAR PA Gain" value="POS_6_DB" />
         <ctl name="DAC1 Switch" value="1" />
         <ctl name="RX1 Digital Volume" value="91" />
         <ctl name="RX2 Digital Volume" value="91" />
@@ -346,8 +345,7 @@
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="DAC1 Switch" value="1" />
-        <ctl name="EAR PA Gain" value="POS_6_DB" />
-        <ctl name="RX1 Digital Volume" value="91" />
+        <ctl name="RX1 Digital Volume" value="93" />
     </path>
 
     <path name="handset-mic">
@@ -379,8 +377,7 @@
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="DAC1 Switch" value="1" />
-        <ctl name="EAR PA Gain" value="POS_2_DB" />
-        <ctl name="RX1 Digital Volume" value="91" />
+        <ctl name="RX1 Digital Volume" value="93" />
     </path>
 
     <path name="voice-handset-tmus">
