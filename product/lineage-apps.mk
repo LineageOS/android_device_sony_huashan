@@ -2,6 +2,10 @@
 PRODUCT_PACKAGES += \
     Jelly
 
+# Launcher packages
+PRODUCT_PACKAGES += \
+    Trebuchet
+
 # Music packages
 PRODUCT_PACKAGES += \
     Eleven
