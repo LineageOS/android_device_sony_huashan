@@ -18,9 +18,6 @@
 # Device configurations for AOSP
 BOARD_AOSP_BASED := true
 
-# Inherit common Android Go configurations
-$(call inherit-product, build/target/product/go_defaults.mk)
-
 # Inherit device configurations
 $(call inherit-product, device/sony/huashan/device.mk)
 

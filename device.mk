@@ -40,5 +40,8 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-dalvi
 # Device product elements
 include $(LOCAL_PATH)/product/*.mk
 
+# Common Android Go configurations
+$(call inherit-product, build/target/product/go_defaults.mk)
+
 # Vendor product configurations
 $(call inherit-product, vendor/sony/huashan/huashan-vendor.mk)
