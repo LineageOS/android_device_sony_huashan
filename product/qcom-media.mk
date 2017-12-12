@@ -25,7 +25,3 @@ PRODUCT_PACKAGES += \
 # DRM properties
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
-
-# OMX properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.media.treble_omx=false
