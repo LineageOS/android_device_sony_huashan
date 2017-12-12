@@ -20,4 +20,17 @@
   <string name="lights_effects_title">Световые эффекты</string>
   <string name="lights_effects_notification_category">Уведомления</string>
   <string name="lights_effects_notification_settings_title">Настройка уведомлений</string>
+  <string name="lights_effects_notification_settings_summary">Параметры доступа к световым уведомлениям</string>
+  <string name="lights_effects_music_category">Световые эффекты музыки</string>
+  <string name="lights_effects_music_enable_title">Пульсирующий эффект музыки</string>
+  <string name="lights_effects_music_enable_summary">Аудио сигнал управляет светодиодами в ритм музыки</string>
+  <string name="lights_effects_music_gain_title">Усиление звуковых эффектов музыки</string>
+  <string name="lights_effects_music_gain_summary">Шкала громкости звука для яркости LED</string>
+  <string name="lights_effects_music_gain_higher">Высокое усиление</string>
+  <string name="lights_effects_music_gain_normal">Нормальное усиление</string>
+  <string name="lights_effects_music_gain_lower">Слабое усиление</string>
+  <string name="lights_effects_music_awake_title">Только пульсация при включенном дисплее</string>
+  <string name="lights_effects_music_awake_summary">Разрешить музыкальные эффекты только тогда, когда устройство активно</string>
+  <string name="lights_effects_music_always_title">Музыкальные эффекты включены всегда</string>
+  <string name="lights_effects_music_always_summary">Использовать пульсирующий LED со всей исходящей музыкой. Блокировать обычные световые уведомления и уведомление зарядки.</string>
 </resources>

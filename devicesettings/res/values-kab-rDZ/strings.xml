@@ -17,13 +17,4 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
-  <string name="lights_effects_title">Efekty świetlne</string>
-  <string name="lights_effects_notification_category">Powiadomienia</string>
-  <string name="lights_effects_music_gain_title">Wzmocnienie efektów muzycznych</string>
-  <string name="lights_effects_music_gain_higher">Mocniejsze wzmocnienie</string>
-  <string name="lights_effects_music_gain_normal">Normalne wzmocnienie</string>
-  <string name="lights_effects_music_gain_lower">Mniejsze wzmocnienie</string>
-  <string name="lights_effects_music_awake_title">Pulsowanie tylko, gdy ekran włączony</string>
-  <string name="lights_effects_music_awake_summary">Zezwól na efekty muzyczne tylko, gdy urządzenie jest wybudzone</string>
-  <string name="lights_effects_music_always_title">Efekty muzyczne zawsze włączone</string>
 </resources>

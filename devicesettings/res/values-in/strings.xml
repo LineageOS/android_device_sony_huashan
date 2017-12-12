@@ -19,5 +19,8 @@
   <!-- Lights effects -->
   <string name="lights_effects_title">Efek lampu</string>
   <string name="lights_effects_notification_category">Pemberitahuan</string>
+  <string name="lights_effects_notification_settings_title">Konfigurasikan pemberitahuan</string>
+  <string name="lights_effects_notification_settings_summary">Setelan akses lampu pemberitahuan</string>
+  <string name="lights_effects_music_category">Efek lampu musik</string>
   <string name="lights_effects_music_always_title">Selalu hidupkan efek musik</string>
 </resources>

@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Світлові ефекти</string>
+  <string name="lights_effects_notification_category">Сповіщення</string>
+  <string name="lights_effects_notification_settings_title">Налаштувати сповіщення</string>
+  <string name="lights_effects_notification_settings_summary">Доступ до налаштувань світлових сповіщень</string>
+  <string name="lights_effects_music_category">Музичні світлові ефекти</string>
+  <string name="lights_effects_music_enable_title">Музичні пульсуючі ефекти</string>
+  <string name="lights_effects_music_enable_summary">Аудіо сигнал керує світодіодами у ритм музики</string>
+  <string name="lights_effects_music_gain_title">Посилення звукових ефектів музики</string>
+  <string name="lights_effects_music_gain_summary">Шкала гучності звуку для яскравості LED</string>
+  <string name="lights_effects_music_gain_higher">Виcоке посилення</string>
+  <string name="lights_effects_music_gain_normal">Нормальне посилення</string>
+  <string name="lights_effects_music_gain_lower">Слабке посилення</string>
+  <string name="lights_effects_music_awake_title">Пульсувати лише із увімкненим екраном</string>
+  <string name="lights_effects_music_awake_summary">Дозволяти музичні ефекти лише коли пристрій є пробудженим</string>
+  <string name="lights_effects_music_always_title">Звукові ефекти завжди увімкнені</string>
+  <string name="lights_effects_music_always_summary">Використовувати пульсуючий LED зі всією вихідною музикою. Блокувати звичайне світло і сповіщення зарядки.</string>
 </resources>

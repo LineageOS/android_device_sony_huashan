@@ -22,6 +22,7 @@
   <string name="lights_effects_notification_settings_title">Konfigurer varsler</string>
   <string name="lights_effects_notification_settings_summary">Tilgang til varsellys-innstillinger</string>
   <string name="lights_effects_music_category">Musikk lyseffekter</string>
+  <string name="lights_effects_music_enable_summary">Lydsignal kontrollerer LED-lysene rytmisk</string>
   <string name="lights_effects_music_gain_title">Lydforsterkningsnivå for musikkeffekter</string>
   <string name="lights_effects_music_gain_higher">Høyere forsterkningsnivå</string>
   <string name="lights_effects_music_gain_normal">Normalt forsterkningsnivå</string>
