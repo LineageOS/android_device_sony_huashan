@@ -19,7 +19,7 @@
 /dev/msm_acdb                                                                     u:object_r:audio_device:s0
 /dev/msm_camera(/.*)?                                                             u:object_r:video_device:s0
 /dev/msm_rotator                                                                  u:object_r:video_device:s0
-/dev/msm_vidc.*                                                                   u:object_r:audio_device:s0
+/dev/msm_vidc.*                                                                   u:object_r:video_device:s0
 /dev/msm_vpe_standalone                                                           u:object_r:video_device:s0
 /dev/qseecom                                                                      u:object_r:tee_device:s0
 /dev/radio0                                                                       u:object_r:fm_device:s0
