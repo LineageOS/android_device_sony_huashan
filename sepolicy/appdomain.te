@@ -1,0 +1,2 @@
+r_dir_file(appdomain, sysfs_batteryinfo)
+r_dir_file(appdomain, sysfs_thermal)
