@@ -19,7 +19,7 @@ $(uncompressed_ramdisk): $(INSTALLED_RAMDISK_TARGET)
 
 recovery_uncompressed_ramdisk := $(PRODUCT_OUT)/ramdisk-recovery.cpio
 recovery_uncompressed_device_ramdisk := $(PRODUCT_OUT)/ramdisk-recovery-device.cpio
-$(recovery_uncompressed_device_ramdisk): $(MKBOOTFS) \
+$(recovery_uncompressed_device_ramdisk): $(MKBOOTFS) $(ADBD) \
 		$(INTERNAL_RECOVERYIMAGE_FILES) \
 		$(recovery_initrc) $(recovery_sepolicy) $(recovery_kernel) \
 		$(INSTALLED_2NDBOOTLOADER_TARGET) \
