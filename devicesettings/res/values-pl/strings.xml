@@ -19,11 +19,18 @@
   <!-- Lights effects -->
   <string name="lights_effects_title">Efekty świetlne</string>
   <string name="lights_effects_notification_category">Powiadomienia</string>
+  <string name="lights_effects_notification_settings_title">Skonfiguruj powiadomienia</string>
+  <string name="lights_effects_notification_settings_summary">Dostęp do powiadomień ustawień świetlnych</string>
+  <string name="lights_effects_music_category">Muzyczne efekty świetlne</string>
+  <string name="lights_effects_music_enable_title">Pulsowanie</string>
+  <string name="lights_effects_music_enable_summary">Sygnał audio kontroluje LED w rytm muzyki</string>
   <string name="lights_effects_music_gain_title">Wzmocnienie efektów muzycznych</string>
+  <string name="lights_effects_music_gain_summary">Skala głośności dźwięku dla diody LED</string>
   <string name="lights_effects_music_gain_higher">Mocniejsze wzmocnienie</string>
   <string name="lights_effects_music_gain_normal">Normalne wzmocnienie</string>
   <string name="lights_effects_music_gain_lower">Mniejsze wzmocnienie</string>
   <string name="lights_effects_music_awake_title">Pulsowanie tylko, gdy ekran włączony</string>
   <string name="lights_effects_music_awake_summary">Zezwól na efekty muzyczne tylko, gdy urządzenie jest wybudzone</string>
   <string name="lights_effects_music_always_title">Efekty muzyczne zawsze włączone</string>
+  <string name="lights_effects_music_always_summary">Użyj wszystkich wyjść audio do pulsowania LED. Blokuje normalne powiadomienia diodą.</string>
 </resources>
