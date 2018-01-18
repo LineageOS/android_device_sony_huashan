@@ -34,10 +34,22 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on fs
-    mount_all fstab.qcom
+    mount_all fstab.qcom --early
 
     restorecon /data/misc/audio/mbhc.bin
     restorecon /data/misc/audio/wcd9310_anc.bin
+
+    # Start HW service manager early
+    start hwservicemanager
+
+on late-fs
+    # Start services for bootanim
+    start surfaceflinger
+    start bootanim
+    start configstore-hal-1-0
+    start gralloc-2-0
+
+    mount_all fstab.qcom --late
 
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
