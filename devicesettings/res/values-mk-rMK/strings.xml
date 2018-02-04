@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Светлосни ефекти</string>
+  <string name="lights_effects_notification_category">Известувања</string>
+  <string name="lights_effects_notification_settings_title">Конфигурирај известувања</string>
+  <string name="lights_effects_notification_settings_summary">Прилагодувања на светлата за известување</string>
+  <string name="lights_effects_music_category">Светлосни музички ефекти</string>
+  <string name="lights_effects_music_enable_title">Пулсни музички ефекти</string>
+  <string name="lights_effects_music_enable_summary">Аудио сигналот ги контролира LED диодите во ритам</string>
+  <string name="lights_effects_music_gain_title">Ниво на засилување на музичките ефекти</string>
+  <string name="lights_effects_music_gain_summary">Прилагодете ја светлината на LED диодите спрема јачината на звукот</string>
+  <string name="lights_effects_music_gain_higher">Повисоко ниво</string>
+  <string name="lights_effects_music_gain_normal">Нормално ниво</string>
+  <string name="lights_effects_music_gain_lower">Пониско ниво</string>
+  <string name="lights_effects_music_awake_title">Само пулсирај со уклучен екран</string>
+  <string name="lights_effects_music_awake_summary">Дозволи музички ефекти само кога уредот е буден</string>
+  <string name="lights_effects_music_always_title">Секогаш вклучете музички ефекти</string>
+  <string name="lights_effects_music_always_summary">Користете ги сите аудио излези за пулсирање на LED диодите. Ги блокира нормалните светла и известувањата за полнење.</string>
 </resources>

@@ -20,5 +20,17 @@
   <string name="lights_effects_title">Εφέ φωτισμού</string>
   <string name="lights_effects_notification_category">Ειδοποιήσεις</string>
   <string name="lights_effects_notification_settings_title">Ρύθμιση ειδοποιήσεων</string>
+  <string name="lights_effects_notification_settings_summary">Πρόσβαση ρυθμίσεων LED ειδοποιήσεων</string>
+  <string name="lights_effects_music_category">Εφέ φωτισμού μουσικής</string>
   <string name="lights_effects_music_enable_title">Εφέ παλμού μουσικής</string>
+  <string name="lights_effects_music_enable_summary">Τα ηχητικά σήματα ελέγχουν τα LED ρυθμικά</string>
+  <string name="lights_effects_music_gain_title">Ενίσχυση ήχου για τα εφέ μουσικής</string>
+  <string name="lights_effects_music_gain_summary">Κλιμάκωση της έντασης ήχου για την φωτεινότητα των LED</string>
+  <string name="lights_effects_music_gain_higher">Υψηλότερη ένταση</string>
+  <string name="lights_effects_music_gain_normal">Κανονική ένταση</string>
+  <string name="lights_effects_music_gain_lower">Χαμηλότερη ένταση</string>
+  <string name="lights_effects_music_awake_title">Παλμός μόνο όταν η οθόνη είναι ενεργή</string>
+  <string name="lights_effects_music_awake_summary">Τα μουσικά εφέ θα επιτρέπονται μόνο όταν η συσκευή είναι ενεργή</string>
+  <string name="lights_effects_music_always_title">Μόνιμη ενεργοποίηση των μουσικών εφέ</string>
+  <string name="lights_effects_music_always_summary">Χρήση όλων των εξόδων ήχου για τον παλμό του LED. Αποκλείει τις κανονικές φωτεινές ενδείξεις και τις ειδοποιήσεις φόρτισης.</string>
 </resources>

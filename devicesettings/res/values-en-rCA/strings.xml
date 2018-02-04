@@ -17,11 +17,4 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
-  <string name="lights_effects_title">Effeithiau goleuadau</string>
-  <string name="lights_effects_notification_category">Hysbysiadau</string>
-  <string name="lights_effects_notification_settings_title">Ffurfweddu hysbysiadau</string>
-  <string name="lights_effects_music_category">Effeithiau goleuadau cerddoriaeth</string>
-  <string name="lights_effects_music_enable_summary">Signal sain yn rheoli\'r goleuadau LED mewn rhythm</string>
-  <string name="lights_effects_music_awake_summary">Galluogi effeithiau cerddoriaeth dim ond pan mae\'r ddyfais yn effro</string>
-  <string name="lights_effects_music_always_title">Galluogi effeithiau cerddoriaeth o hyd</string>
 </resources>
