@@ -30,9 +30,6 @@ import init.board.target.rc
 import init.target.rc
 
 on init
-    # Symbols required for SONY blobs
-    export LD_SHIM_LIBS "/system/lib/libcald_pal.so|libshim_cald.so:/system/lib/hw/camera.vendor.qcom.so|libshim_camera.so"
-
     symlink /dev/socket /tmp
 
     symlink /sdcard /storage/sdcard0
