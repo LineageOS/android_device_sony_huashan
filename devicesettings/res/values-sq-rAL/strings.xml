@@ -17,4 +17,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Efektet e dritave</string>
+  <string name="lights_effects_notification_category">Njoftimet</string>
 </resources>
