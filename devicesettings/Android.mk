@@ -10,6 +10,7 @@ ifneq ($(BOARD_AOSP_BASED),)
 endif
 
 LOCAL_PACKAGE_NAME := DeviceSettings
+LOCAL_SDK_VERSION := current
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
 
