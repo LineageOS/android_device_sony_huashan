@@ -1,5 +1,5 @@
 type thermanager, domain;
-type thermanager_exec, exec_type, file_type;
+type thermanager_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(thermanager)
 

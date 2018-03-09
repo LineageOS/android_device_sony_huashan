@@ -18,4 +18,4 @@ type debugfs_asoc, debugfs_type, fs_type;
 type tad_socket, file_type;
 
 # /data
-type fm_data_file, file_type, data_file_type;
+type fm_data_file, file_type, data_file_type, core_data_file_type;
