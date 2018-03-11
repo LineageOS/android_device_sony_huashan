@@ -1,2 +1,2 @@
 #============= surfaceflinger ==============
-allow surfaceflinger sysfs_surfaceflinger:file write;
+allow surfaceflinger sysfs_surfaceflinger:file rw_file_perms;
