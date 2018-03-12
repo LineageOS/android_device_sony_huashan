@@ -1,0 +1,2 @@
+# LMKD
+TARGET_LMKD_STATS_LOG := true
