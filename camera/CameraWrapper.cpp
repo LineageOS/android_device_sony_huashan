@@ -331,7 +331,7 @@ static char *camera_fixup_setparams(int __attribute__((unused)) id,
             params.set(KEY_SONY_VIDEO_STABILISER,
                     VALUE_SONY_INTELLIGENT_ACTIVE);
         } else {
-            params.set(KEY_SONY_VIDEO_STABILISER, VALUE_SONY_ON);
+            params.set(KEY_SONY_VIDEO_STABILISER, VALUE_SONY_OFF);
         }
         params.set(KEY_SONY_IMAGE_STABILISER, VALUE_SONY_OFF);
     }
