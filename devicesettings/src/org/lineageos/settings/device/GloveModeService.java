@@ -62,14 +62,14 @@ public class GloveModeService extends Service {
 
         initializeGloveMode();
 
-        mGloveModeEnabled = isGloveModeEnabled();
+        getGloveModeEnabled();
         if (DEBUG) Log.d(TAG, "Glove Mode state: " + mGloveModeEnabled);
 
         updateGloveMode(true);
 
         mPreferencesListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
             public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-                mGloveModeEnabled = isGloveModeEnabled();
+                getGloveModeEnabled();
                 updateGloveMode(true);
             }
         };
@@ -115,7 +115,7 @@ public class GloveModeService extends Service {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
-                mGloveModeEnabled = isGloveModeEnabled();
+                getGloveModeEnabled();
                 if (DEBUG) Log.d(TAG, "Glove Mode state: " + mGloveModeEnabled);
             } else if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
                 updateGloveMode(false);
@@ -123,17 +123,16 @@ public class GloveModeService extends Service {
         }
     };
 
-    private boolean isGloveModeEnabled() {
-        int HighTouchSensitivity = SettingsUtils.getInt(mContext,
-                SettingsUtils.HIGH_TOUCH_SENSITIVITY_ENABLE, 1);
-        return HighTouchSensitivity == 1;
+    private void getGloveModeEnabled() {
+        mGloveModeEnabled = SettingsUtils.getIntSystem(mContext, mContext.getContentResolver(),
+                SettingsUtils.HIGH_TOUCH_SENSITIVITY_ENABLE, 1) == 1;
     }
 
     private void initializeGloveMode() {
         SharedPreferences settings = getSharedPreferences(PREFERENCES, 0);
         boolean initiated = settings.getBoolean("glovemode-initiated", false);
 
-        if (!initiated && SettingsUtils.putInt(mContext,
+        if (!initiated && SettingsUtils.putIntSystem(mContext, mContext.getContentResolver(),
                 SettingsUtils.HIGH_TOUCH_SENSITIVITY_ENABLE, 1)) {
             Log.d(TAG, "GloveMode has been enabled by default");
             SharedPreferences.Editor editor = settings.edit();
