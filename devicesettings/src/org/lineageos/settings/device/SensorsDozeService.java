@@ -352,7 +352,7 @@ public class SensorsDozeService extends Service {
         Vibrator vibrator = (Vibrator) mContext.getSystemService(
                 Context.VIBRATOR_SERVICE);
 
-        boolean enabled = SettingsUtils.getInt(mContext,
+        boolean enabled = SettingsUtils.getIntSystem(mContext, mContext.getContentResolver(),
                 SettingsUtils.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, 1) != 0;
 
         switch (audioManager.getRingerMode()) {
