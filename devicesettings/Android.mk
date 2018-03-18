@@ -5,6 +5,10 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
+ifneq ($(BOARD_AOSP_BASED),)
+    LOCAL_FULL_LIBS_MANIFEST_FILES := $(LOCAL_PATH)/ExtendedManifest.xml
+endif
+
 LOCAL_PACKAGE_NAME := DeviceSettings
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
