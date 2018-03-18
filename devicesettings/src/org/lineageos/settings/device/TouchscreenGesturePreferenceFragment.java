@@ -113,8 +113,8 @@ public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
-        mHapticFeedback.setChecked(SettingsUtils.getInt(getContext(),
-                SettingsUtils.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, 1) != 0);
+        mHapticFeedback.setChecked(SettingsUtils.getIntSystem(getContext(), getActivity().
+                getContentResolver(), SettingsUtils.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, 1) != 0);
         getListView().setPadding(0, 0, 0, 0);
     }
 
@@ -165,7 +165,7 @@ public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
             final String key = preference.getKey();
             if (KEY_HAPTIC_FEEDBACK.equals(key)) {
                 final boolean value = (boolean) newValue;
-                SettingsUtils.putInt(getContext(),
+                SettingsUtils.putIntSystem(getContext(), getActivity().getContentResolver(),
                         SettingsUtils.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, value ? 1 : 0);
                 return true;
             }
