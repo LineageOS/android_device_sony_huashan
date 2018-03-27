@@ -17,4 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Ljuseffekter</string>
+  <string name="lights_effects_music_enable_title">Ljuseffekter för musik</string>
+  <string name="lights_effects_music_always_title">Aktivera alltid musikeffekter</string>
 </resources>

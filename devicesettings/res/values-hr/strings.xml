@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Efekti svjetla</string>
+  <string name="lights_effects_notification_category">Obavijesti</string>
+  <string name="lights_effects_notification_settings_title">Konfigurirajte obavijesti</string>
+  <string name="lights_effects_notification_settings_summary">Pristup postavkama obavijesti svjetla</string>
+  <string name="lights_effects_music_category">Svjetlosni efekti glazbe</string>
+  <string name="lights_effects_music_enable_title">Pulsirajući efekti glazbe</string>
+  <string name="lights_effects_music_enable_summary">Zvučni signal kontrolira LED-ice u ritmu</string>
+  <string name="lights_effects_music_gain_title">Razina pojačanja glazbenih efekata</string>
+  <string name="lights_effects_music_gain_summary">Prilagodi osvijetljenost LED-ice prema glasnoći</string>
+  <string name="lights_effects_music_gain_higher">Viša razina</string>
+  <string name="lights_effects_music_gain_normal">Normalna razina</string>
+  <string name="lights_effects_music_gain_lower">Viša razina</string>
+  <string name="lights_effects_music_awake_title">Samo pulsiraj s uklj. zaslonom</string>
+  <string name="lights_effects_music_awake_summary">Dopusti glazbene efekte samo kada je uređaj budan</string>
+  <string name="lights_effects_music_always_title">Uvijek omogući glazbene efekte</string>
+  <string name="lights_effects_music_always_summary">Koristi sve audio izlaze za pulsiranje LED dioda. Blokiraj normalna svjetla i obavijesti punjenja.</string>
 </resources>

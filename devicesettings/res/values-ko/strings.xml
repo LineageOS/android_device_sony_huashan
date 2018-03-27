@@ -17,4 +17,14 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">조명 효과</string>
+  <string name="lights_effects_notification_category">알림</string>
+  <string name="lights_effects_notification_settings_title">알림 설정</string>
+  <string name="lights_effects_notification_settings_summary">알림 표시등 설정으로 이동합니다.</string>
+  <string name="lights_effects_music_category">음악 조명 효과</string>
+  <string name="lights_effects_music_enable_title">음악 펄스 효과</string>
+  <string name="lights_effects_music_enable_summary">리듬에 맞춰 오디오 신호가 LED를 제어합니다.</string>
+  <string name="lights_effects_music_awake_title">화면이 켜져 있을 때만 펄스 효과 사용</string>
+  <string name="lights_effects_music_awake_summary">기기의 화면이 켜져 있을 때만 펄스 효과 허용</string>
+  <string name="lights_effects_music_always_title">항상 음악 효과 사용</string>
 </resources>
