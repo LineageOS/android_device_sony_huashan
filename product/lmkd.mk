@@ -7,4 +7,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.kill_timeout_ms=100 \
     ro.lmk.low=1001 \
     ro.lmk.medium=0 \
-    ro.lmk.upgrade_pressure=100
+    ro.lmk.upgrade_pressure=100 \
+    ro.lmk.use_minfree_levels=true
