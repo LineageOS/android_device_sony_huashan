@@ -24,7 +24,13 @@
   <string name="lights_effects_music_category">음악 조명 효과</string>
   <string name="lights_effects_music_enable_title">음악 펄스 효과</string>
   <string name="lights_effects_music_enable_summary">리듬에 맞춰 오디오 신호가 LED를 제어합니다.</string>
+  <string name="lights_effects_music_gain_title">음악 효과 오디오 게인</string>
+  <string name="lights_effects_music_gain_summary">오디오 볼륨에 따라 LED 밝기 조정</string>
+  <string name="lights_effects_music_gain_higher">높은 게인</string>
+  <string name="lights_effects_music_gain_normal">보통 게인</string>
+  <string name="lights_effects_music_gain_lower">낮은 게인</string>
   <string name="lights_effects_music_awake_title">화면이 켜져 있을 때만 펄스 효과 사용</string>
   <string name="lights_effects_music_awake_summary">기기의 화면이 켜져 있을 때만 펄스 효과 허용</string>
   <string name="lights_effects_music_always_title">항상 음악 효과 사용</string>
+  <string name="lights_effects_music_always_summary">모든 오디오 출력을 LED 펄스에 사용합니다. 기본 알림 표시등과 충전 중 알림은 중지됩니다.</string>
 </resources>
