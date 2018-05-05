@@ -10,5 +10,5 @@ BLUE_LED_PATH := /sys/devices/i2c-10/10-0047/leds/LED1_B/brightness
 # Healthd library extension
 ifneq ($(BOARD_AOSP_BASED),)
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.board
-BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(DEVICE_PATH)/charger/images
 endif
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(DEVICE_PATH)/charger/images
