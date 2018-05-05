@@ -22,5 +22,9 @@
   <string name="lights_effects_notification_settings_title">Konfigurasikan pemberitahuan</string>
   <string name="lights_effects_notification_settings_summary">Setelan akses lampu pemberitahuan</string>
   <string name="lights_effects_music_category">Efek lampu musik</string>
+  <string name="lights_effects_music_enable_title">Efek pulse musik</string>
+  <string name="lights_effects_music_enable_summary">Sinyal audio mengontrol LED dalam irama</string>
+  <string name="lights_effects_music_awake_title">Hanya berkedip saat layar hidup</string>
+  <string name="lights_effects_music_awake_summary">Memungkinkan efek musik hanya saat perangkat terjaga</string>
   <string name="lights_effects_music_always_title">Selalu hidupkan efek musik</string>
 </resources>

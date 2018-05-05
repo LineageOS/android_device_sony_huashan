@@ -17,4 +17,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Efetos luminosos</string>
+  <string name="lights_effects_notification_category">Notìficas</string>
+  <string name="lights_effects_notification_settings_title">Cunfigura sas notìficas</string>
+  <string name="lights_effects_notification_settings_summary">Impostatziones de sas lughes de notìfica de atzessu</string>
+  <string name="lights_effects_music_category">Efetos de sas lughes de sa mùsica</string>
+  <string name="lights_effects_music_enable_title">Efetos lampègiu mùsica</string>
+  <string name="lights_effects_music_enable_summary">Su sinnale àudio controllat su ritmu de sos LEDs</string>
+  <string name="lights_effects_music_gain_title">Balàngiu àudio de sos efetos musicales</string>
+  <string name="lights_effects_music_gain_summary">Adata sa luminosidade de sos LEDs a su volume àudio</string>
+  <string name="lights_effects_music_gain_higher">Balàngiu artu</string>
+  <string name="lights_effects_music_gain_normal">Balàngiu normale</string>
+  <string name="lights_effects_music_gain_lower">Balàngiu bassu</string>
+  <string name="lights_effects_music_awake_title">Pulsa petzi cun s\'ischermu allutu</string>
+  <string name="lights_effects_music_awake_summary">Abìlita sos efetos musicales petzi cando su dispositivu est allutu</string>
+  <string name="lights_effects_music_always_title">Abìlita semper sos efetos musicales</string>
+  <string name="lights_effects_music_always_summary">Imprea totu sas essidas àudio pro faghere pulsare sos LEDs. Bloca sas lughes normale e sas notìficas de càrriga.</string>
 </resources>
