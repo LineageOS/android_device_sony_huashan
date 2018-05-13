@@ -1,5 +1,6 @@
 #============= dontaudit ==============
 dontaudit bootanim shell_data_file:dir search;
+dontaudit hal_graphics_allocator shell_data_file:dir search;
 dontaudit mediaserver shell_data_file:dir search;
 dontaudit surfaceflinger shell_data_file:dir search;
 dontaudit system_app shell_data_file:dir search;
