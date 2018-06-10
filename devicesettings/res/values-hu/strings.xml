@@ -17,6 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Lights effects -->
+  <string name="lights_effects_title">Fényeffektek</string>
   <string name="lights_effects_notification_category">Értesítések</string>
   <string name="lights_effects_notification_settings_title">Értesítések beállítása</string>
+  <string name="lights_effects_music_category">Zene fényeffektek</string>
+  <string name="lights_effects_music_enable_title">Zene ütem effektek</string>
+  <string name="lights_effects_music_gain_title">Zeneeffektek hangerősítése</string>
+  <string name="lights_effects_music_gain_higher">Nagymértékű erősítés</string>
+  <string name="lights_effects_music_gain_normal">Normál erősítés</string>
+  <string name="lights_effects_music_gain_lower">Enyhébb erősítés</string>
 </resources>
