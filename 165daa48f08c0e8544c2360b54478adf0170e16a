@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "943b14f1_64627f78",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2018-06-15T22:25:10Z",
+      "side": 1,
+      "message": "Not sure it matters, but I believe legacy GPS uses 0x10000",
+      "revId": "165daa48f08c0e8544c2360b54478adf0170e16a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
