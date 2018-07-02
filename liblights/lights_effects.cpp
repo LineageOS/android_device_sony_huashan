@@ -19,7 +19,7 @@
 #define LOG_TAG "lights_effects.huashan"
 
 /* === Module Libraries === */
-#include <cutils/log.h>
+#include <log/log.h>
 #include <cutils/properties.h>
 #include <errno.h>
 #include <fcntl.h>

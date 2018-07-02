@@ -14,7 +14,7 @@
 #include <private/android_filesystem_config.h>
 
 #define LOG_TAG "macaddrsetup"
-#include <cutils/log.h>
+#include <log/log.h>
 
 /* TA Misc Data Constants */
 #include "tamiscdata.h"

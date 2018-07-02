@@ -21,7 +21,7 @@
 #define LOG_TAG "lights.huashan"
 
 /* === Module Libraries === */
-#include <cutils/log.h>
+#include <log/log.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
