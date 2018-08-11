@@ -11,6 +11,7 @@ type sysfs_proximity_sensor, sysfs_type, fs_type;
 type sysfs_rmtfs, sysfs_type, fs_type;
 type sysfs_smdcntl_open_timeout, sysfs_type, fs_type;
 type sysfs_surfaceflinger, sysfs_type, fs_type;
+type sysfs_system_soc, fs_type, sysfs_type;
 
 # debugfs
 type debugfs_asoc, debugfs_type, fs_type;

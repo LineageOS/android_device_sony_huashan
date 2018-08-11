@@ -65,6 +65,9 @@
 /sys/class/thermal(/.*)?                                                          u:object_r:sysfs_thermal:s0
 /sys/class/uio(/.*)?                                                              u:object_r:sysfs_rmtfs:s0
 /sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity     u:object_r:sysfs_glove_mode:s0
+/sys/devices/i2c-10/10-0040/adc_als_value                                         u:object_r:sysfs_als:s0
+/sys/devices/i2c-10/10-0040/als_gain                                              u:object_r:sysfs_als:s0
+/sys/devices/i2c-10/10-0040/als_lx                                                u:object_r:sysfs_als:s0
 /sys/devices/i2c-10/10-0040/als_on                                                u:object_r:sysfs_als:s0
 /sys/devices/i2c-10/10-0040/debug                                                 u:object_r:sysfs_als:s0
 /sys/devices/i2c-10/10-0040/leds/lcd-backlight(.*/.*)?                            u:object_r:sysfs_leds:s0
@@ -87,6 +90,7 @@
 /sys/devices/platform/msmgpio/gpio(/.*)?                                          u:object_r:sysfs_gpio:s0
 /sys/devices/platform/wcnss_wlan.0/serial_number                                  u:object_r:sysfs_mac_serial:s0
 /sys/devices/platform/wcnss_wlan.0/wcnss_mac_addr                                 u:object_r:sysfs_mac_address:s0
+/sys/devices/system/soc/soc0/id                                                   u:object_r:sysfs_system_soc:s0
 /sys/devices/virtual/graphics/fb([0-2])+/hpd                                      u:object_r:sysfs_surfaceflinger:s0
 /sys/devices/virtual/graphics/fb([0-2])+/vendor_name                              u:object_r:sysfs_surfaceflinger:s0
 /sys/devices/virtual/graphics/fb([0-2])+/product_description                      u:object_r:sysfs_surfaceflinger:s0
