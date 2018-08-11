@@ -1,2 +1,3 @@
 #============= audioserver ==============
 allow audioserver debugfs_asoc:dir { open read search };
+allow audioserver hal_power_hwservice:hwservice_manager find;
