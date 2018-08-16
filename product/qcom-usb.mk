@@ -5,4 +5,4 @@ PRODUCT_COPY_FILES += \
 
 # USB HIDL interfaces
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
+    android.hardware.usb@1.0-service.basic
