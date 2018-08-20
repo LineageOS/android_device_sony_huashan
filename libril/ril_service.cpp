@@ -25,6 +25,8 @@
 
 #include <hwbinder/IPCThreadState.h>
 #include <hwbinder/ProcessState.h>
+#include <telephony/ril.h>
+#include <telephony/ril_mnc.h>
 #include <ril_service.h>
 #include <hidl/HidlTransportSupport.h>
 #include <utils/SystemClock.h>
@@ -3571,7 +3573,7 @@ void fillCellIdentityResponse(CellIdentity &cellIdentity, RIL_CellIdentity_v16 &
             cellIdentity.cellIdentityGsm[0].mcc =
                     std::to_string(rilCellIdentity.cellIdentityGsm.mcc);
             cellIdentity.cellIdentityGsm[0].mnc =
-                    std::to_string(rilCellIdentity.cellIdentityGsm.mnc);
+                    ril::util::mnc::decode(rilCellIdentity.cellIdentityGsm.mnc);
             cellIdentity.cellIdentityGsm[0].lac = rilCellIdentity.cellIdentityGsm.lac;
             cellIdentity.cellIdentityGsm[0].cid = rilCellIdentity.cellIdentityGsm.cid;
             cellIdentity.cellIdentityGsm[0].arfcn = rilCellIdentity.cellIdentityGsm.arfcn;
@@ -3584,7 +3586,7 @@ void fillCellIdentityResponse(CellIdentity &cellIdentity, RIL_CellIdentity_v16 &
             cellIdentity.cellIdentityWcdma[0].mcc =
                     std::to_string(rilCellIdentity.cellIdentityWcdma.mcc);
             cellIdentity.cellIdentityWcdma[0].mnc =
-                    std::to_string(rilCellIdentity.cellIdentityWcdma.mnc);
+                    ril::util::mnc::decode(rilCellIdentity.cellIdentityWcdma.mnc);
             cellIdentity.cellIdentityWcdma[0].lac = rilCellIdentity.cellIdentityWcdma.lac;
             cellIdentity.cellIdentityWcdma[0].cid = rilCellIdentity.cellIdentityWcdma.cid;
             cellIdentity.cellIdentityWcdma[0].psc = rilCellIdentity.cellIdentityWcdma.psc;
@@ -3608,7 +3610,7 @@ void fillCellIdentityResponse(CellIdentity &cellIdentity, RIL_CellIdentity_v16 &
             cellIdentity.cellIdentityLte[0].mcc =
                     std::to_string(rilCellIdentity.cellIdentityLte.mcc);
             cellIdentity.cellIdentityLte[0].mnc =
-                    std::to_string(rilCellIdentity.cellIdentityLte.mnc);
+                    ril::util::mnc::decode(rilCellIdentity.cellIdentityLte.mnc);
             cellIdentity.cellIdentityLte[0].ci = rilCellIdentity.cellIdentityLte.ci;
             cellIdentity.cellIdentityLte[0].pci = rilCellIdentity.cellIdentityLte.pci;
             cellIdentity.cellIdentityLte[0].tac = rilCellIdentity.cellIdentityLte.tac;
@@ -3621,7 +3623,7 @@ void fillCellIdentityResponse(CellIdentity &cellIdentity, RIL_CellIdentity_v16 &
             cellIdentity.cellIdentityTdscdma[0].mcc =
                     std::to_string(rilCellIdentity.cellIdentityTdscdma.mcc);
             cellIdentity.cellIdentityTdscdma[0].mnc =
-                    std::to_string(rilCellIdentity.cellIdentityTdscdma.mnc);
+                    ril::util::mnc::decode(rilCellIdentity.cellIdentityTdscdma.mnc);
             cellIdentity.cellIdentityTdscdma[0].lac = rilCellIdentity.cellIdentityTdscdma.lac;
             cellIdentity.cellIdentityTdscdma[0].cid = rilCellIdentity.cellIdentityTdscdma.cid;
             cellIdentity.cellIdentityTdscdma[0].cpid = rilCellIdentity.cellIdentityTdscdma.cpid;
@@ -7997,7 +7999,7 @@ void convertRilCellInfoListToHal(void *response, size_t responseLen, hidl_vec<Ce
                 cellInfoGsm->cellIdentityGsm.mcc =
                         std::to_string(rillCellInfo->CellInfo.gsm.cellIdentityGsm.mcc);
                 cellInfoGsm->cellIdentityGsm.mnc =
-                        std::to_string(rillCellInfo->CellInfo.gsm.cellIdentityGsm.mnc);
+                        ril::util::mnc::decode(rillCellInfo->CellInfo.gsm.cellIdentityGsm.mnc);
                 cellInfoGsm->cellIdentityGsm.lac =
                         rillCellInfo->CellInfo.gsm.cellIdentityGsm.lac;
                 cellInfoGsm->cellIdentityGsm.cid =
@@ -8021,7 +8023,7 @@ void convertRilCellInfoListToHal(void *response, size_t responseLen, hidl_vec<Ce
                 cellInfoWcdma->cellIdentityWcdma.mcc =
                         std::to_string(rillCellInfo->CellInfo.wcdma.cellIdentityWcdma.mcc);
                 cellInfoWcdma->cellIdentityWcdma.mnc =
-                        std::to_string(rillCellInfo->CellInfo.wcdma.cellIdentityWcdma.mnc);
+                        ril::util::mnc::decode(rillCellInfo->CellInfo.wcdma.cellIdentityWcdma.mnc);
                 cellInfoWcdma->cellIdentityWcdma.lac =
                         rillCellInfo->CellInfo.wcdma.cellIdentityWcdma.lac;
                 cellInfoWcdma->cellIdentityWcdma.cid =
@@ -8069,7 +8071,7 @@ void convertRilCellInfoListToHal(void *response, size_t responseLen, hidl_vec<Ce
                 cellInfoLte->cellIdentityLte.mcc =
                         std::to_string(rillCellInfo->CellInfo.lte.cellIdentityLte.mcc);
                 cellInfoLte->cellIdentityLte.mnc =
-                        std::to_string(rillCellInfo->CellInfo.lte.cellIdentityLte.mnc);
+                        ril::util::mnc::decode(rillCellInfo->CellInfo.lte.cellIdentityLte.mnc);
                 cellInfoLte->cellIdentityLte.ci =
                         rillCellInfo->CellInfo.lte.cellIdentityLte.ci;
                 cellInfoLte->cellIdentityLte.pci =
@@ -8099,7 +8101,8 @@ void convertRilCellInfoListToHal(void *response, size_t responseLen, hidl_vec<Ce
                 cellInfoTdscdma->cellIdentityTdscdma.mcc =
                         std::to_string(rillCellInfo->CellInfo.tdscdma.cellIdentityTdscdma.mcc);
                 cellInfoTdscdma->cellIdentityTdscdma.mnc =
-                        std::to_string(rillCellInfo->CellInfo.tdscdma.cellIdentityTdscdma.mnc);
+                        ril::util::mnc::decode(
+                                rillCellInfo->CellInfo.tdscdma.cellIdentityTdscdma.mnc);
                 cellInfoTdscdma->cellIdentityTdscdma.lac =
                         rillCellInfo->CellInfo.tdscdma.cellIdentityTdscdma.lac;
                 cellInfoTdscdma->cellIdentityTdscdma.cid =
