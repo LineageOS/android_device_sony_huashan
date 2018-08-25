@@ -114,11 +114,7 @@ RIL_RadioFunctions s_callbacks = {0, NULL, NULL, NULL, NULL, NULL};
 static int s_registerCalled = 0;
 
 static pthread_t s_tid_dispatch;
-static pthread_t s_tid_reader;
 static int s_started = 0;
-
-static int s_fdDebug = -1;
-static int s_fdDebug_socket2 = -1;
 
 static int s_fdWakeupRead;
 static int s_fdWakeupWrite;
@@ -128,43 +124,29 @@ int s_wakelock_count = 0;
 static struct ril_event s_wakeupfd_event;
 
 static pthread_mutex_t s_pendingRequestsMutex = PTHREAD_MUTEX_INITIALIZER;
-static pthread_mutex_t s_writeMutex = PTHREAD_MUTEX_INITIALIZER;
 static pthread_mutex_t s_wakeLockCountMutex = PTHREAD_MUTEX_INITIALIZER;
 static RequestInfo *s_pendingRequests = NULL;
 
 #if (SIM_COUNT >= 2)
 static pthread_mutex_t s_pendingRequestsMutex_socket2  = PTHREAD_MUTEX_INITIALIZER;
-static pthread_mutex_t s_writeMutex_socket2            = PTHREAD_MUTEX_INITIALIZER;
 static RequestInfo *s_pendingRequests_socket2          = NULL;
 #endif
 
 #if (SIM_COUNT >= 3)
 static pthread_mutex_t s_pendingRequestsMutex_socket3  = PTHREAD_MUTEX_INITIALIZER;
-static pthread_mutex_t s_writeMutex_socket3            = PTHREAD_MUTEX_INITIALIZER;
 static RequestInfo *s_pendingRequests_socket3          = NULL;
 #endif
 
 #if (SIM_COUNT >= 4)
 static pthread_mutex_t s_pendingRequestsMutex_socket4  = PTHREAD_MUTEX_INITIALIZER;
-static pthread_mutex_t s_writeMutex_socket4            = PTHREAD_MUTEX_INITIALIZER;
 static RequestInfo *s_pendingRequests_socket4          = NULL;
 #endif
-
-static struct ril_event s_wake_timeout_event;
-static struct ril_event s_debug_event;
-
 
 static const struct timeval TIMEVAL_WAKE_TIMEOUT = {ANDROID_WAKE_LOCK_SECS,ANDROID_WAKE_LOCK_USECS};
 
 
 static pthread_mutex_t s_startupMutex = PTHREAD_MUTEX_INITIALIZER;
 static pthread_cond_t s_startupCond = PTHREAD_COND_INITIALIZER;
-
-static pthread_mutex_t s_dispatchMutex = PTHREAD_MUTEX_INITIALIZER;
-static pthread_cond_t s_dispatchCond = PTHREAD_COND_INITIALIZER;
-
-static RequestInfo *s_toDispatchHead = NULL;
-static RequestInfo *s_toDispatchTail = NULL;
 
 static UserCallbackInfo *s_last_wake_timeout_info = NULL;
 
@@ -308,13 +290,6 @@ static void resendLastNITZTimeData(RIL_SOCKET_ID socket_id) {
         int responseType = (s_callbacks.version >= 13)
                            ? RESPONSE_UNSOLICITED_ACK_EXP
                            : RESPONSE_UNSOLICITED;
-        // acquire read lock for the service before calling nitzTimeReceivedInd() since it reads
-        // nitzTimeReceived in ril_service
-        pthread_rwlock_t *radioServiceRwlockPtr = radio::getRadioServiceRwlock(
-                (int) socket_id);
-        int rwlockRet = pthread_rwlock_rdlock(radioServiceRwlockPtr);
-        assert(rwlockRet == 0);
-
         int ret = radio::nitzTimeReceivedInd(
             (int)socket_id, responseType, 0,
             RIL_E_SUCCESS, s_lastNITZTimeData, s_lastNITZTimeDataSize);
@@ -322,9 +297,6 @@ static void resendLastNITZTimeData(RIL_SOCKET_ID socket_id) {
             free(s_lastNITZTimeData);
             s_lastNITZTimeData = NULL;
         }
-
-        rwlockRet = pthread_rwlock_unlock(radioServiceRwlockPtr);
-        assert(rwlockRet == 0);
     }
 }
 
@@ -445,9 +417,6 @@ extern "C" void RIL_setcallbacks (const RIL_RadioFunctions *callbacks) {
 
 extern "C" void
 RIL_register (const RIL_RadioFunctions *callbacks) {
-    int ret;
-    int flags;
-
     RLOGI("SIM_COUNT: %d", SIM_COUNT);
 
     if (callbacks == NULL) {
@@ -583,9 +552,7 @@ checkAndDequeueRequestInfoIfAck(struct RequestInfo *pRI, bool isAck) {
 extern "C" void
 RIL_onRequestAck(RIL_Token t) {
     RequestInfo *pRI;
-    int ret;
 
-    size_t errorOffset;
     RIL_SOCKET_ID socket_id = RIL_SOCKET_1;
 
     pRI = (RequestInfo *)t;
@@ -619,7 +586,6 @@ extern "C" void
 RIL_onRequestComplete(RIL_Token t, RIL_Errno e, void *response, size_t responselen) {
     RequestInfo *pRI;
     int ret;
-    size_t errorOffset;
     RIL_SOCKET_ID socket_id = RIL_SOCKET_1;
 
     pRI = (RequestInfo *)t;
@@ -809,17 +775,8 @@ void RIL_onUnsolicitedResponse(int unsolResponse, const void *data,
     }
 
     pthread_rwlock_t *radioServiceRwlockPtr = radio::getRadioServiceRwlock((int) soc_id);
-    int rwlockRet;
-
-    if (unsolResponse == RIL_UNSOL_NITZ_TIME_RECEIVED) {
-        // get a write lock in caes of NITZ since setNitzTimeReceived() is called
-        rwlockRet = pthread_rwlock_wrlock(radioServiceRwlockPtr);
-        assert(rwlockRet == 0);
-        radio::setNitzTimeReceived((int) soc_id, android::elapsedRealtime());
-    } else {
-        rwlockRet = pthread_rwlock_rdlock(radioServiceRwlockPtr);
-        assert(rwlockRet == 0);
-    }
+    int rwlockRet = pthread_rwlock_rdlock(radioServiceRwlockPtr);
+    assert(rwlockRet == 0);
 
     if (s_unsolResponses[unsolResponseIndex].responseFunction) {
         ret = s_unsolResponses[unsolResponseIndex].responseFunction(
@@ -848,7 +805,7 @@ void RIL_onUnsolicitedResponse(int unsolResponse, const void *data,
     }
 
 #if VDBG
-    RLOGI("%s UNSOLICITED: %s length:%d", rilSocketIdToString(soc_id),
+    RLOGI("%s UNSOLICITED: %s length:%zu", rilSocketIdToString(soc_id),
             requestToString(unsolResponse), datalen);
 #endif
 
@@ -976,7 +933,7 @@ failCauseToString(RIL_Errno e) {
         case RIL_E_SIM_FULL: return "E_SIM_FULL";
         case RIL_E_NETWORK_REJECT: return "E_NETWORK_REJECT";
         case RIL_E_OPERATION_NOT_ALLOWED: return "E_OPERATION_NOT_ALLOWED";
-        case RIL_E_EMPTY_RECORD: "E_EMPTY_RECORD";
+        case RIL_E_EMPTY_RECORD: return "E_EMPTY_RECORD";
         case RIL_E_INVALID_SMS_FORMAT: return "E_INVALID_SMS_FORMAT";
         case RIL_E_ENCODING_ERR: return "E_ENCODING_ERR";
         case RIL_E_INVALID_SMSC_ADDRESS: return "E_INVALID_SMSC_ADDRESS";
@@ -1191,6 +1148,7 @@ requestToString(int request) {
         case RIL_REQUEST_GET_ACTIVITY_INFO: return "GET_ACTIVITY_INFO";
         case RIL_REQUEST_SET_CARRIER_RESTRICTIONS: return "SET_CARRIER_RESTRICTIONS";
         case RIL_REQUEST_GET_CARRIER_RESTRICTIONS: return "GET_CARRIER_RESTRICTIONS";
+        case RIL_REQUEST_SET_CARRIER_INFO_IMSI_ENCRYPTION: return "SET_CARRIER_INFO_IMSI_ENCRYPTION";
         case RIL_RESPONSE_ACKNOWLEDGEMENT: return "RESPONSE_ACKNOWLEDGEMENT";
         case RIL_UNSOL_RESPONSE_RADIO_STATE_CHANGED: return "UNSOL_RESPONSE_RADIO_STATE_CHANGED";
         case RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED: return "UNSOL_RESPONSE_CALL_STATE_CHANGED";
@@ -1236,6 +1194,7 @@ requestToString(int request) {
         case RIL_UNSOL_DC_RT_INFO_CHANGED: return "UNSOL_DC_RT_INFO_CHANGED";
         case RIL_UNSOL_RADIO_CAPABILITY: return "UNSOL_RADIO_CAPABILITY";
         case RIL_UNSOL_MODEM_RESTART: return "UNSOL_MODEM_RESTART";
+        case RIL_UNSOL_CARRIER_INFO_IMSI_ENCRYPTION: return "UNSOL_CARRIER_INFO_IMSI_ENCRYPTION";
         case RIL_UNSOL_ON_SS: return "UNSOL_ON_SS";
         case RIL_UNSOL_STK_CC_ALPHA_NOTIFY: return "UNSOL_STK_CC_ALPHA_NOTIFY";
         case RIL_UNSOL_LCEDATA_RECV: return "UNSOL_LCEDATA_RECV";
