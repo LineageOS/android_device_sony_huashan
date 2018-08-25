@@ -195,11 +195,6 @@ char * RIL_getServiceName() {
     return ril_service_name;
 }
 
-extern "C"
-void RIL_setServiceName(const char * s) {
-    strncpy(ril_service_name, s, MAX_SERVICE_NAME_LENGTH);
-}
-
 RequestInfo *
 addRequestToList(int serial, int slotId, int request) {
     RequestInfo *pRI;
@@ -295,6 +290,13 @@ static void resendLastNITZTimeData(RIL_SOCKET_ID socket_id) {
         int responseType = (s_callbacks.version >= 13)
                            ? RESPONSE_UNSOLICITED_ACK_EXP
                            : RESPONSE_UNSOLICITED;
+        // acquire read lock for the service before calling nitzTimeReceivedInd() since it reads
+        // nitzTimeReceived in ril_service
+        pthread_rwlock_t *radioServiceRwlockPtr = radio::getRadioServiceRwlock(
+                (int) socket_id);
+        int rwlockRet = pthread_rwlock_rdlock(radioServiceRwlockPtr);
+        assert(rwlockRet == 0);
+
         int ret = radio::nitzTimeReceivedInd(
             (int)socket_id, responseType, 0,
             RIL_E_SUCCESS, s_lastNITZTimeData, s_lastNITZTimeDataSize);
@@ -302,6 +304,9 @@ static void resendLastNITZTimeData(RIL_SOCKET_ID socket_id) {
             free(s_lastNITZTimeData);
             s_lastNITZTimeData = NULL;
         }
+
+        rwlockRet = pthread_rwlock_unlock(radioServiceRwlockPtr);
+        assert(rwlockRet == 0);
     }
 }
 
@@ -464,10 +469,10 @@ RIL_register (const RIL_RadioFunctions *callbacks) {
 }
 
 extern "C" void
-RIL_register_socket (RIL_RadioFunctions *(*Init)(const struct RIL_Env *, int, char **),
+RIL_register_socket (const RIL_RadioFunctions *(*Init)(const struct RIL_Env *, int, char **),
         RIL_SOCKET_TYPE socketType, int argc, char **argv) {
 
-    RIL_RadioFunctions* UimFuncs = NULL;
+    const RIL_RadioFunctions* UimFuncs = NULL;
 
     if(Init) {
         UimFuncs = Init(&RilSapSocket::uimRilEnv, argc, argv);
@@ -780,14 +785,21 @@ void RIL_onUnsolicitedResponse(int unsolResponse, const void *data,
     }
 
     pthread_rwlock_t *radioServiceRwlockPtr = radio::getRadioServiceRwlock((int) soc_id);
-    int rwlockRet = pthread_rwlock_rdlock(radioServiceRwlockPtr);
-    assert(rwlockRet == 0);
+    int rwlockRet;
 
-    if (s_unsolResponses[unsolResponseIndex].responseFunction) {
-        ret = s_unsolResponses[unsolResponseIndex].responseFunction(
-                (int) soc_id, responseType, 0, RIL_E_SUCCESS, const_cast<void*>(data),
-                datalen);
+    if (unsolResponse == RIL_UNSOL_NITZ_TIME_RECEIVED) {
+        // get a write lock in caes of NITZ since setNitzTimeReceived() is called
+        rwlockRet = pthread_rwlock_wrlock(radioServiceRwlockPtr);
+        assert(rwlockRet == 0);
+        radio::setNitzTimeReceived((int) soc_id, android::elapsedRealtime());
+    } else {
+        rwlockRet = pthread_rwlock_rdlock(radioServiceRwlockPtr);
+        assert(rwlockRet == 0);
     }
+
+    ret = s_unsolResponses[unsolResponseIndex].responseFunction(
+            (int) soc_id, responseType, 0, RIL_E_SUCCESS, const_cast<void*>(data),
+            datalen);
 
     rwlockRet = pthread_rwlock_unlock(radioServiceRwlockPtr);
     assert(rwlockRet == 0);

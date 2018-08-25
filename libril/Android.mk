@@ -37,12 +37,15 @@ ifeq ($(SIM_COUNT), 2)
     LOCAL_CFLAGS += -DANDROID_SIM_COUNT_2
 endif
 
+ifneq ($(DISABLE_RILD_OEM_HOOK),)
+    LOCAL_CFLAGS += -DOEM_HOOK_DISABLED
+endif
+
 LOCAL_C_INCLUDES += external/nanopb-c
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/../include
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/../include
 
 LOCAL_MODULE:= libril
-LOCAL_CLANG := true
 LOCAL_SANITIZE := integer
 
 include $(BUILD_SHARED_LIBRARY)
