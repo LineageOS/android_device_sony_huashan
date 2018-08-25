@@ -184,11 +184,11 @@ static UserCallbackInfo * internalRequestTimedCallback
 
 /** Index == requestNumber */
 static CommandInfo s_commands[] = {
-#include "ril_commands.h"
+#include <ril_commands.h>
 };
 
 static UnsolResponseInfo s_unsolResponses[] = {
-#include "ril_unsol_commands.h"
+#include <ril_unsol_commands.h>
 };
 
 char * RIL_getServiceName() {
@@ -229,6 +229,11 @@ addRequestToList(int serial, int slotId, int request) {
     }
 #endif
 #endif
+
+    if (request >= (int)NUM_ELEMS(s_commands)) {
+        RLOGE("Request %s not supported", requestToString(request));
+        return NULL;
+    }
 
     pRI = (RequestInfo *)calloc(1, sizeof(RequestInfo));
     if (pRI == NULL) {
