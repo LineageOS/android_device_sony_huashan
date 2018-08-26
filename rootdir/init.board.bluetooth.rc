@@ -35,3 +35,9 @@ on property:bluetooth.hciattach=true
 
 on property:bluetooth.hciattach=false
     setprop bluetooth.status off
+
+on property:vendor.bluetooth.hciattach=true
+    start hci_attach
+
+on property:vendor.bluetooth.hciattach=false
+    setprop vendor.bluetooth.status off
