@@ -20,6 +20,7 @@ $(uncompressed_ramdisk): $(INSTALLED_RAMDISK_TARGET)
 recovery_uncompressed_ramdisk := $(PRODUCT_OUT)/ramdisk-recovery.cpio
 recovery_uncompressed_device_ramdisk := $(PRODUCT_OUT)/ramdisk-recovery-device.cpio
 $(recovery_uncompressed_device_ramdisk): $(MKBOOTFS) $(ADBD) \
+		$(INTERNAL_ROOT_FILES) \
 		$(INTERNAL_RECOVERYIMAGE_FILES) \
 		$(recovery_initrc) $(recovery_sepolicy) $(recovery_kernel) \
 		$(INSTALLED_2NDBOOTLOADER_TARGET) \
@@ -45,6 +46,7 @@ INSTALLED_BOOTIMAGE_TARGET := $(PRODUCT_OUT)/boot.img
 $(INSTALLED_BOOTIMAGE_TARGET): $(PRODUCT_OUT)/kernel \
 		$(uncompressed_ramdisk) \
 		$(recovery_uncompressed_device_ramdisk) \
+		$(INTERNAL_ROOT_FILES) \
 		$(INSTALLED_RAMDISK_TARGET) \
 		$(INITSONY) \
 		$(TARGET_RECOVERY_ROOT_OUT)/sbin/toybox_static \
