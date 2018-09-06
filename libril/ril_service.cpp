@@ -538,6 +538,9 @@ bool copyHidlStringToRil(char **dest, const hidl_string &src, RequestInfo *pRI, 
         RLOGE("Copy of the HIDL string has been truncated, as "
               "the string length reported by size() does not "
               "match the length of string returned by c_str().");
+        free(*dest);
+        *dest = NULL;
+        sendErrorResponse(pRI, RIL_E_INTERNAL_ERR);
         return false;
     }
     return true;
