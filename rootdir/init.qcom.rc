@@ -32,8 +32,6 @@ import /vendor/etc/init/hw/init.target.rc
 on init
     symlink /dev/socket /tmp
 
-    symlink /sdcard /storage/sdcard0
-
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
