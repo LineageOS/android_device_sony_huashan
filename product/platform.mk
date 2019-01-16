@@ -4,6 +4,7 @@ PRODUCT_SHIPPING_API_LEVEL := 16
 # Ramdisk packages
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    fstab.ramdisk \
     ueventd.qcom.rc
 
 # Sony TrimArea packages
