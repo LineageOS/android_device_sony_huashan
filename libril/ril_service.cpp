@@ -7158,6 +7158,10 @@ void convertRilSignalStrengthToHalV10(void *response, size_t responseLen,
 
     signalStrength.gw.signalStrength = rilSignalStrength->GW_SignalStrength.signalStrength;
     signalStrength.gw.bitErrorRate = rilSignalStrength->GW_SignalStrength.bitErrorRate;
+    // RIL_SignalStrength_v10 not support gw.timingAdvance. Set to INT_MAX as
+    // invalid value.
+    signalStrength.gw.timingAdvance = INT_MAX;
+
     signalStrength.cdma.dbm = rilSignalStrength->CDMA_SignalStrength.dbm;
     signalStrength.cdma.ecio = rilSignalStrength->CDMA_SignalStrength.ecio;
     signalStrength.evdo.dbm = rilSignalStrength->EVDO_SignalStrength.dbm;
