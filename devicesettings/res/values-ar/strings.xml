@@ -16,5 +16,20 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Lights effects -->
+    <string name="lights_effects_title">تأثيرات الأضواء</string>
+    <string name="lights_effects_notification_category">الإشعارات</string>
+    <string name="lights_effects_notification_settings_title">تهيئة الإشعارات</string>
+    <string name="lights_effects_notification_settings_summary">الوصل إلى إعدادات إشعارات الأضواء</string>
+    <string name="lights_effects_music_category">تأثيرات أضواء الموسيقى</string>
+    <string name="lights_effects_music_enable_title">تأثيرات النبض للموسيقى</string>
+    <string name="lights_effects_music_enable_summary">إشارة الصوت تتحكم في مصابيح LED عند الإيقاع</string>
+    <string name="lights_effects_music_gain_title">تأثيرات الموسيقى مع قوة الصوت</string>
+    <string name="lights_effects_music_gain_summary">قياس مستوى الصوت لسطوع مصابيح LED</string>
+    <string name="lights_effects_music_gain_higher">تغيير عالي</string>
+    <string name="lights_effects_music_gain_normal">تغيير متوسط</string>
+    <string name="lights_effects_music_gain_lower">تغيير قليل</string>
+    <string name="lights_effects_music_awake_title">النبض فقط عند تشغيل الشاشة</string>
+    <string name="lights_effects_music_awake_summary">السماح بتاثيرات الموسيقى فقط عندما يكون الجهاز يعمل</string>
+    <string name="lights_effects_music_always_title">تمكين تأثيرات الموسيقى دائماً</string>
+    <string name="lights_effects_music_always_summary">إستخدام كل المخارج الصوتية لنبض مصابيح LED. يتم حجب الأضواء العادية وإشعارات الشحن.</string>
 </resources>
