@@ -1,0 +1,5 @@
+#============= hal_graphics_composer ==============
+allow hal_graphics_composer self:netlink_kobject_uevent_socket read;
+allow hal_graphics_composer sysfs:file { getattr open read };
+allow hal_graphics_composer sysfs_surfaceflinger:file { open read write };
+allow hal_graphics_composer video_device:chr_file { ioctl open read write };
