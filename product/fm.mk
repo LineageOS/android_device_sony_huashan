@@ -4,4 +4,4 @@ PRODUCT_PACKAGES += \
 
 # FM properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    hw.fm.internal_antenna=true
+    vendor.hw.fm.internal_antenna=true
