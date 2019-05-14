@@ -1,0 +1,2 @@
+#============= hal_lineage_touch_default ==============
+allow hal_lineage_touch_default sysfs_glove_mode:file rw_file_perms;
