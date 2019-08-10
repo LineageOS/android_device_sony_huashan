@@ -10,3 +10,4 @@ allow system_server sysfs_als:file write;
 allow system_server sysfs_glove_mode:file rw_file_perms;
 allow system_server sysfs_proximity_sensor:file write;
 allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
+r_dir_file(system_server, debugfs_kgsl);
