@@ -77,6 +77,8 @@
 /sys/devices/i2c-10/10-0047/audio_en                                              u:object_r:sysfs_lights_effects:s0
 /sys/devices/i2c-10/10-0047/lights_effects                                        u:object_r:sysfs_lights_effects:s0
 /sys/devices/i2c-10/10-0053(/.*)?                                                 u:object_r:sysfs_camera_torch:s0
+/sys/devices/i2c-12/12-0019/pollrate_ms                                           u:object_r:sysfs_sensors:s0
+/sys/devices/i2c-12/12-006b/pollrate_ms                                           u:object_r:sysfs_sensors:s0
 /sys/devices/i2c-12/12-0054(/.*)?                                                 u:object_r:sysfs_proximity_sensor:s0
 /sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8921-charger/power_supply(/.*)?   u:object_r:sysfs_batteryinfo:s0
 /sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8xxx-gpio/gpio(/.*)?              u:object_r:sysfs_gpio:s0
@@ -92,6 +94,7 @@
 /sys/devices/platform/msmgpio/gpio(/.*)?                                          u:object_r:sysfs_gpio:s0
 /sys/devices/platform/wcnss_wlan.0/serial_number                                  u:object_r:sysfs_mac_serial:s0
 /sys/devices/platform/wcnss_wlan.0/wcnss_mac_addr                                 u:object_r:sysfs_mac_address:s0
+/sys/devices/system/soc/soc0/hw_platform                                          u:object_r:sysfs_system_soc:s0
 /sys/devices/system/soc/soc0/id                                                   u:object_r:sysfs_system_soc:s0
 /sys/devices/virtual/graphics/fb([0-2])+/hpd                                      u:object_r:sysfs_surfaceflinger:s0
 /sys/devices/virtual/graphics/fb([0-2])+/vendor_name                              u:object_r:sysfs_surfaceflinger:s0
