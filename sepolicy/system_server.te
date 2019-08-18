@@ -1,13 +1,7 @@
-qmux_socket(system_server)
-
 #============= system_server ==============
 allow system_server diag_device:chr_file rw_file_perms;
 allow system_server graphics_device:chr_file { ioctl open read write };
-allow system_server graphics_device:dir search;
 allow system_server mediaserver:process sigkill;
-allow system_server self:socket ioctl;
 allow system_server sysfs_als:file write;
 allow system_server sysfs_glove_mode:file rw_file_perms;
 allow system_server sysfs_proximity_sensor:file write;
-allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
-r_dir_file(system_server, debugfs_kgsl);

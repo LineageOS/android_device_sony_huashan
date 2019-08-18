@@ -1,9 +1,5 @@
-set_prop(mediaserver, camera_prop);
-
 #============= mediaserver ==============
 allow mediaserver audio_device:chr_file { ioctl open read write };
-allow mediaserver camera_data_file:dir create_dir_perms;
-allow mediaserver camera_data_file:file create_file_perms;
 allow mediaserver sensorservice_service:service_manager find;
 allow mediaserver sysfs_als:file { getattr open read write };
 allow mediaserver sysfs_batteryinfo:dir search;

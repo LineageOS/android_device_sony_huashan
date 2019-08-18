@@ -4,35 +4,23 @@ type sysfs_block_iosched, fs_type, sysfs_type;
 type sysfs_bluetooth_control, fs_type, sysfs_type;
 type sysfs_bus_i2c, fs_type, sysfs_type;
 type sysfs_camera_torch, fs_type, sysfs_type;
-type sysfs_charger, fs_type, sysfs_type;
-type sysfs_cpu_boost, fs_type, sysfs_type;
 type sysfs_disk_polling, fs_type, sysfs_type;
-type sysfs_fm_dl, fs_type, sysfs_type;
 type sysfs_glove_mode, fs_type, sysfs_type;
 type sysfs_gpio, fs_type, sysfs_type;
 type sysfs_i2c_name, fs_type, sysfs_type;
 type sysfs_input_devices, fs_type, sysfs_type;
 type sysfs_lights_effects, fs_type, sysfs_type;
 type sysfs_mac_serial, fs_type, sysfs_type;
-type sysfs_memory_ksm, fs_type, sysfs_type;
 type sysfs_mhl, fs_type, sysfs_type;
-type sysfs_msmuart_file, fs_type, sysfs_type;
 type sysfs_power_control, fs_type, sysfs_type;
 type sysfs_proximity_sensor, sysfs_type, fs_type;
 type sysfs_rmtfs, sysfs_type, fs_type;
-type sysfs_sensors, sysfs_type, fs_type;
-type sysfs_smdcntl_open_timeout, sysfs_type, fs_type;
-type sysfs_surfaceflinger, sysfs_type, fs_type;
 type sysfs_system_soc, fs_type, sysfs_type;
 type sysfs_thermal_control, fs_type, sysfs_type;
 type sysfs_wcnss_ssr, fs_type, sysfs_type;
 
 # debugfs
 type debugfs_asoc, debugfs_type, fs_type;
-type debugfs_kgsl, debugfs_type, fs_type;
 
 # /dev/socket
 type tad_socket, file_type;
-
-# /data
-type fm_data_file, file_type, data_file_type, core_data_file_type;

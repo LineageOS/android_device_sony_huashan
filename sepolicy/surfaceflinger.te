@@ -1,4 +1,2 @@
 #============= surfaceflinger ==============
-allow surfaceflinger qdisplay_service:service_manager { add find };
-allow surfaceflinger sysfs_surfaceflinger:file rw_file_perms;
 allow surfaceflinger sysfs_thermal:file { getattr open read };
