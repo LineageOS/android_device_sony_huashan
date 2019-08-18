@@ -1,5 +1,5 @@
-type hci_attach, domain;
-type hci_attach_exec, exec_type, file_type;
+type hci_attach, domain, coredomain;
+type hci_attach_exec, system_file_type, exec_type, file_type;
 
 init_daemon_domain(hci_attach)
 

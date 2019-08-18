@@ -1,5 +1,5 @@
-type ta_qmi_service, domain;
-type ta_qmi_service_exec, exec_type, file_type;
+type ta_qmi_service, domain, coredomain;
+type ta_qmi_service_exec, system_file_type, exec_type, file_type;
 
 init_daemon_domain(ta_qmi_service)
 

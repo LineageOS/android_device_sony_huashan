@@ -1,4 +1,4 @@
-type fm_dl, domain;
+type fm_dl, domain, coredomain;
 type fm_dl_exec, exec_type, file_type;
 
 init_daemon_domain(fm_dl)
