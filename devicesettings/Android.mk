@@ -17,11 +17,9 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_USE_AAPT2 := true
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
-    android-support-v14-preference \
-    android-support-v7-appcompat \
-    android-support-v7-palette \
-    android-support-v7-preference \
-    android-support-v7-recyclerview
+    androidx.core_core \
+    androidx.palette_palette \
+    androidx.preference_preference
 
 ifeq ($(BOARD_AOSP_BASED),)
     LOCAL_STATIC_JAVA_LIBRARIES += \

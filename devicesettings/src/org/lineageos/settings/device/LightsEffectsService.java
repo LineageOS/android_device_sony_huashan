@@ -32,8 +32,9 @@ import android.media.session.PlaybackState;
 import android.os.AsyncTask;
 import android.os.IBinder;
 import android.os.SystemProperties;
-import android.support.v7.graphics.Palette;
 import android.util.Log;
+
+import androidx.palette.graphics.Palette;
 
 import java.lang.System;
 import java.util.ArrayList;
