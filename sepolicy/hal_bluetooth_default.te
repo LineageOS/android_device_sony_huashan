@@ -1,0 +1,5 @@
+set_prop(hal_bluetooth_default, vendor_bluetooth_prop)
+
+#============= hal_bluetooth_default ==============
+allow hal_bluetooth_default bluetooth_data_file:dir search;
+allow hal_bluetooth_default bluetooth_data_file:file { open read };
