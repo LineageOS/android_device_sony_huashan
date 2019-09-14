@@ -30,28 +30,6 @@
 /* === Module Header === */
 #include "lights.h"
 
-/* === Module read_uint === */
-static unsigned long read_uint(char const* path) {
-
-    int fd, amt;
-    char buffer[20];
-    char* ptr;
-
-    /* Path to unsigned int */
-    fd = open(path, O_RDONLY);
-    if (fd >= 0) {
-        amt = read(fd, buffer, sizeof(buffer) / sizeof(buffer[0]));
-        close(fd);
-        if (amt != -1) {
-            return strtoul(buffer, &ptr, 10);
-        }
-    }
-
-    /* Failed read */
-    ALOGE("read_int failed to open %s (%s)\n", path, strerror(errno));
-    return 0;
-}
-
 /* === Module write_int === */
 static int write_int(char const* path, int value) {
 
