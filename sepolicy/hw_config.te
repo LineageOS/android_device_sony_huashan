@@ -6,12 +6,17 @@ init_daemon_domain(hw_config)
 unix_socket_connect(hw_config, tad, tad)
 
 #============= hw_config ==============
+allow hw_config file_contexts_file:file { getattr open read };
 allow hw_config shell_exec:file { entrypoint getattr read };
+allow hw_config sysfs:dir { open read relabelfrom };
+allow hw_config sysfs:file { getattr relabelfrom };
+allow hw_config sysfs:lnk_file relabelfrom;
 allow hw_config sysfs_als:file { open write };
 allow hw_config sysfs_bus_i2c:dir search;
 allow hw_config sysfs_bus_i2c:lnk_file read;
-allow hw_config sysfs_gpio:dir search;
-allow hw_config sysfs_gpio:file { open read write };
+allow hw_config sysfs_gpio:dir { open read relabelto search };
+allow hw_config sysfs_gpio:file { getattr open read relabelto write };
+allow hw_config sysfs_gpio:lnk_file { getattr read relabelto };
 allow hw_config sysfs_proximity_sensor:dir search;
 allow hw_config sysfs_proximity_sensor:file { open write };
 allow hw_config system_file:file execute_no_trans;

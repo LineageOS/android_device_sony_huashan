@@ -19,6 +19,14 @@ echo $hwid0 > /sys/class/gpio/export
 echo $hwid1 > /sys/class/gpio/export
 echo $hwid2 > /sys/class/gpio/export
 echo $hwid3 > /sys/class/gpio/export
+restorecon /sys/class/gpio/gpio$hwid0 2> /dev/null
+restorecon /sys/class/gpio/gpio$hwid1 2> /dev/null
+restorecon /sys/class/gpio/gpio$hwid2 2> /dev/null
+restorecon /sys/class/gpio/gpio$hwid3 2> /dev/null
+restorecon -R /sys/devices/platform/msmgpio/gpio/gpio$hwid0 2> /dev/null
+restorecon -R /sys/devices/platform/msmgpio/gpio/gpio$hwid1 2> /dev/null
+restorecon -R /sys/devices/platform/msmgpio/gpio/gpio$hwid2 2> /dev/null
+restorecon -R /sys/devices/platform/msmgpio/gpio/gpio$hwid3 2> /dev/null
 hwidvalue=`cat /sys/class/gpio/gpio$hwid3/value`
 hwidvalue=$hwidvalue`cat /sys/class/gpio/gpio$hwid2/value`
 hwidvalue=$hwidvalue`cat /sys/class/gpio/gpio$hwid1/value`
