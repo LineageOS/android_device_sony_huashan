@@ -80,6 +80,8 @@
 /sys/devices/i2c-12/12-0019/pollrate_ms                                           u:object_r:sysfs_sensors:s0
 /sys/devices/i2c-12/12-006b/pollrate_ms                                           u:object_r:sysfs_sensors:s0
 /sys/devices/i2c-12/12-0054(/.*)?                                                 u:object_r:sysfs_proximity_sensor:s0
+/sys/devices/i2c-.*/name                                                          u:object_r:sysfs_i2c_name:s0
+/sys/devices/i2c-.*/.*-.*/name                                                    u:object_r:sysfs_i2c_name:s0
 /sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8921-charger/power_supply(/.*)?   u:object_r:sysfs_batteryinfo:s0
 /sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8xxx-gpio/gpio(/.*)?              u:object_r:sysfs_gpio:s0
 /sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8xxx-mpp\.0/gpio(/.*)?            u:object_r:sysfs_gpio:s0
@@ -99,6 +101,7 @@
 /sys/devices/virtual/graphics/fb([0-2])+/hpd                                      u:object_r:sysfs_surfaceflinger:s0
 /sys/devices/virtual/graphics/fb([0-2])+/vendor_name                              u:object_r:sysfs_surfaceflinger:s0
 /sys/devices/virtual/graphics/fb([0-2])+/product_description                      u:object_r:sysfs_surfaceflinger:s0
+/sys/devices/virtual/input                                                        u:object_r:sysfs_input_devices:s0
 /sys/devices/virtual/smdpkt/smdcntl([0-9])+/open_timeout                          u:object_r:sysfs_smdcntl_open_timeout:s0
 /sys/devices/virtual/thermal(/.*)?                                                u:object_r:sysfs_thermal:s0
 /sys/devices/virtual/timed_output/vibrator/level                                  u:object_r:sysfs_vibrator:s0

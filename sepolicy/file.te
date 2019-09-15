@@ -6,6 +6,8 @@ type sysfs_camera_torch, fs_type, sysfs_type;
 type sysfs_fm_dl, fs_type, sysfs_type;
 type sysfs_glove_mode, fs_type, sysfs_type;
 type sysfs_gpio, fs_type, sysfs_type;
+type sysfs_i2c_name, fs_type, sysfs_type;
+type sysfs_input_devices, fs_type, sysfs_type;
 type sysfs_lights_effects, fs_type, sysfs_type;
 type sysfs_mac_serial, fs_type, sysfs_type;
 type sysfs_memory_ksm, fs_type, sysfs_type;
