@@ -59,6 +59,7 @@
 /(vendor|system/vendor)/bin/thermanager                                           u:object_r:thermanager_exec:s0
 
 # /sys
+/sys/block/mmcblk1/queue/iosched/slice_idle                                       u:object_r:sysfs_block_iosched:s0
 /sys/bus/i2c(/.*)?                                                                u:object_r:sysfs_bus_i2c:s0
 /sys/class/gpio(/.*)?                                                             u:object_r:sysfs_gpio:s0
 /sys/class/power_supply/battery(/.*)?                                             u:object_r:sysfs_batteryinfo:s0
@@ -97,6 +98,7 @@
 /sys/devices/virtual/smdpkt/smdcntl([0-9])+/open_timeout                          u:object_r:sysfs_smdcntl_open_timeout:s0
 /sys/devices/virtual/thermal(/.*)?                                                u:object_r:sysfs_thermal:s0
 /sys/devices/virtual/timed_output/vibrator/level                                  u:object_r:sysfs_vibrator:s0
+/sys/kernel/mm/ksm(/.*)?                                                          u:object_r:sysfs_memory_ksm:s0
 /sys/module/radio_iris_transport/parameters/fmsmd_set                             u:object_r:sysfs_fm_dl:s0
 
 # debugfs

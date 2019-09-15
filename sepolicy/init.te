@@ -1,5 +1,12 @@
 #============= init ==============
 allow init camera_data_file:file getattr;
 allow init fm_device:chr_file write;
+allow init sysfs_block_iosched:file write;
+allow init sysfs_camera_torch:file setattr;
+allow init sysfs_devices_system_cpu:file write;
+allow init sysfs_fm_dl:file setattr;
+allow init sysfs_memory_ksm:file { open write };
+allow init sysfs_surfaceflinger:file setattr;
+allow init sysfs_usb:file write;
 allow init tmpfs:lnk_file create;
 allow init wlan_device:chr_file write;
