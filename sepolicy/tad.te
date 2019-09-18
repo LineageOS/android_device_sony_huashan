@@ -1,5 +1,5 @@
 type tad, domain;
-type tad_exec, exec_type, file_type;
+type tad_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(tad)
 
@@ -7,5 +7,4 @@ init_daemon_domain(tad)
 allow tad block_device:dir search;
 allow tad proc_cmdline:file { open read };
 allow tad properties_device:dir { open read };
-allow tad rootfs:file { entrypoint read };
 allow tad trim_area_partition_device:blk_file { ioctl open read write };
