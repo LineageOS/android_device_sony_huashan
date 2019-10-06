@@ -12,3 +12,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Partitions blocks
 BOARD_FLASH_BLOCK_SIZE := 131072
+
+# Root extra symlinks
+BOARD_ROOT_EXTRA_SYMLINKS := /data/tombstones:/tombstones
