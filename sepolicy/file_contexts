@@ -142,3 +142,6 @@
 /data/camera(/.*)?                                                                u:object_r:camera_data_file:s0
 /data/etc/flashled_vf_factory                                                     u:object_r:camera_data_file:s0
 /data/misc/fm(/.*)?                                                               u:object_r:fm_data_file:s0
+
+# /
+/tombstones                                                                       u:object_r:rootfs:s0

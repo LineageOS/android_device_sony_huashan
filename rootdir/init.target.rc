@@ -31,8 +31,6 @@
 on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
-    symlink /data/tombstones /tombstones
-
 on fs
     mount_all /vendor/etc/fstab.qcom --early
 
