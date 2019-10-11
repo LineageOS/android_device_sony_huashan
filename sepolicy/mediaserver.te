@@ -1,4 +1,3 @@
-hal_client_domain(mediaserver, hal_lineage_camera_motor)
 set_prop(mediaserver, camera_prop);
 
 #============= mediaserver ==============
