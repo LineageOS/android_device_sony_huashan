@@ -16,15 +16,26 @@
 
 package org.lineageos.settings.device;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Toolbar;
 
-import com.android.settingslib.drawer.SettingsDrawerActivity;
-
-public class GloveModePreferenceActivity extends SettingsDrawerActivity {
+public class GloveModePreferenceActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity);
+        Toolbar toolbar = findViewById(R.id.action_bar);
+        if (toolbar != null) {
+            setActionBar(toolbar);
+        }
+
         getFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, new GloveModePreferenceFragment())
                 .commit();
