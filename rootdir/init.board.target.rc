@@ -25,13 +25,13 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-import /init.board.bluetooth.rc
-import /init.board.charger.rc
-import /init.board.fm.rc
-import /init.board.hardware.rc
-import /init.board.led.rc
-import /init.board.perf.rc
-import /init.board.radio.rc
-import /init.board.usb.rc
-import /init.board.wifi.rc
+import /vendor/etc/init/hw/init.board.bluetooth.rc
+import /vendor/etc/init/hw/init.board.charger.rc
+import /vendor/etc/init/hw/init.board.fm.rc
+import /vendor/etc/init/hw/init.board.hardware.rc
+import /vendor/etc/init/hw/init.board.led.rc
+import /vendor/etc/init/hw/init.board.perf.rc
+import /vendor/etc/init/hw/init.board.radio.rc
+import /vendor/etc/init/hw/init.board.usb.rc
+import /vendor/etc/init/hw/init.board.wifi.rc
 

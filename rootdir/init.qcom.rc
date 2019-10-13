@@ -26,8 +26,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.board.target.rc
-import init.target.rc
+import /vendor/etc/init/hw/init.board.target.rc
+import /vendor/etc/init/hw/init.target.rc
 
 on init
     symlink /dev/socket /tmp
