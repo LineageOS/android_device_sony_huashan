@@ -99,7 +99,6 @@
 /sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/pwrscale/trustzone(/.*)?          u:object_r:sysfs_thermal:s0
 /sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/reset_count                       u:object_r:sysfs_thermal:s0
 /sys/devices/platform/msm_sdcc\..*/polling                                        u:object_r:sysfs_disk_polling:s0
-/sys/devices/platform/msm_sdcc\.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/stat      u:object_r:sysfs_disk_stat:s0
 /sys/devices/platform/msm_sdcc\.3/mmc_host(/.*)?                                  u:object_r:sysfs_usb:s0
 /sys/devices/platform/msm_sdcc\.3/idle_timeout                                    u:object_r:sysfs_usb:s0
 /sys/devices/platform/msm_hsusb_host(/.*)?                                        u:object_r:sysfs_usb:s0
