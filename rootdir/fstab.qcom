@@ -6,7 +6,7 @@
 #       /proc/device-tree/firmware/android/fstab/system
 
 #<src>                                                <mnt_point>         <type>   <mnt_flags and options>                                                    <fs_mgr_flags>
-/dev/block/platform/msm_sdcc.1/by-name/FOTAKernel     /recovery           emmc     defaults                                                                   defaults
+/dev/block/platform/msm_sdcc.1/by-name/FOTAKernel     /recovery           emmc     defaults                                                                   recoveryonly
 /dev/block/platform/msm_sdcc.1/by-name/Kernel         /boot               emmc     defaults                                                                   recoveryonly
 /dev/block/platform/msm_sdcc.1/by-name/System         /system             ext4     ro,barrier=1                                                               wait,recoveryonly
 /dev/block/platform/msm_sdcc.1/by-name/Userdata       /data               ext4     rw,nosuid,nodev,noatime,noauto_da_alloc,barrier=1,errors=panic             latemount,wait,check,encryptable=footer,formattable,length=-16384
