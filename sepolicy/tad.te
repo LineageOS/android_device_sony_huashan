@@ -8,3 +8,4 @@ allow tad block_device:dir search;
 allow tad proc_cmdline:file { open read };
 allow tad properties_device:dir { open read };
 allow tad trim_area_partition_device:blk_file { ioctl open read write };
+allowxperm tad trim_area_partition_device:blk_file ioctl BLKGETSIZE;
