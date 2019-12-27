@@ -1,2 +1,5 @@
 #============= vendor_init ==============
 allow vendor_init proc_swap:file write;
+allow vendor_init shell_data_file:dir search;
+allow vendor_init system_data_file:file setattr;
+allow vendor_init wcnss_device:chr_file { open write };

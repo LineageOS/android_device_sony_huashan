@@ -1,5 +1,7 @@
 #============= mediaserver ==============
 allow mediaserver audio_device:chr_file { ioctl open read write };
+allow mediaserver camera_socket:dir { add_name search write };
+allow mediaserver camera_socket:file { create getattr open read write };
 allow mediaserver sensorservice_service:service_manager find;
 allow mediaserver sysfs_als:file { getattr open read write };
 allow mediaserver sysfs_batteryinfo:dir search;
@@ -11,5 +13,5 @@ allow mediaserver sysfs_camera_torch:dir search;
 allow mediaserver sysfs_camera_torch:file { open read write };
 allow mediaserver sysfs_i2c_name:file { open read };
 allow mediaserver sysfs_system_soc:file { getattr open read };
-allow mediaserver system_file:file execmod;
+allow mediaserver system_lib_file:file execmod;
 allow mediaserver system_server:unix_stream_socket { read write };

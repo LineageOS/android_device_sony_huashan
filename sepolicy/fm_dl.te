@@ -3,11 +3,14 @@ type fm_dl_exec, exec_type, file_type;
 
 init_daemon_domain(fm_dl)
 
+get_prop(fm_dl, bluetooth_prop)
+
 set_prop(fm_dl, fm_prop)
 
 #============= fm_dl ==============
 allow fm_dl fm_data_file:dir ra_dir_perms;
 allow fm_dl fm_data_file:file create_file_perms;
+allow fm_dl fm_radio_device:chr_file r_file_perms;
 allow fm_dl shell_exec:file { entrypoint getattr read };
 allow fm_dl sysfs_fm:file w_file_perms;
 allow fm_dl system_file:file execute_no_trans;

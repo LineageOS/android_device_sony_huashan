@@ -6,8 +6,11 @@ init_daemon_domain(secchand)
 unix_socket_connect(secchand, tad, tad)
 
 #============= secchand ==============
+allow secchand firmware_file:dir search;
+allow secchand firmware_file:file { getattr open read };
 allow secchand ion_device:chr_file { ioctl open read };
 allow secchand self:socket create_socket_perms;
 allow secchand shared_log_device:chr_file { ioctl open read write };
+allow secchand smem_log_device:chr_file rw_file_perms;
 allow secchand tee_device:chr_file { ioctl open read write };
 allowxperm secchand self:socket ioctl msm_sock_ipc_ioctls;

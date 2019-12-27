@@ -1,5 +1,3 @@
 #============= hal_graphics_composer ==============
-vndbinder_use(hal_graphics_composer_default)
 allow hal_graphics_composer self:netlink_kobject_uevent_socket read;
 allow hal_graphics_composer sysfs:file { getattr open read };
-allow hal_graphics_composer_default sysfs_system_soc:file { getattr open read };
