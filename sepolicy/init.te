@@ -1,5 +1,9 @@
 #============= init ==============
 allow init camera_data_file:file getattr;
+allow init debugfs:dir mounton;
+allow init functionfs:dir mounton;
+allow init qti_debugfs:dir relabelfrom;
+allow init qti_debugfs:file relabelfrom;
 allow init sysfs_batteryinfo:file { open setattr write };
 allow init sysfs_block_iosched:file write;
 allow init sysfs_bluetooth_control:file setattr;

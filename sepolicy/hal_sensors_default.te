@@ -1,4 +1,5 @@
 #============= hal_sensors_default ==============
+allow hal_sensors_default sysfs:file { open read };
 allow hal_sensors_default sysfs_als:file rw_file_perms;
 allow hal_sensors_default sysfs_bus_i2c:dir { open read search };
 allow hal_sensors_default sysfs_bus_i2c:lnk_file read;
@@ -10,3 +11,5 @@ allow hal_sensors_default sysfs_proximity_sensor:dir search;
 allow hal_sensors_default sysfs_proximity_sensor:file { open read write };
 allow hal_sensors_default sysfs_sensors:file { open write };
 allow hal_sensors_default sysfs_system_soc:file { read };
+allow hal_sensors_default system_data_file:dir { add_name write };
+allow hal_sensors_default system_data_file:file { getattr open read write };
