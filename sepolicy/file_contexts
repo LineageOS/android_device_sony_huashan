@@ -35,7 +35,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@[0-9]\.[0-9]-service\..*   u:object_r:hal_gnss_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-effects\..*          u:object_r:lights_effects_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\..*          u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.[0-9]+-service\..*     u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.[0-9]+-service.*       u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.0-service\..*       u:object_r:hal_vibrator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.wifi@1\.0-service\..*           u:object_r:hal_wifi_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\..*            u:object_r:hal_lineage_touch_default_exec:s0
@@ -47,6 +47,9 @@
 /sys/block/mmcblk1/queue/iosched/slice_idle                                       u:object_r:sysfs_block_iosched:s0
 /sys/bus/i2c(/.*)?                                                                u:object_r:sysfs_bus_i2c:s0
 /sys/class/gpio(/.*)?                                                             u:object_r:sysfs_gpio:s0
+/sys/class/leds/lcd-backlight/brightness                                          u:object_r:sysfs_leds:s0
+/sys/class/leds/LED([1-3])+_([RGB])+/brightness                                   u:object_r:sysfs_leds:s0
+/sys/class/leds/LED([1-3])+_([RGB])+/led_current                                  u:object_r:sysfs_leds:s0
 /sys/class/power_supply/battery(/.*)?                                             u:object_r:sysfs_batteryinfo:s0
 /sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/finger_threshold     u:object_r:sysfs_glove_mode:s0
 /sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity     u:object_r:sysfs_glove_mode:s0
@@ -78,6 +81,7 @@
 /sys/devices/i2c-.*/.*-.*/name                                                    u:object_r:sysfs_i2c_name:s0
 /sys/devices/platform/bt_power.0/rfkill/rfkill0/state                             u:object_r:sysfs_bluetooth_control:s0
 /sys/devices/platform/bt_power.0/rfkill/rfkill0/type                              u:object_r:sysfs_bluetooth_control:s0
+/sys/devices/platform/msm_fb\.524288/leds/lcd-backlight/brightness                u:object_r:sysfs_leds:s0
 /sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8921-charger/power_supply(/.*)?   u:object_r:sysfs_batteryinfo:s0
 /sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8xxx-gpio/gpio(/.*)?              u:object_r:sysfs_gpio:s0
 /sys/devices/platform/msm_ssbi\.0/pm8921-core/pm8xxx-mpp\.0/gpio(/.*)?            u:object_r:sysfs_gpio:s0
@@ -102,6 +106,8 @@
 /sys/devices/virtual/graphics/fb([0-3])+/msm_fb_fps_level                         u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-3])+/video_mode                               u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/input                                                        u:object_r:sysfs_input_devices:s0
+/sys/devices/virtual/input/input[0-9]+/interval                                   u:object_r:sysfs_sensors:s0
+/sys/devices/virtual/input/input[0-9]+/name                                       u:object_r:sysfs_input_devices:s0
 /sys/devices/virtual/timed_output/vibrator/level                                  u:object_r:sysfs_vibrator:s0
 /sys/module/cpu_boost/parameters(/.*)?                                            u:object_r:sysfs_cpu_boost:s0
 /sys/module/hci_smd/parameters/hcismd_set                                         u:object_r:sysfs_bluetooth_control:s0

@@ -10,4 +10,5 @@ wakelock_use(ta_qmi_service)
 #============= ta_qmi_service ==============
 allow ta_qmi_service self:socket create_socket_perms;
 allow ta_qmi_service shared_log_device:chr_file { ioctl open read write };
+allow ta_qmi_service smem_log_device:chr_file rw_file_perms;
 allowxperm ta_qmi_service self:socket ioctl msm_sock_ipc_ioctls;
