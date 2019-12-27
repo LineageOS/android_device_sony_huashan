@@ -3,6 +3,8 @@ type fm_dl_exec, exec_type, file_type;
 
 init_daemon_domain(fm_dl)
 
+get_prop(fm_dl, bluetooth_prop)
+
 set_prop(fm_dl, fm_prop)
 
 #============= fm_dl ==============

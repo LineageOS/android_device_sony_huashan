@@ -1,0 +1,2 @@
+#============= crash_dump ==============
+allow crash_dump hwservicemanager_prop:file { getattr open };

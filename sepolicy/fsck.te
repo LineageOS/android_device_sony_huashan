@@ -1,0 +1,2 @@
+#============= fsck ==============
+allow fsck cache_file:dir getattr;
