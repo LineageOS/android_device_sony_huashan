@@ -5,4 +5,8 @@ dontaudit hal_graphics_allocator shell_data_file:dir search;
 dontaudit mediaserver shell_data_file:dir search;
 dontaudit surfaceflinger shell_data_file:dir search;
 dontaudit system_app shell_data_file:dir search;
+dontaudit system_app system_suspend_control_service:service_manager find;
 dontaudit system_server kernel:process setsched;
+dontaudit untrusted_app proc_tty_drivers:file read;
+dontaudit untrusted_app serialno_prop:file read;
+dontaudit untrusted_app wifi_prop:file read;
