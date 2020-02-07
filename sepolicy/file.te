@@ -24,3 +24,4 @@ type debugfs_asoc, debugfs_type, fs_type;
 
 # /dev/socket
 type tad_socket, file_type;
+type wifihal_socket, file_type, data_file_type;
