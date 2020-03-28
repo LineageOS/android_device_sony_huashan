@@ -6,7 +6,7 @@ on post-fs-data
     mkdir /data/misc/fm 0770 system system
     chmod 0770 /data/misc/fm
 
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
+service vendor.fm /system/bin/sh /system/etc/init.qcom.fm.sh
     class late_start
     user system
     group system
