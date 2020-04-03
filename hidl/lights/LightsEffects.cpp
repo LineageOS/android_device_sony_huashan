@@ -1,6 +1,6 @@
 /*
- * Copyright (C) 2017 Adrian DC
- *           (C) 2017 The LineageOS Project
+ * Copyright (C) 2017-2020 Adrian DC
+ *           (C) 2017-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,10 +15,12 @@
  * limitations under the License.
  */
 
-/* === Module Debug === */
-#define LOG_TAG "lights_effects.huashan"
+#include <string>
 
-/* === Module Libraries === */
+// === Module Debug ===
+#define LOG_TAG "lights_effects"
+
+// === Module Libraries ===
 #include <log/log.h>
 #include <cutils/properties.h>
 #include <errno.h>
@@ -27,17 +29,30 @@
 #include <string.h>
 #include <tinyalsa/asoundlib.h>
 
-/* === Module Header === */
-#include "lights.h"
+// === AS3665 Constants ===
+const static std::string LEDS_LIGHTS_EFFECTS_OFF = "0";
+const static uint32_t LEDS_AUDIO_AGC_CTRL_OFF = 0;
+const static uint32_t LEDS_AUDIO_AGC_CTRL_ON = 7;
+const static uint32_t LEDS_AUDIO_BUF_GAIN_OFF = 0;
+const static uint32_t LEDS_AUDIO_BUF_GAIN_ON = 4;
+const static uint32_t LEDS_AUDIO_EN_OFF = 0;
+const static uint32_t LEDS_AUDIO_EN_ON = 1;
 
-/* === Module write_int === */
-static int write_int(char const* path, int value) {
+// === AS3665 Paths ===
+const static std::string LEDS_AUDIO_AGC_CTRL_FILE = "/sys/devices/i2c-10/10-0047/audio_agc_ctrl";
+const static std::string LEDS_AUDIO_BUF_GAIN_FILE = "/sys/devices/i2c-10/10-0047/audio_buf_gain";
+const static std::string LEDS_AUDIO_EN_FILE = "/sys/devices/i2c-10/10-0047/audio_en";
+const static std::string LEDS_LIGHTS_EFFECTS_FILE = "/sys/devices/i2c-10/10-0047/lights_effects";
 
+// === Module write_int ===
+static int write_int(const std::string& path, int value)
+{
+    // Variables
     int fd, amt, bytes;
     char buffer[20];
 
-    /* Int output to path */
-    fd = open(path, O_WRONLY);
+    // Int output to path
+    fd = open(path.c_str(), O_WRONLY);
     if (fd >= 0) {
         bytes = snprintf(buffer, sizeof(buffer), "%d\n", value);
         amt = write(fd, buffer, bytes);
@@ -45,114 +60,113 @@ static int write_int(char const* path, int value) {
         return (amt == -1 ? -errno : 0);
     }
     else {
-        ALOGE("write_int failed to open %s (%s)\n", path, strerror(errno));
+        ALOGE("write_int failed to open %s (%s)\n", path.c_str(), strerror(errno));
         return -errno;
     }
 }
 
-/* === Module write_string === */
-static int write_string(char const* path, const char *value)
+// === Module write_string ===
+static int write_string(const std::string& path, const std::string& value)
 {
+    // Variables
     int fd, amt, bytes;
     char buffer[20];
 
-    /* String output to path */
-    fd = open(path, O_WRONLY);
+    // String output to path
+    fd = open(path.c_str(), O_WRONLY);
     if (fd >= 0) {
-        bytes = snprintf(buffer, sizeof(buffer), "%s\n", value);
+        bytes = snprintf(buffer, sizeof(buffer), "%s\n", value.c_str());
         amt = write(fd, buffer, bytes);
         close(fd);
         return (amt == -1 ? -errno : 0);
     }
     else {
-        ALOGE("write_string failed to open %s (%s)\n", path, strerror(errno));
+        ALOGE("write_string failed to open %s (%s)\n", path.c_str(), strerror(errno));
         return -errno;
     }
 }
 
-/* === Module mixer_set_int === */
+// === Module mixer_set_int ===
 static void mixer_set_int(struct mixer* mixer, const char* name, int value)
 {
-    /* Acquire control by name */
+    // Acquire control by name
     struct mixer_ctl* ctl = mixer_get_ctl_by_name(mixer, name);
     if (!ctl) {
         ALOGE("Mixer: Invalid mixer control (%s)\n", name);
         return;
     }
 
-    /* Set value to control */
+    // Set value to control
     if (mixer_ctl_set_value(ctl, 0, value)) {
         ALOGE("Mixer: Invalid value for index 0\n");
         return;
     }
 }
 
-/* === Module mixer_set_enum === */
-static void mixer_set_enum(struct mixer* mixer, const char* name,
-        const char* value)
+// === Module mixer_set_enum ===
+static void mixer_set_enum(struct mixer* mixer, const char* name, const char* value)
 {
-    /* Acquire control by name */
+    // Acquire control by name
     struct mixer_ctl* ctl = mixer_get_ctl_by_name(mixer, name);
     if (!ctl) {
         ALOGE("Mixer: Invalid mixer control (%s)\n", name);
         return;
     }
 
-    /* Set value to control */
+    // Set value to control
     if (mixer_ctl_set_enum_by_string(ctl, value)) {
         ALOGE("Mixer: Invalid enum value\n");
         return;
     }
 }
 
-/* === Module set_light_mixer_music === */
+// === Module set_light_mixer_music ===
 static void set_light_mixer_music(bool enable)
 {
-    /* Acquire mixer card */
+    // Acquire mixer card
     struct mixer* mixer = mixer_open(0);
     if (!mixer) {
         ALOGE("Mixer: Failed to open mixer\n");
         return;
     }
 
-    /* Apply Huashan LEDs music routes */
+    // Apply Huashan LEDs music routes
     mixer_set_int(mixer, "RX5 Digital Volume", enable ? 82 : 84);
     mixer_set_int(mixer, "LINEOUT2 Volume", enable ? 12 : 0);
     mixer_set_enum(mixer, "RX5 MIX1 INP2", enable ? "RX2" : "ZERO");
     mixer_set_enum(mixer, "RX5 MIX1 INP1", enable ? "RX1" : "ZERO");
 
-    /* Release mixer card */
+    // Release mixer card
     mixer_close(mixer);
 }
 
-/* === Module Entrypoint === */
+// === Module Entrypoint ===
 int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv)
 {
-    /* Variables */
+    // Variables
     int lights_effects_buf_gain = LEDS_AUDIO_BUF_GAIN_ON;
     bool lights_effects_enabled = false;
     char lights_effects_gain[PROP_VALUE_MAX];
     char lights_effects_value[PROP_VALUE_MAX];
     char* ptr;
 
-    /* Lights effects update property */
+    // Lights effects update property
     property_get("sys.lights_effects_value", lights_effects_value, "");
-    if (strcmp(lights_effects_value, "") &&
-            strtoul(lights_effects_value, &ptr, 16) > 0) {
+    if (strcmp(lights_effects_value, "") && strtoul(lights_effects_value, &ptr, 16) > 0) {
         lights_effects_enabled = true;
     }
 
-    /* Lights effects gain property */
+    // Lights effects gain property
     property_get("sys.lights_effects_gain", lights_effects_gain, "");
     if (strcmp(lights_effects_gain, "")) {
         lights_effects_buf_gain = strtoul(lights_effects_gain, &ptr, 16);
     }
 
-    /* Lights effects information */
+    // Lights effects information
     ALOGI("Updating lights effects: %s, value = %s, gain = %d", lights_effects_enabled ?
             "enabled" : "disabled", lights_effects_value, lights_effects_buf_gain);
 
-    /* Lights effects enabled */
+    // Lights effects enabled
     if (lights_effects_enabled) {
         write_int(LEDS_AUDIO_EN_FILE, LEDS_AUDIO_EN_OFF);
         write_int(LEDS_AUDIO_BUF_GAIN_FILE, lights_effects_buf_gain);
@@ -161,7 +175,7 @@ int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv)
         write_int(LEDS_AUDIO_EN_FILE, LEDS_AUDIO_EN_ON);
         set_light_mixer_music(true);
     }
-    /* Lights effects disabled */
+    // Lights effects disabled
     else {
         set_light_mixer_music(false);
         write_string(LEDS_LIGHTS_EFFECTS_FILE, LEDS_LIGHTS_EFFECTS_OFF);

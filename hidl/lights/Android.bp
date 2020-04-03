@@ -1,0 +1,38 @@
+cc_binary {
+    name: "android.hardware.light@2.0-effects.huashan",
+    defaults: ["hidl_defaults"],
+    vendor: true,
+    relative_install_path: "hw",
+    init_rc: ["android.hardware.light@2.0-effects.huashan.rc"],
+
+    srcs: [
+        "LightsEffects.cpp",
+    ],
+
+    shared_libs: [
+        "libcutils",
+        "liblog",
+        "libtinyalsa",
+    ],
+}
+
+cc_binary {
+    name: "android.hardware.light@2.0-service.huashan",
+    defaults: ["hidl_defaults"],
+    vendor: true,
+    relative_install_path: "hw",
+    init_rc: ["android.hardware.light@2.0-service.huashan.rc"],
+
+    srcs: [
+        "Light.cpp",
+        "service.cpp",
+    ],
+
+    shared_libs: [
+        "libhardware",
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "android.hardware.light@2.0",
+    ],
+}

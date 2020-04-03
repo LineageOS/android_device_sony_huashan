@@ -1,0 +1,12 @@
+on property:sys.lights_effects_gain=*
+    start vendor.light-effects-2-0
+
+on property:sys.lights_effects_value=*
+    start vendor.light-effects-2-0
+
+service vendor.light-effects-2-0 /vendor/bin/hw/android.hardware.light@2.0-effects.huashan
+    class late_start
+    user system
+    group system
+    disabled
+    oneshot

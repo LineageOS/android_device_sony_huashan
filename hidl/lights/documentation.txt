@@ -1,0 +1,88 @@
+/*
+ * Copyright (C) 2015-2020 Adrian DC
+ *           (C) 2015-2016 The CyanogenMod Project
+ *           (C) 2017-2020 The LineageOS Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* ===================================================================== */
+/* === Module AS3665 Sequence details === */
+/*
+  ==[ Common structure ]==
+
+    00 0e0e 9d00 9c0e 9c8f 9d80 00ff 9dc0 00ff 9d80 %%ff 9dc0 %%ff 9d80 a004 c000 0000 0%%%
+
+  ==[ Detailed blinker program structure ]==
+
+      00 : Initialization.
+    0e0e : Start the PWM with 16 clock cycles per step (0.49ms at 32768Hz), 7 steps, ramp up, 14 ramp cycles.
+    9d00 : Clear the MUX table.
+    9c0e : Set MUX start address to 14.
+    9c8f : Set MUX end address to 15.
+    9d80 : Increase the MUX pointer by one (or cycle).
+    %%ff (02ff) : Blink turning on delay (0x00 = instant, 0x02 = smooth).
+    9dc0 : Decrease the MUX pointer by one (or cycle).
+    %%ff (0dff) : Blink turned on delay (0x00 = 0ms, 0x0d = 1000ms).
+    9d80 : Increase the MUX pointer by one (or cycle).
+    %%ff (03ff) : Blink turning off delay (0x01 = instant, 0x03 = smooth).
+    9dc0 : Decrease the MUX pointer by one (or cycle).
+    %%ff (0dff) : Blink turned off delay (0x00 = 0ms, 0x0d = 1000ms).
+    9d80 : Increase the MUX pointer by one (or cycle).
+    a004 : Create an infinite loop, with 4 steps.
+    c000 : End command, no interrupt, increment program counter.
+    0000 : Goto sequencer program start.
+    0%%% (01ff) : Trigger the concerned RGB LEDs (1ff = ALL, 1b6 = SIDES, 049 = MIDDLE).
+
+  ==[ Detailed music program structure ]==
+
+      00 : Initialization.
+    2121 : Start the PWM with 16 clock cycles per step (0.49ms at 32768Hz), 16 steps, ramp down, 1 ramp cycle.
+    9d00 : Clear the MUX table.
+    9c21 : Set MUX start address to 33.
+    9ca3 : Set MUX end address to 35.
+    4000 : Start the PWM with 512 clock cycles per step (15.6ms at 32768Hz), 0 steps, ramp up, instant step.
+    9d80 : Increase the MUX pointer by one (or cycle).
+    89aa : Skip 26 instructions, if variable rc == variable rc.
+    8f0a : Write to SRAM number 0 from variable rc.
+    906e : Load the value 110 in variable ra.
+    9400 : Load the value 0 in variable rb.
+    8a22 : 8a25? Get ADC Audio value in variable rb?.
+    9501 : Add in variable rb the value 1.
+    8c42 : Skip 4 instructions, if variable ra < variable rc.
+    9d80 : Increase the MUX pointer by one (or cycle).
+    4000 : Start the PWM with 512 clock cycles per step (15.6ms at 32768Hz), 0 steps, ramp up, instant step.
+    1400 : Start the PWM with 16 clock cycles per step (0.49ms at 32768Hz), 10 steps, ramp up, instant step.
+    9dc0 : Decrease the MUX pointer by one (or cycle).
+    9000 : Load the value 0 in variable ra.
+    9b0a : Add in variable rc the result from rc + rc.
+    8a12 : Skip 1 instruction, if variable ra >= variable rc.
+    8c22 : Skip 2 instructions, if variable rc < variable rc.
+    4000 : Start the PWM with 512 clock cycles per step (15.6ms at 32768Hz), 0 steps, ramp up, instant step.
+    8a12 : Skip 1 instruction, if variable ra >= variable rc.
+    8462 : Set the PWM to the variable rc.
+    9d80 : Increase the MUX pointer by one (or cycle).
+    9000 : Load the value 0 in variable ra.
+    8824 : Skip 2 instructions, if variable rb == variable ra.
+    9a32 : Substract in variable rc the value 50.
+    8462 : Set the PWM to the variable rc.
+    1400 : Start the PWM with 16 clock cycles per step (0.49ms at 32768Hz), 10 steps, ramp up, instant step.
+    9dc0 : Decrease the MUX pointer by one (or cycle).
+    8e0a : Read from SRAM number 0 to variable rc.
+    8a2f : Get audio ADC values in variable rd.
+    a005 : Create an infinite loop, with 5 steps.
+    01ff : Trigger the concerned RGB LEDs (1ff = ALL).
+    0049 : Trigger the concerned RGB LEDs (049 = MIDDLE).
+    01b6 : Trigger the concerned RGB LEDs (1b6 = SIDES).
+
+*/

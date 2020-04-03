@@ -5,8 +5,3 @@ PRODUCT_COPY_FILES += \
 # Hardware packages
 PRODUCT_PACKAGES += \
     hw_config.sh
-
-# Lights packages
-PRODUCT_PACKAGES += \
-    lights.msm8960 \
-    lights_effects

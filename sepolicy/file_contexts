@@ -49,9 +49,10 @@
 /system/bin/updatemiscta                                                          u:object_r:updatemiscta_exec:s0
 
 # /vendor
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.1-service-qti          u:object_r:hal_power_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.0-service\.huashan  u:object_r:hal_vibrator_default_exec:s0
-/(vendor|system/vendor)/bin/lights_effects                                        u:object_r:lights_effects_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-effects\..*          u:object_r:lights_effects_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\..*          u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.[0-9]+-service\..*     u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.0-service\..*       u:object_r:hal_vibrator_default_exec:s0
 /(vendor|system/vendor)/bin/macaddrsetup                                          u:object_r:macaddrsetup_exec:s0
 /(vendor|system/vendor)/bin/tad_static                                            u:object_r:tad_exec:s0
 /(vendor|system/vendor)/bin/thermanager                                           u:object_r:thermanager_exec:s0
@@ -71,14 +72,18 @@
 /sys/devices/i2c-10/10-0040/als_lx                                                u:object_r:sysfs_als:s0
 /sys/devices/i2c-10/10-0040/als_on                                                u:object_r:sysfs_als:s0
 /sys/devices/i2c-10/10-0040/debug                                                 u:object_r:sysfs_als:s0
-/sys/devices/i2c-10/10-0047/leds/LED([1-3])+_B/brightness                         u:object_r:sysfs_leds:s0
-/sys/devices/i2c-10/10-0047/leds/LED([1-3])+_G/brightness                         u:object_r:sysfs_leds:s0
-/sys/devices/i2c-10/10-0047/leds/LED([1-3])+_R/brightness                         u:object_r:sysfs_leds:s0
+/sys/devices/i2c-10/10-0047/leds/LED([1-3])+_([RGB])+/brightness                  u:object_r:sysfs_leds:s0
+/sys/devices/i2c-10/10-0047/leds/LED([1-3])+_([RGB])+/color_id                    u:object_r:sysfs_leds:s0
+/sys/devices/i2c-10/10-0047/leds/LED([1-3])+_([RGB])+/effects_current             u:object_r:sysfs_leds:s0
+/sys/devices/i2c-10/10-0047/leds/LED([1-3])+_([RGB])+/led_current                 u:object_r:sysfs_leds:s0
 /sys/devices/i2c-10/10-0040/leds/lcd-backlight(.*/.*)?                            u:object_r:sysfs_leds:s0
 /sys/devices/i2c-10/10-0047/audio_agc_ctrl                                        u:object_r:sysfs_lights_effects:s0
 /sys/devices/i2c-10/10-0047/audio_buf_gain                                        u:object_r:sysfs_lights_effects:s0
 /sys/devices/i2c-10/10-0047/audio_en                                              u:object_r:sysfs_lights_effects:s0
 /sys/devices/i2c-10/10-0047/lights_effects                                        u:object_r:sysfs_lights_effects:s0
+/sys/devices/i2c-10/10-0047/sequencer([1-3])+_mode                                u:object_r:sysfs_leds:s0
+/sys/devices/i2c-10/10-0047/sequencer([1-3])+_run_mode                            u:object_r:sysfs_leds:s0
+/sys/devices/i2c-10/10-0047/sequencer_load                                        u:object_r:sysfs_leds:s0
 /sys/devices/i2c-10/10-0053(/.*)?                                                 u:object_r:sysfs_camera_torch:s0
 /sys/devices/i2c-12/12-0019/pollrate_ms                                           u:object_r:sysfs_sensors:s0
 /sys/devices/i2c-12/12-0019/power/autosuspend_delay_ms                            u:object_r:sysfs_sensors:s0
