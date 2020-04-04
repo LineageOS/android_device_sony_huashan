@@ -1,3 +1,6 @@
+# /proc
+type proc_swap, fs_type;
+
 # /sys
 type sysfs_als, fs_type, sysfs_type;
 type sysfs_block_iosched, fs_type, sysfs_type;
