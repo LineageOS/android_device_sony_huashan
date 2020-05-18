@@ -1,5 +1,5 @@
 cc_library_shared {
-    name: "android.hardware.gnss@1.0-impl",
+    name: "android.hardware.gnss@1.0-impl.msm8960",
     defaults: ["hidl_defaults"],
     vendor: true,
     relative_install_path: "hw",
@@ -33,9 +33,9 @@ cc_library_shared {
 cc_binary {
     relative_install_path: "hw",
     vendor: true,
-    name: "android.hardware.gnss@1.0-service",
+    name: "android.hardware.gnss@1.0-service.msm8960",
     defaults: ["hidl_defaults"],
-    init_rc: ["android.hardware.gnss@1.0-service.rc"],
+    init_rc: ["android.hardware.gnss@1.0-service.msm8960.rc"],
     srcs: ["service.cpp"],
 
     shared_libs: [

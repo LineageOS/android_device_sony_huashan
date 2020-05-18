@@ -49,6 +49,7 @@
 /system/bin/updatemiscta                                                          u:object_r:updatemiscta_exec:s0
 
 # /vendor
+/(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@[0-9]\.[0-9]-service\..*   u:object_r:hal_gnss_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-effects\..*          u:object_r:lights_effects_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\..*          u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.[0-9]+-service\..*     u:object_r:hal_power_default_exec:s0

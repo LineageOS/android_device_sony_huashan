@@ -4,5 +4,5 @@ PRODUCT_COPY_FILES += \
 
 # GPS HIDL interfaces
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl \
-    android.hardware.gnss@1.0-service
+    android.hardware.gnss@1.0-impl.msm8960 \
+    android.hardware.gnss@1.0-service.msm8960
