@@ -74,6 +74,10 @@ on boot
     # Bring CPU online
     write /sys/devices/system/cpu/cpu1/online 1
 
+on fs
+    wait /dev/block/platform/${ro.boot.bootdevice}
+    symlink /dev/block/platform/${ro.boot.bootdevice} /dev/block/bootdevice
+
 on init
     write /sys/class/android_usb/android0/iSerial ${ro.serialno}
     write /sys/class/android_usb/android0/f_rndis/vendorID 0FCE
