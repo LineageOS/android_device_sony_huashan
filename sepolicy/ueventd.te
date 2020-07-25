@@ -1,4 +1,5 @@
 #============= ueventd ==============
+allow ueventd self:capability sys_nice;
 allow ueventd sysfs_batteryinfo:file write;
 allow ueventd sysfs_camera_torch:file write;
 allow ueventd sysfs_gpio:file write;
