@@ -1,6 +1,6 @@
-# GPS configurations
-PRODUCT_COPY_FILES += \
-   $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
+# GPS packages
+PRODUCT_PACKAGES += \
+    gps.conf
 
 # SEC configurations
 PRODUCT_COPY_FILES += \
