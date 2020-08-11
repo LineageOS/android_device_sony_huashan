@@ -46,6 +46,7 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
+    symbols/Permissions.cpp \
     symbols/SurfaceComposer.cpp \
     ui/GraphicBuffer.cpp \
     ui/GraphicBufferAllocator.cpp \
