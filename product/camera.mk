@@ -6,7 +6,8 @@ PRODUCT_PACKAGES += \
 # Camera SHIM packages
 PRODUCT_PACKAGES += \
     libshim_cald \
-    libshim_camera
+    libshim_camera \
+    libshim_unwind
 
 # Camera configurations
 PRODUCT_COPY_FILES += \

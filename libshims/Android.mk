@@ -74,3 +74,17 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 
 include $(BUILD_SHARED_LIBRARY)
+
+# libshim_unwind
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+    symbols/Unwind.cpp
+
+LOCAL_MODULE := libshim_unwind
+
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
+include $(BUILD_SHARED_LIBRARY)
