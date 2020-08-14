@@ -4679,9 +4679,8 @@ int radio::getAvailableNetworksResponse(int slotId,
 #ifndef OLD_MNC_FORMAT
                 networks[j].operatorNumeric = convertCharPtrToHidlString(resp[i + 2]);
 #else
-                std::string opNum = convertCharPtrToHidlString(resp[i + 2]);
-                std::size_t mccmncIdx = opNum.find_last_of("+");
-                networks[j].operatorNumeric = opNum.substr(0,mccmncIdx);
+                const char *mccmncIdx = strrchr(resp[i + 2], '+');
+                networks[j].operatorNumeric = hidl_string(resp[i + 2], mccmncIdx - resp[i + 2]);
 #endif
                 int status = convertOperatorStatusToInt(resp[i + 3]);
                 if (status == -1) {
