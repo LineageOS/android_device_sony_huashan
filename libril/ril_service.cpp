@@ -31,6 +31,11 @@
 #include <hidl/HidlTransportSupport.h>
 #include <utils/SystemClock.h>
 #include <inttypes.h>
+
+/**
+ * Sony 8960 RIL stack compatibility
+ * Support the ro.ril.telephony.mqanelements property
+ */
 #include <cutils/properties.h>
 
 #define INVALID_HEX_CHAR 16
@@ -1363,6 +1368,10 @@ Return<void> RadioImpl::setNetworkSelectionModeAutomatic(int32_t serial) {
 #if VDBG
     RLOGD("setNetworkSelectionModeAutomatic: serial %d", serial);
 #endif
+    /**
+      * Sony 8960 RIL stack compatibility
+      * Use dispatchStrings for auto/manual network selection request
+      */
     dispatchStrings(serial, mSlotId, RIL_REQUEST_SET_NETWORK_SELECTION_AUTOMATIC, true, 0);
     return Void();
 }
@@ -1373,11 +1382,19 @@ Return<void> RadioImpl::setNetworkSelectionModeManual(int32_t serial,
     RLOGD("setNetworkSelectionModeManual: serial %d", serial);
 #endif
 #ifndef OLD_MNC_FORMAT
+    /**
+      * Sony 8960 RIL stack compatibility
+      * Use dispatchStrings for auto/manual network selection request
+      */
     dispatchStrings(serial, mSlotId, RIL_REQUEST_SET_NETWORK_SELECTION_MANUAL, true,
             1, operatorNumeric.c_str());
 #else
     std::string opNum = operatorNumeric;
     opNum.append("+");
+    /**
+      * Sony 8960 RIL stack compatibility
+      * Use dispatchStrings for auto/manual network selection request
+      */
     dispatchStrings(serial, mSlotId, RIL_REQUEST_SET_NETWORK_SELECTION_MANUAL, true,
             1, opNum.c_str());
 #endif
@@ -4581,6 +4598,12 @@ int radio::getAvailableNetworksResponse(int slotId,
 #if VDBG
     RLOGD("getAvailableNetworksResponse: serial %d", serial);
 #endif
+
+    /**
+      * Sony 8960 RIL stack compatibility
+      * Support the ro.ril.telephony.mqanelements property
+      * Includes the 3 "mqanelements" calls below
+     */
     int mqanelements = property_get_int32("ro.ril.telephony.mqanelements", 4);
 
     if (radioService[slotId]->mRadioResponse != NULL) {
