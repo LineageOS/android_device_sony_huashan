@@ -23,7 +23,6 @@
 #define BTA_DISABLE_DELAY 1000
 
 #define SC_MODE_INCLUDED FALSE
-#undef PROPERTY_VALUE_MAX
 
 #pragma pop_macro("PROPERTY_VALUE_MAX")
 
