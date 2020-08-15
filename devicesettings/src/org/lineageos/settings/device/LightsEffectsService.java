@@ -116,7 +116,7 @@ public class LightsEffectsService extends Service {
         boolean lightsEffectsMusicEnable = SettingsUtils.getInt(mContext,
                 SettingsUtils.LIGHTS_EFFECTS_MUSIC_ENABLE, 1) != 0;
         boolean lightsEffectsMusicAwake = SettingsUtils.getInt(mContext,
-                SettingsUtils.LIGHTS_EFFECTS_MUSIC_AWAKE, 1) != 0;
+                SettingsUtils.LIGHTS_EFFECTS_MUSIC_AWAKE, 0) != 0;
         boolean lightsEffectsMusicAlways = SettingsUtils.getInt(mContext,
                 SettingsUtils.LIGHTS_EFFECTS_MUSIC_ALWAYS, 0) != 0;
         int lightsEffectsMusicGain = SettingsUtils.getInt(mContext,

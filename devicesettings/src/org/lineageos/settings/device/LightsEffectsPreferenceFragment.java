@@ -129,7 +129,7 @@ public class LightsEffectsPreferenceFragment extends PreferenceFragment {
 
     private boolean getLightsEffectsMusicAwake() {
         return SettingsUtils.getInt(getContext(),
-                SettingsUtils.LIGHTS_EFFECTS_MUSIC_AWAKE, 1) != 0;
+                SettingsUtils.LIGHTS_EFFECTS_MUSIC_AWAKE, 0) != 0;
     }
 
     private boolean getLightsEffectsMusicAlways() {
