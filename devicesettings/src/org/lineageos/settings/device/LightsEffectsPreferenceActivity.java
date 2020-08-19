@@ -18,6 +18,7 @@ package org.lineageos.settings.device;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toolbar;
@@ -39,5 +40,22 @@ public class LightsEffectsPreferenceActivity extends Activity {
         getFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, new LightsEffectsPreferenceFragment())
                 .commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (!getFragmentManager().popBackStackImmediate()) {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
