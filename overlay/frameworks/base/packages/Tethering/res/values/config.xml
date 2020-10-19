@@ -50,6 +50,12 @@
         <item>"bt-pan"</item>
     </string-array>
 
+    <!-- Use the BPF offload for tethering when the kernel has support. True by default.
+         If the device doesn't want to support tether BPF offload, this should be false.
+         Note that this setting could be overridden by device config.
+    -->
+    <bool translatable="false" name="config_tether_enable_bpf_offload">false</bool>
+
     <!-- Array of ConnectivityManager.TYPE_{BLUETOOTH, ETHERNET, MOBILE, MOBILE_DUN, MOBILE_HIPRI,
          WIFI} values allowable for tethering.
     -->
