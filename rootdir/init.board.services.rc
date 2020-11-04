@@ -1,0 +1,3 @@
+on post-fs-data
+    # Services
+    setprop init.svc.console stopped
