@@ -30,6 +30,7 @@ import /vendor/etc/init/hw/init.board.charger.rc
 import /vendor/etc/init/hw/init.board.fm.rc
 import /vendor/etc/init/hw/init.board.hardware.rc
 import /vendor/etc/init/hw/init.board.led.rc
+import /vendor/etc/init/hw/init.board.media.rc
 import /vendor/etc/init/hw/init.board.perf.rc
 import /vendor/etc/init/hw/init.board.radio.rc
 import /vendor/etc/init/hw/init.board.services.rc

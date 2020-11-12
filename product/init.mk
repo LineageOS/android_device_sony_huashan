@@ -5,6 +5,7 @@ PRODUCT_PACKAGES += \
     init.board.fm.rc \
     init.board.hardware.rc \
     init.board.led.rc \
+    init.board.media.rc \
     init.board.perf.rc \
     init.board.radio.rc \
     init.board.services.rc \
