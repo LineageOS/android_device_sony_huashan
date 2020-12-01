@@ -12,6 +12,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # RIL properties
 PRODUCT_PROPERTY_OVERRIDES += \
+    keyguard.no_require_sim=true \
     rild.libpath=/system/lib/libril-qc-qmi-1.so \
     ro.telephony.ril_class=SonyRIL \
     ro.ril.telephony.mqanelements=5 \
