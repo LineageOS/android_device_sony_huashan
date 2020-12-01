@@ -16,7 +16,7 @@
 #
 
 # Inherit common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_mini_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_mini_go_phone.mk)
 
 # Inherit device configurations
 $(call inherit-product, device/sony/huashan/device.mk)
