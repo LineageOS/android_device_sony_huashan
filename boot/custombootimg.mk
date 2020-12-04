@@ -55,17 +55,17 @@ $(INSTALLED_BOOTIMAGE_TARGET): $(PRODUCT_OUT)/kernel \
 		$(INTERNAL_BOOTIMAGE_FILES)
 	$(hide) rm -fr $(PRODUCT_OUT)/combinedroot
 	$(hide) cp -a $(TARGET_RAMDISK_OUT) $(PRODUCT_OUT)/combinedroot
-	$(hide) mkdir -p $(PRODUCT_OUT)/combinedroot/sbin
+	$(hide) mkdir -p $(PRODUCT_OUT)/combinedroot/bin
 
 	$(hide) cp $(DEVICE_LOGORLE) $(PRODUCT_OUT)/combinedroot/logo.rle
-	$(hide) cp $(recovery_uncompressed_ramdisk) $(PRODUCT_OUT)/combinedroot/sbin/
-	$(hide) cp $(PRODUCT_OUT)/utilities/keycheck $(PRODUCT_OUT)/combinedroot/sbin/
-	$(hide) cp $(TARGET_RECOVERY_ROOT_OUT)/system/bin/toybox_static $(PRODUCT_OUT)/combinedroot/sbin/toybox_init
+	$(hide) cp $(recovery_uncompressed_ramdisk) $(PRODUCT_OUT)/combinedroot/bin/
+	$(hide) cp $(PRODUCT_OUT)/utilities/keycheck $(PRODUCT_OUT)/combinedroot/bin/
+	$(hide) cp $(TARGET_RECOVERY_ROOT_OUT)/system/bin/toybox_static $(PRODUCT_OUT)/combinedroot/bin/toybox_init
 
-	$(hide) cp $(INITSONY) $(PRODUCT_OUT)/combinedroot/sbin/init_sony
-	$(hide) chmod 755 $(PRODUCT_OUT)/combinedroot/sbin/init_sony
+	$(hide) cp $(INITSONY) $(PRODUCT_OUT)/combinedroot/bin/init_sony
+	$(hide) chmod 755 $(PRODUCT_OUT)/combinedroot/bin/init_sony
 	$(hide) mv $(PRODUCT_OUT)/combinedroot/init $(PRODUCT_OUT)/combinedroot/init.real
-	$(hide) ln -s sbin/init_sony $(PRODUCT_OUT)/combinedroot/init
+	$(hide) ln -s bin/init_sony $(PRODUCT_OUT)/combinedroot/init
 
 	$(hide) $(MKBOOTFS) $(PRODUCT_OUT)/combinedroot/ > $(PRODUCT_OUT)/combinedroot.cpio
 	$(hide) cat $(PRODUCT_OUT)/combinedroot.cpio | gzip > $(PRODUCT_OUT)/combinedroot.fs
