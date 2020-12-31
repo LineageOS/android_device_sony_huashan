@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "06c28ee0_43cb42be",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-12-31T13:40:38Z",
+      "side": 1,
+      "message": "You can remove this. It\u0027s included via the makefile above: https://github.com/LineageOS/android_build/blob/lineage-18.0/target/product/generic.mk#L24",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 63
+      },
+      "revId": "9b3a99f562491cb22d8362386efc25787187fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
