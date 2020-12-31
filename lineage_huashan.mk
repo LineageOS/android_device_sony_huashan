@@ -15,6 +15,9 @@
 # limitations under the License.
 #
 
+# Vendor specific configurations
+TARGET_REDUCES_RINGTONES := true
+
 # Inherit common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_mini_go_phone.mk)
 
