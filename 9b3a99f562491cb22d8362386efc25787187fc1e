@@ -22,6 +22,30 @@
       "revId": "9b3a99f562491cb22d8362386efc25787187fc1e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a9499bb1_9ed323e7",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2020-12-31T13:45:44Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "06c28ee0_43cb42be",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 63
+      },
+      "revId": "9b3a99f562491cb22d8362386efc25787187fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
