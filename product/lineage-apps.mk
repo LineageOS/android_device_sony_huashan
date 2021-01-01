@@ -3,8 +3,10 @@ PRODUCT_PACKAGES += \
     Jelly
 
 # Launcher packages
+ifneq ($(BOARD_AOSP_BASED),)
 PRODUCT_PACKAGES += \
-    Trebuchet
+    TrebuchetQuickStepGo
+endif
 
 # Music packages
 PRODUCT_PACKAGES += \
