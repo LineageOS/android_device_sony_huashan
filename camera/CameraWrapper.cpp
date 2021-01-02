@@ -179,8 +179,7 @@ void camera_fixup_capability(CameraParameters *params)
     }
 }
 
-static char *camera_fixup_getparams(int __attribute__((unused)) id,
-    const char *settings)
+static char *camera_fixup_getparams(int id, const char *settings)
 {
     CameraParameters params;
     params.unflatten(String8(settings));
@@ -191,6 +190,13 @@ static char *camera_fixup_getparams(int __attribute__((unused)) id,
 #endif
 
     camera_fixup_capability(&params);
+
+    // Set preferenced video preview sizes
+    if (id == 0) {
+        params.set(CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO, "1280x720");
+    } else {
+        params.set(CameraParameters::KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO, "640x480");
+    }
 
     if (params.get(KEY_SONY_ISO_AVAIL_MODES)) {
         // fixup the iso mode list with those that are in the sony list
